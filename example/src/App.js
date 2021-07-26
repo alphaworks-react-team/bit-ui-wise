@@ -5,6 +5,11 @@ import 'bit-ui-wise/dist/index.css'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+// Pages
+import Team1 from './Pages/Team1'
+import Team2 from './Pages/Team2'
+import Team3 from './Pages/Team3'
+
 const App = () => {
   return (
     <div>
@@ -14,13 +19,13 @@ const App = () => {
             <h1>This is the UI library</h1>
           </Route>
           <Route path='/team1'>
-            <h1>im for team 1</h1>
+            <Team1 />
           </Route>
           <Route path='/team2'>
-            <h1>im for team 2</h1>
+            <Team2 />
           </Route>
           <Route path='/team3'>
-            <h1>im for team 3</h1>
+            <Team3 />
           </Route>
         </Switch>
       </Router>
