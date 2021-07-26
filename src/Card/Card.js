@@ -23,7 +23,7 @@ const Card = (props) => {
       width: '100%'
     },
     title: {
-      fontSize: `${props.titleSize}`, // possible prop
+      fontSize: `${props.titleSize || "20px"}`, // possible prop
       fontWeight: 'bold',
       margin: '10px' // possible prop
     },
@@ -55,7 +55,6 @@ const Card = (props) => {
         {props.text ? (<div className='text' style={styles.text}>
           {props.text}
         </div>) : null}
-        
         {props.btnOneText ? (
           <button className='cardButton1' style={styles.button}>
             {props.btnOneText}
