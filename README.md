@@ -28,3 +28,4 @@ class Example extends Component {
 ## License
 
 MIT © [TS22082](https://github.com/alphaworks-react-team/bit-ui-wise)
+//team 1
