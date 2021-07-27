@@ -1,11 +1,11 @@
 import React from 'react'
-import { CardTemplate, Button, Card } from 'bit-ui-wise'
+import { CardTemplate, Button, Card, CardButton } from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
 const Team3 = () => {
   const styles = {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     height: '100vh',
     backgroundColor: '#9e9e9e'
@@ -28,7 +28,14 @@ const Team3 = () => {
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
         ad
       </CardTemplate>
-      <Card></Card>
+      <Card>
+        <CardButton
+          buttons={[
+            <Button variant={'delete'}>Delete Me!</Button>,
+            <Button variant={'primary'}>Click Me!</Button>
+          ]}
+        />
+      </Card>
     </div>
   )
 }
