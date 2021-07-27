@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardTemplate, Button, Card } from 'bit-ui-wise'
+import { CardTemplate, Button, Card, CardText } from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
 const Team3 = () => {
@@ -28,7 +28,9 @@ const Team3 = () => {
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
         ad
       </CardTemplate>
-      <Card></Card>
+
+      <CardText>
+      </CardText>
     </div>
   )
 }
