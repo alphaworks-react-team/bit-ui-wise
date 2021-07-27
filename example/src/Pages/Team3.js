@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardTemplate, Button, Card, CardHeader } from 'bit-ui-wise'
+import { CardTemplate, Button, Card, CardHeader, CardButton } from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
 
@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 const Team3 = () => {
   const styles = {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     height: '100vh',
     backgroundColor: '#9e9e9e'
@@ -34,6 +34,12 @@ const Team3 = () => {
       <Card>
         <CardHeader title='hello' subTitle='hello again'></CardHeader>
       
+        <CardButton
+          buttons={[
+            <Button variant={'delete'}>Delete Me!</Button>,
+            <Button variant={'primary'}>Click Me!</Button>
+          ]}
+        />
       </Card>
     </div>
   )
