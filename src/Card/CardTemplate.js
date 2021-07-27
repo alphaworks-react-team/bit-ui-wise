@@ -3,7 +3,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import './card.css'
 
-const Card = (props) => {
+const CardTemplate = (props) => {
   const styles = {
     main: {
       width: `${props.width || '200px'}`,
@@ -80,4 +80,4 @@ const Card = (props) => {
   )
 }
 
-export default Card
+export default CardTemplate
