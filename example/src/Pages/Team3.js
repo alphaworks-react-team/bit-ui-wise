@@ -49,14 +49,15 @@ const Team3 = () => {
       <Card direction=''>
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>Header</Typography>
-          <Typography>sub-header</Typography>
+          <Typography variant='sub-header'>sub-header</Typography>
         </CardHeader>
         <CardImage img={'https://picsum.photos/400/600'} />
         <CardText
-          title='hello'
-          subtitle='this is a subtitle'
-          desc='orem Ipsum is simply dummy text of the printing and typesetting industry.'
-        ></CardText>
+        >
+        <Typography variant="header">this is a header</Typography>
+        <Typography variant="sub-header">this is sub-header</Typography>
+
+        </CardText>
         <CardButton
           buttons={[
             <Button variant={'delete'}>Delete Me!</Button>,
