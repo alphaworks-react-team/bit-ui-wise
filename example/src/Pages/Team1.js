@@ -12,7 +12,8 @@ const Team1 = () => {
 
       <TextField />
       <TextField placeholder={'im a placeholder'} />
-      <TextField value={'im a value'} width={'50%'} />
+      <TextField inputStyle={'outline'} value={'im a value'} width={'25%'} />
+      <TextField inputStyle={'filled'} value={'im a value'} width={'25%'} />
     </div>
   )
 }
