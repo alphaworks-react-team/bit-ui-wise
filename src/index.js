@@ -4,5 +4,6 @@ import Thing from './Thing/Thing'
 import Button from './Button/Button'
 import CardTemplate from './Card/CardTemplate.js'
 import Card from './Card/Card'
+import CardHeader from './Card/CardHeader.js'
 
-export { Thing, Button, CardTemplate, Card }
+export { Thing, Button, CardTemplate, Card, CardHeader }
