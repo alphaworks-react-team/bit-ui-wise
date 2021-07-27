@@ -31,13 +31,12 @@ const Team3 = () => {
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
         ad
       </CardTemplate>
-
-      <CardText>
-      </CardText>
       
       <Card>
         <CardHeader title='hello' subTitle='hello again'></CardHeader>
-      
+        <CardText title="hello" subtitle="this is a subtitle" 
+        desc="orem Ipsum is simply dummy text of the printing and typesetting industry."> 
+        </CardText>
         <CardButton
           buttons={[
             <Button variant={'delete'}>Delete Me!</Button>,
