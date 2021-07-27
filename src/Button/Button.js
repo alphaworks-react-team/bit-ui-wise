@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Card from '../Card/Card'
 const Button = (props) => {
 //   const styles = {
 //     // primary: {
