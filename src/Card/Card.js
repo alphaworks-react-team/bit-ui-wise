@@ -36,16 +36,6 @@ const Card = (props) => {
       fontWeight: 'bold'
       // margin: '10px' // possible prop
     },
-    button: {
-      // width: '40%',
-      width: 'auto',
-      height: '20px',
-      border: 'none',
-      backgroundColor: 'white',
-      cursor: 'pointer'
-      // margin: '10px',
-      // paddingRight: '0'
-    },
     buttonGroup: {
       width: '100%',
       display: 'flex',

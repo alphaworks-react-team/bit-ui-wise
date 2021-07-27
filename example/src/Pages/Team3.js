@@ -17,8 +17,6 @@ const Team3 = () => {
         title='hello'
         subTitle='subtitle'
         img={'https://picsum.photos/400/600'}
-        btnOneText={'hello'}
-        btnTwoText={'hello'}
         width='300px'
         // height='600px'
         buttons={[
@@ -28,7 +26,7 @@ const Team3 = () => {
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
-        ad \
+        ad
       </Card>
     </div>
   )
