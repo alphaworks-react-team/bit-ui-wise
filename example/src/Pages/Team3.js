@@ -1,9 +1,14 @@
 import React from 'react'
-import { CardTemplate, Button, Card, CardHeader, CardButton, CardText } from 'bit-ui-wise'
+import {
+  CardTemplate,
+  Button,
+  Card,
+  CardHeader,
+  CardButton,
+  CardText,
+  CardImage
+} from 'bit-ui-wise'
 import PropTypes from 'prop-types'
-
-
-
 
 const Team3 = () => {
   const styles = {
@@ -12,6 +17,12 @@ const Team3 = () => {
     alignItems: 'center',
     height: '100vh',
     backgroundColor: '#9e9e9e'
+  }
+
+  const leftSide = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly'
   }
 
   return (
@@ -31,12 +42,19 @@ const Team3 = () => {
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
         ad
       </CardTemplate>
-      
-      <Card>
-        <CardHeader title='hello' subTitle='hello again'></CardHeader>
-        <CardText title="hello" subtitle="this is a subtitle" 
-        desc="orem Ipsum is simply dummy text of the printing and typesetting industry."> 
-        </CardText>
+
+      <Card direction=''>
+        <div>
+          <CardHeader title='hello' subTitle='hello again'></CardHeader>
+        </div>
+        <CardImage img={'https://picsum.photos/400/600'} />
+        <div>
+          <CardText
+            title='hello'
+            subtitle='this is a subtitle'
+            desc='orem Ipsum is simply dummy text of the printing and typesetting industry.'
+          ></CardText>
+        </div>
         <CardButton
           buttons={[
             <Button variant={'delete'}>Delete Me!</Button>,
