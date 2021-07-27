@@ -1,18 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const textField = (props) => {
 
-  const inputStyles = {}
+const TextField = (props) => {
+  const inputStyles = {
+    width: props.width || '100%'
+  }
+
   return (
+    <input
+      style={inputStyles}
+      type={props.type}
+      value={props.value}
+      onChange={props.onChange}
+      placeholder={props.placeholder}
 
-     <input style={inputStyles} type={props.type}  value={} onChange={}/>
-
+    />
   )
 }
 
-TextField.propTypes = {
-  title: PropTypes.string.isRequired
-}
 
-export default textField
+
+export default TextField
