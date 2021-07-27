@@ -2,7 +2,8 @@ import React from 'react'
 
 const CardButton = (props) => {
   const styles = {
-    width: '200px',
+    height: '100%',
+    margin: '10px',
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-evenly',
