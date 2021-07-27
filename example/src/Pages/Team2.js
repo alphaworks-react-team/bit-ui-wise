@@ -5,9 +5,13 @@ const Team2 = () => {
   return (
     <div>
       <h1>Im for team 2</h1>
+      <div style={{display: 'flex', alignItems: 'center'}}>
+      <Button size="large" variant="primary">Primary</Button>
+      <Button size="large" variant="primary" type="outlined">Primary</Button>
       <Button size="large" variant="primary">Primary</Button>
       <Button size="medium" variant="secondary">Secondary</Button>
-      <Button size="small" variant="delete">Delete</Button>
+      <Button size="small" variant="delete">Small</Button>
+      </div>
       <Button variant="warning">Warning</Button>
       <Button size="large" variant="send">Send</Button>
       <Button variant="upload">Upload</Button>
