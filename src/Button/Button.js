@@ -1,22 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styles from './button.module.css'
+
 const Button = (props) => {
-//   const styles = {
-//     // primary: {
-//     //   backgroundColor: '#3f51b5',
-//     // },
-//     // secondary: {
-//     //   backgroundColor: `#FF5722`,
-//     // }
-//   }
   const commonStyle = {
-    fontSize: "100%",
+    //padding: '25dp',
+    cursor: 'pointer',
+    fontSize: "70%",
     borderRadius: '3px',
     border: 'none',
-    height: '50px',
-    width: '100px',
-    color: 'white'
+    color: 'white',
+    margin: '3px',
+    //boxShadow: '0 2px 5px rgba(0,0,0,0.5)',
+    textTransform: 'uppercase'
   }
   const btnStyles = {
     backgroundColor:
@@ -30,30 +27,42 @@ const Button = (props) => {
         ? '#f0d53e'
         : props.variant === 'send'
         ? '#078c22'
-        : 'grey'
+        : 'grey',
+
+    width:
+      props.size === 'small'
+      ? '55px'
+      : props.size === 'medium'
+      ? '80px'
+      : props.size === 'large'
+      ? '100px'
+      : '80px',
+    
+    height: 
+      props.size === 'small'
+      ? '30px'
+      : props.size === 'medium'
+      ? '35px'
+      : props.size === 'large'
+      ? '40px'
+      : '35px',
   }
+
   return (
     <div>
-      <button style={{...btnStyles, ...commonStyle}}>
+      <button className={styles.bitUiWiseBtn} style={{...btnStyles, ...commonStyle}}>
           {props.children}</button>
-      {/* <button
-        style={
-          props.type === 'primary'
-            ? Object.assign(styles.primary, commonStyle)
-            : Object.assign(styles.secondary, commonStyle)
-        }
-      >
-        {props.text}
-      </button> */}
     </div>
-  )
+  ) 
 }
 
 Button.propTypes = {
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  size: PropTypes.string
 }
 Button.defaultProps = {
   variant: 'primary',
+  size: 'medium'
 }
 
 export default Button

@@ -1,0 +1,20 @@
+
+
+
+/* .bit-ui-wise-btn {
+    background-color: aqua;
+    cursor: pointer;
+} */
+
+.bitUiWiseBtn:hover {
+    box-shadow: inset 0 1px 25px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22);
+    transition: 200ms 
+}
+
+/* .bitUiWiseBtn:active {
+    background-color: 
+} */
+
+.bitUiWiseBtn {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5) 
+}
