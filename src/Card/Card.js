@@ -1,76 +1,84 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React from 'react'
 // import PropTypes from 'prop-types'
-import './card.css';
+import './card.css'
 
 
 const Card = (props) => {
-
   const styles = {
     main: {
-      width: '200px',
-      // height: "100px",
-      backgroundColor: 'white'
+      width: `${props.width || '200px'}`,
+      // height: `${props.height}`,
+      height: `${props.height}`,
+      backgroundColor: 'white',
+      boxShadow: '3px 3px 5px black'
     },
     img: {
       backgroundImage: `url(${props.img})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      height: '150px'
+      height: '300px'
     },
     textBody: {
-      height: '100%',
-      width: '100%'
+      // height: '%',
+      width: 'auto',
+      margin: '15px',
+      display: 'flex',
+      flexFlow: 'column',
+      justifyContent: 'space-around',
+      alignItems: 'flex-start'
+    },
+    header: {
+      marginBottom: '10px'
     },
     title: {
-      fontSize: `${props.titleSize || "20px"}`, // possible prop
-      fontWeight: 'bold',
-      margin: '10px' // possible prop
+      fontSize: `${props.titleSize || '20px'}`, // possible prop
+      fontWeight: 'bold'
+      // margin: '10px' // possible prop
     },
-    text: {
-      margin: '10px'
-    },
-    button: {
-      // width: '40%',
-      width: props.width,
-      height: '20px',
-      border: 'none',
-      backgroundColor: 'white',
-      cursor: 'pointer',
-      margin: '10px',
-      padding: "0"
+    buttonGroup: {
+      width: '100%',
+      display: 'flex',
+      flexFlow: 'row wrap',
+      justifyContent: 'space-evenly',
+      alignContent: 'space-around',
+      alignItems: 'space-between'
+      // minHeight: {minHeight: "51px" ? minHeight: '125px' :  null}
     }
   }
-  
-  
+
   return (
-    
     <div className='main' style={styles.main}>
-      {props.img ? 
-      ( <div className='img' style={styles.img}>{}</div>) : null}
+      {props.img ? (
+        <div className='img' style={styles.img}>
+          {}
+        </div>
+      ) : null}
       <div className='textBody' style={styles.textBody}>
-        {props.title ? (<div className='title' style={styles.title}>
-          {props.title}
-        </div>) : null}
-        {props.text ? (<div className='text' style={styles.text}>
-          {props.text}
-        </div>) : null}
-        {props.btnOneText ? (
-          <button className='cardButton1' style={styles.button}>
-            {props.btnOneText}
-          </button>
+        <div className='header' style={styles.header}>
+          {props.title ? (
+            <div className='title' style={styles.title}>
+              {props.title}
+            </div>
+          ) : null}
+          {props.subTitle ? (
+            <div className='subTitle'>{props.subTitle}</div>
+          ) : null}
+        </div>
+        {props.children ? (
+          <div className='text' style={{ marginBottom: '10px' }}>
+            {props.children}
+          </div>
         ) : null}
-        {props.btnTwoText ? (
-          <button className='cardButton2' style={styles.button}>
-            {props.btnTwoText}
-          </button>
+        {props.buttons ? (
+          <div className='buttonGroup' style={styles.buttonGroup}>
+            {props.buttons.map((item) => item)}
+          </div>
         ) : null}
-        
       </div>
     </div>
   )
 }
-
 
 export default Card
