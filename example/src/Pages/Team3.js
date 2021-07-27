@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'bit-ui-wise'
+import { Card, Button } from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
 const Team3 = () => {
@@ -20,12 +20,15 @@ const Team3 = () => {
         btnOneText={'hello'}
         btnTwoText={'hello'}
         width='300px'
-        height='500px'
+        // height='600px'
+        buttons={[
+          <Button variant={'delete'}>Click Me!</Button>,
+          <Button variant={'primary'}>Delete Me!</Button>
+        ]}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
-        laboriosam explicabo expedita illum voluptates magnam! Quasi harum
-        explicabo sed voluptatum eum tenetur, rerum ullam, inventore neque
-        labore voluptates distinctio. Est.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
+        ad \
       </Card>
     </div>
   )

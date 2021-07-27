@@ -7,7 +7,6 @@ const Card = (props) => {
   const styles = {
     main: {
       width: `${props.width || '200px'}`,
-      maxHeight: '100%',
       // height: `${props.height}`,
       height: `${props.height}`,
       backgroundColor: 'white',
@@ -18,16 +17,19 @@ const Card = (props) => {
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      height: '50%'
+      height: '300px'
     },
     textBody: {
-      height: '50%',
+      // height: '%',
       width: 'auto',
-      margin: '0 15px 0 15px',
+      margin: '15px',
       display: 'flex',
       flexFlow: 'column',
       justifyContent: 'space-around',
       alignItems: 'flex-start'
+    },
+    header: {
+      marginBottom: '10px'
     },
     title: {
       fontSize: `${props.titleSize || '20px'}`, // possible prop
@@ -47,8 +49,11 @@ const Card = (props) => {
     buttonGroup: {
       width: '100%',
       display: 'flex',
-      flexFlow: 'row',
-      justifyContent: 'flex-start'
+      flexFlow: 'row wrap',
+      justifyContent: 'space-evenly',
+      alignContent: 'space-around',
+      alignItems: 'space-between'
+      // minHeight: {minHeight: "51px" ? minHeight: '125px' :  null}
     }
   }
 
@@ -60,7 +65,7 @@ const Card = (props) => {
         </div>
       ) : null}
       <div className='textBody' style={styles.textBody}>
-        <div className='header'>
+        <div className='header' style={styles.header}>
           {props.title ? (
             <div className='title' style={styles.title}>
               {props.title}
@@ -70,19 +75,16 @@ const Card = (props) => {
             <div className='subTitle'>{props.subTitle}</div>
           ) : null}
         </div>
-        {props.children ? <div className='text'>{props.children}</div> : null}
-        <div className='buttonGroup' style={styles.buttonGroup}>
-          {props.btnOneText ? (
-            <button className='cardButton' style={styles.button}>
-              {props.btnOneText}
-            </button>
-          ) : null}
-          {props.btnTwoText ? (
-            <button className='cardButton' style={styles.button}>
-              {props.btnTwoText}
-            </button>
-          ) : null}
-        </div>
+        {props.children ? (
+          <div className='text' style={{ marginBottom: '10px' }}>
+            {props.children}
+          </div>
+        ) : null}
+        {props.buttons ? (
+          <div className='buttonGroup' style={styles.buttonGroup}>
+            {props.buttons.map((item) => item)}
+          </div>
+        ) : null}
       </div>
     </div>
   )
