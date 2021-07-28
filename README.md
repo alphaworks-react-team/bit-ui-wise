@@ -13,14 +13,17 @@ npm install --save bit-ui-wise
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
 
-import MyComponent from 'bit-ui-wise'
-import 'bit-ui-wise/dist/index.css'
+import CardText from 'bit-ui-wise'
+import Typography from 'bit-ui-wise'
 
-class Example extends Component {
+// import 'bit-ui-wise/dist/index.css'
+
+class CardText tends Component {
   render() {
-    return <MyComponent />
+    return <CardText>
+    <Typography></Typography>
+    </CardText>
   }
 }
 ```
