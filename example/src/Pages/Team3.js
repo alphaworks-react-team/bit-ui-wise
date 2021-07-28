@@ -27,6 +27,7 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
+      {/* VERSION 1 */}
       <CardTemplate
         title='hello'
         subTitle='subtitle'
@@ -43,24 +44,37 @@ const Team3 = () => {
         ad
       </CardTemplate>
 
+      {/* VERSION 2 */}
       <Card direction=''>
-        <div>
-          <CardHeader title='hello' subTitle='hello again'></CardHeader>
-        </div>
+        <CardHeader title='hello' subTitle='hello again'></CardHeader>
         <CardImage img={'https://picsum.photos/400/600'} />
-        <div>
-          <CardText
-            title='hello'
-            subtitle='this is a subtitle'
-            desc='orem Ipsum is simply dummy text of the printing and typesetting industry.'
-          ></CardText>
-        </div>
+        <CardText
+          title='hello'
+          subtitle='this is a subtitle'
+          desc='orem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ></CardText>
         <CardButton
           buttons={[
             <Button variant={'delete'}>Delete Me!</Button>,
             <Button variant={'primary'}>Click Me!</Button>
           ]}
         />
+      </Card>
+
+      {/* VERSION 3 SIDE MODE */}
+      <Card direction='row'>
+        <div style={leftSide}>
+          <CardHeader title='hello' subTitle='hello again'></CardHeader>
+          <CardButton
+            buttons={[
+              <Button variant={'delete'}>Delete Me!</Button>,
+              <Button variant={'primary'}>Click Me!</Button>
+            ]}
+          />
+        </div>
+        <div>
+          <CardImage img={'https://picsum.photos/400/600'} />
+        </div>
       </Card>
     </div>
   )

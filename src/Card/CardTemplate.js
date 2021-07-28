@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 // import PropTypes from 'prop-types'
-import './card.css'
+import styling from './card.css'
 
 const CardTemplate = (props) => {
   const styles = {
     main: {
-      width: `${props.width || '200px'}`,
+      width: `${props.width || '300px'}`,
       // height: `${props.height}`,
       height: `${props.height}`,
       backgroundColor: 'white',
@@ -71,7 +71,7 @@ const CardTemplate = (props) => {
           </div>
         ) : null}
         {props.buttons ? (
-          <div className='buttonGroup' style={styles.buttonGroup}>
+          <div className={styling.ButtonGroup} style={styles.buttonGroup}>
             {props.buttons.map((item) => item)}
           </div>
         ) : null}

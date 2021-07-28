@@ -6,7 +6,8 @@ const CardImage = (props) => {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: '300px'
+    height: '300px',
+    width: '300px'
   }
   return <div className='img' style={styles}></div>
 }
