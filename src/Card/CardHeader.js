@@ -2,24 +2,21 @@
 import React from 'react'
 
 const CardHeader = (props) => {
-
-  const style = { 
+  const style = {
     main: {
-      padding:"10px"
-      
+      padding: '10px'
     },
     title: {
-      margin: "10px 10px 0px 10px",
-      fontWeight: "bold"
+      margin: '10px 10px 0px 10px',
+      fontWeight: 'bold'
     },
     subTitle: {
-      margin: "0px 10px 10px 10px",
-      fontWeight: "lighter",
-      fontSize: "12px"
+      margin: '0px 10px 10px 10px',
+      fontWeight: 'lighter',
+      fontSize: '12px'
     }
   }
 
-  
   return (
     <div styles={style.main}>
       {props.title ? (
@@ -32,6 +29,7 @@ const CardHeader = (props) => {
           {props.subTitle}
         </div>
       ) : null}
+      {/* {props.children} */}
     </div>
   )
 }

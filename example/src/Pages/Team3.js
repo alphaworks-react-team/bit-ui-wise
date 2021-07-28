@@ -6,7 +6,8 @@ import {
   CardHeader,
   CardButton,
   CardText,
-  CardImage
+  CardImage,
+  Typography
 } from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
@@ -46,7 +47,10 @@ const Team3 = () => {
 
       {/* VERSION 2 */}
       <Card direction=''>
-        <CardHeader title='hello' subTitle='hello again'></CardHeader>
+        <CardHeader title='hello' subTitle='hello again'>
+          <Typography variant='header'>Header</Typography>
+          <Typography>sub-header</Typography>
+        </CardHeader>
         <CardImage img={'https://picsum.photos/400/600'} />
         <CardText
           title='hello'
@@ -65,10 +69,15 @@ const Team3 = () => {
       <Card direction='row' width={'auto'}>
         <div style={leftSide}>
           <CardHeader title='hello' subTitle='hello again'></CardHeader>
+
           <CardButton
             buttons={[
-              <Button variant={'delete'}>Delete Me!</Button>,
-              <Button variant={'primary'}>Click Me!</Button>
+              <Button size='small' variant={'delete'}>
+                Delete Me!
+              </Button>,
+              <Button size='small' variant={'primary'}>
+                Click Me!
+              </Button>
             ]}
           />
         </div>
