@@ -1,33 +1,83 @@
 import React from 'react'
-import {Card} from 'bit-ui-wise'
+import {
+  CardTemplate,
+  Button,
+  Card,
+  CardHeader,
+  CardButton,
+  CardText,
+  CardImage
+} from 'bit-ui-wise'
 import PropTypes from 'prop-types'
 
 const Team3 = () => {
   const styles = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems:"center",
-    height:"100vh",
-    backgroundColor:"#9e9e9e"
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#9e9e9e'
   }
 
-  
+  const leftSide = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly'
+  }
+
   return (
     <div style={styles}>
-      <Card
+      {/* VERSION 1 */}
+      <CardTemplate
         title='hello'
-        text='hella lorem'
+        subTitle='subtitle'
         img={'https://picsum.photos/400/600'}
-        btnOneText={'hello'}
-        btnTwoText={'hello'}
-        width={'auto'}
-      />
+        // width='400px'
+        // height='600px'
+        buttons={[
+          <Button variant={'delete'}>Click Me!</Button>,
+          <Button variant={'primary'}>Delete Me!</Button>
+        ]}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
+        ad
+      </CardTemplate>
+
+      {/* VERSION 2 */}
+      <Card direction=''>
+        <CardHeader title='hello' subTitle='hello again'></CardHeader>
+        <CardImage img={'https://picsum.photos/400/600'} />
+        <CardText
+          title='hello'
+          subtitle='this is a subtitle'
+          desc='orem Ipsum is simply dummy text of the printing and typesetting industry.'
+        ></CardText>
+        <CardButton
+          buttons={[
+            <Button variant={'delete'}>Delete Me!</Button>,
+            <Button variant={'primary'}>Click Me!</Button>
+          ]}
+        />
+      </Card>
+
+      {/* VERSION 3 SIDE MODE */}
+      <Card direction='row' width={'auto'}>
+        <div style={leftSide}>
+          <CardHeader title='hello' subTitle='hello again'></CardHeader>
+          <CardButton
+            buttons={[
+              <Button variant={'delete'}>Delete Me!</Button>,
+              <Button variant={'primary'}>Click Me!</Button>
+            ]}
+          />
+        </div>
+        <div>
+          <CardImage img={'https://picsum.photos/400/600'} />
+        </div>
+      </Card>
     </div>
   )
 }
-
-
-
-
 
 export default Team3
