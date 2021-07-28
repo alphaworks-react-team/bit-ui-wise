@@ -1,24 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styles from './button.module.css'
+
 const Button = (props) => {
-//   const styles = {
-//     // primary: {
-//     //   backgroundColor: '#3f51b5',
-//     // },
-//     // secondary: {
-//     //   backgroundColor: `#FF5722`,
-//     // }
-//   }
   const commonStyle = {
-    fontSize: "100%",
-    borderRadius: '3px',
-    border: 'none',
-    height: '50px',
-    width: '100px',
-    color: 'white'
+    cursor: 'pointer',
+    borderRadius: '4px',
+    fontWeight: '600',
+    margin: '3px',
+    textTransform: 'uppercase'
   }
   const btnStyles = {
+    border: 'none',
+    color: 'white',
     backgroundColor:
       props.variant === 'primary'
         ? '#3f51b5'
@@ -27,33 +22,95 @@ const Button = (props) => {
         : props.variant === 'delete'
         ? '#d91111'
         : props.variant === 'warning'
-        ? '#f0d53e'
+        ? 'gold'
         : props.variant === 'send'
         ? '#078c22'
-        : 'grey'
+        : 'grey',
+
+    padding:
+      props.size === 'small'
+      ? '5px 10px'
+      : props.size === 'medium'
+      ? '8px 15px'
+      : props.size === 'large'
+      ? '10px 18px'
+      : '7px 15px',
+
+    fontSize: 
+      props.size === 'small'
+      ? '0.8em'
+      : props.size === 'medium'
+      ? '1em'
+      : props.size === 'large'
+      ? '1.15em'
+      : '1.20em',
+}
+
+  const outlineStyles = {
+    backgroundColor: 'white',
+    color:
+      props.variant === 'primary'
+      ? '#3f51b5'
+      : props.variant === 'secondary'
+      ? '#FF5722'
+      : props.variant === 'delete'
+      ? '#d91111'
+      : props.variant === 'warning'
+      ? 'gold'
+      : props.variant === 'send'
+      ? '#078c22'
+      : 'grey',
+    borderColor: 
+      props.variant === 'primary'
+      ? '#3f51b5'
+      : props.variant === 'secondary'
+      ? '#FF5722'
+      : props.variant === 'delete'
+      ? '#d91111'
+      : props.variant === 'warning'
+      ? 'gold'
+      : props.variant === 'send'
+      ? '#078c22'
+      : 'grey',
+    padding:
+      props.size === 'small'
+      ? '5px 10px'
+      : props.size === 'medium'
+      ? '8px 15px'
+      : props.size === 'large'
+      ? '10px 18px'
+      : '7px 15px',
+
+    fontSize: 
+      props.size === 'small'
+      ? '0.8em'
+      : props.size === 'medium'
+      ? '1em'
+      : props.size === 'large'
+      ? '1.15em'
+      : '1.20em',
   }
+
   return (
     <div>
-      <button style={{...btnStyles, ...commonStyle}}>
-          {props.children}</button>
-      {/* <button
-        style={
-          props.type === 'primary'
-            ? Object.assign(styles.primary, commonStyle)
-            : Object.assign(styles.secondary, commonStyle)
-        }
-      >
-        {props.text}
-      </button> */}
+      {props.type === "outlined" ? 
+        <button className={styles.outlinedBtn} style={{...outlineStyles, ...commonStyle}}>
+            {props.children}</button>
+      :
+        <button className={styles.bitUiWiseBtn} style={{...btnStyles, ...commonStyle}}>
+            {props.children}</button>
+      }
     </div>
-  )
+  ) 
 }
 
 Button.propTypes = {
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  size: PropTypes.string
 }
 Button.defaultProps = {
   variant: 'primary',
+  size: 'medium'
 }
 
 export default Button
