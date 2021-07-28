@@ -48,8 +48,6 @@ const TextField = (props) => {
   }
 
   return (
-    <div>
-      <div>
         <input
           className={styles.teamOne}
           style={showStyles()}
@@ -58,8 +56,6 @@ const TextField = (props) => {
           onChange={props.onChange}
           placeholder={props.placeholder}
         />
-      </div>
-    </div>
   )
 }
 
