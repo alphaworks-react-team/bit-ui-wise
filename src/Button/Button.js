@@ -30,20 +30,20 @@ const Button = (props) => {
         : 'grey',
 
     padding:
-      props.size === 'small'
+      props.size === 'sm'
         ? '5px 10px'
-        : props.size === 'medium'
+        : props.size === 'md'
         ? '8px 15px'
-        : props.size === 'large'
+        : props.size === 'lrg'
         ? '10px 18px'
         : '7px 15px',
 
     fontSize:
-      props.size === 'small'
+      props.size === 'sm'
         ? '0.8em'
-        : props.size === 'medium'
+        : props.size === 'md'
         ? '1em'
-        : props.size === 'large'
+        : props.size === 'lrg'
         ? '1.15em'
         : '1.20em'
   }
@@ -75,20 +75,20 @@ const Button = (props) => {
         ? '#078c22'
         : 'grey',
     padding:
-      props.size === 'small'
+      props.size === 'sm'
         ? '5px 10px'
-        : props.size === 'medium'
+        : props.size === 'md'
         ? '8px 15px'
-        : props.size === 'large'
+        : props.size === 'lrg'
         ? '10px 18px'
         : '7px 15px',
 
     fontSize:
-      props.size === 'small'
+      props.size === 'sm'
         ? '0.8em'
-        : props.size === 'medium'
+        : props.size === 'md'
         ? '1em'
-        : props.size === 'large'
+        : props.size === 'lrg'
         ? '1.15em'
         : '1.20em'
   }
