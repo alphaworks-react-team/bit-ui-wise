@@ -62,7 +62,7 @@ const Team3 = () => {
       </Card>
 
       {/* VERSION 3 SIDE MODE */}
-      <Card direction='row'>
+      <Card direction='row' width={'auto'}>
         <div style={leftSide}>
           <CardHeader title='hello' subTitle='hello again'></CardHeader>
           <CardButton
