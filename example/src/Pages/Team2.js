@@ -13,6 +13,8 @@ const Team2 = () => {
       <Button size="small" variant="delete">Small</Button>
       </div>
       <Button variant="warning">Warning</Button>
+      <Button size="medium" variant="secondary" type="outlined">Outlined</Button>
+      <Button size="small" variant="delete" type="outlined">Delete</Button>
       <Button size="large" variant="send">Send</Button>
       <Button variant="upload">Upload</Button>
       <Button size="medium" variant="save">Save</Button>
