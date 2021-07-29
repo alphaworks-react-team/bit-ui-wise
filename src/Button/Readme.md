@@ -14,7 +14,7 @@ Props
 **'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
 ![button-sizes](./assets/button-colors.png)
 
-**'type'** optinos: 'outlined', 'contained'.\
+**'type'** options: 'outlined', 'contained'.\
 ![button-contained](./assets/button-contained.png)
 
 _If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._
