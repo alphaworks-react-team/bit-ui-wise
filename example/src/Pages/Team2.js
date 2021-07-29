@@ -6,23 +6,16 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center'}}>
-      <Button size="large" variant="primary">Primary</Button>
-      <Button size="large" variant="primary" type="outlined">Primary</Button>
-      <Button size="large" variant="primary">Primary</Button>
-      <Button size="medium" variant="secondary">Secondary</Button>
-      <Button size="small" variant="delete">Small</Button>
+        <Button size="small" variant="primary">Small</Button>
+        <Button size="medium" variant="primary">Medium</Button>
+        <Button size={123} variant="primary">Large</Button>
       </div>
-      <Button variant="warning">Warning</Button>
-      <Button size="medium" variant="secondary" type="outlined">Outlined</Button>
-      <Button size="small" variant="delete" type="outlined">Delete</Button>
-      <Button size="large" variant="send">Send</Button>
-      <Button variant="upload">Upload</Button>
-      <Button size="medium" variant="save">Save</Button>
-      <Button size="small" variant="submit">Submit</Button>
-      {/* <Button variant="shuffle">Delete</Button>
-      <Button variant="play">Delete</Button>
-      <Button variant="forward">Delete</Button>
-      <Button variant="rewind">Delete</Button> */}
+
+      <div style={{display: 'flex', alignItems: 'center'}}>
+        <Button size="small" variant="primary" type="outlined">Primary</Button>
+        <Button size="medium" variant="secondary" type="outlined">Secondary</Button>
+        <Button variant="send" type="outlined">SUccess</Button>
+      </div>
     </div>
   )
 }
