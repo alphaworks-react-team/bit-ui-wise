@@ -4,7 +4,7 @@ const CardText = (props) => {
   const styles = {
     textBody: {
       background: 'white',
-      border: '2px solid black'
+      margin: "10px"
     }
   }
   return (
