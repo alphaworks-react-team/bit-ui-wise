@@ -1,10 +1,10 @@
 ## Buttons
 
-````jsx
+```jsx
     <Button size="small" variant="primary">Small</Button>
     <Button size="medium" variant="primary">Medium</Button>
     <Button size="large" variant="primary">Large</Button>
-````
+```
 
 Props
 
@@ -17,4 +17,4 @@ Props
 **'type'** optinos: 'outlined', 'contained'.\
 ![button-contained](./assets/button-contained.png)
 
-*If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'.*
+_If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._

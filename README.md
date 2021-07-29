@@ -1,30 +1,27 @@
-# bit-ui-wise
+# Component library for react
 
-> Made with create-react-library
+- [Buttons](#Buttons)
 
-[![NPM](https://img.shields.io/npm/v/bit-ui-wise.svg)](https://www.npmjs.com/package/bit-ui-wise) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save bit-ui-wise
-```
-
-## Usage
+# Buttons
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'bit-ui-wise'
-import 'bit-ui-wise/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+    <Button size="small" variant="primary">Small</Button>
+    <Button size="medium" variant="primary">Medium</Button>
+    <Button size="large" variant="primary">Large</Button>
 ```
 
-## License
+Props
 
-MIT © [TS22082](https://github.com/alphaworks-react-team/bit-ui-wise)
+**'size'** has available options: 'sm' for small, 'md' for medium, 'rgl' for large.\
+**'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
+**'type'** optinos: 'outlined', 'contained'.
+
+_If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._
+
+## Props
+
+|          |           |           |         |        |      |
+| -------- | --------- | --------- | ------- | ------ | ---- |
+| size:    | sm        | md        | rgl     |        |      |
+| variant: | primary   | secondary | warning | delete | send |
+| type     | oputlined | contained |         |        |      |
