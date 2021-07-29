@@ -3,7 +3,10 @@ import React from 'react'
 const CardImage = (props) => {
   const styles = {
     backgroundImage: `url(${props.img})`,
-    backgroundSize: 'cover',
+    backgroundSize: 
+    props.bgS === 'contain' 
+    ? 'contain': 
+    'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     height: '300px',
@@ -11,5 +14,7 @@ const CardImage = (props) => {
   }
   return <div className='img' style={styles}></div>
 }
+
+
 
 export default CardImage
