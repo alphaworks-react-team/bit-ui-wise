@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, TextField } from 'bit-ui-wise'
+import { Typography, TextField, practice } from 'bit-ui-wise'
 
 const Team1 = () => {
   return (
@@ -14,6 +14,7 @@ const Team1 = () => {
       <TextField placeholder={'im a placeholder'} />
       <TextField inputStyle={'outline'} value={'im a value'} width={'25%'} />
       <TextField inputStyle={'filled'} value={'im a value'} width={'25%'} />
+
     </div>
   )
 }
