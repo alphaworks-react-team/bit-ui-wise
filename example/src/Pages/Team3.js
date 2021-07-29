@@ -48,17 +48,17 @@ const Team3 = () => {
       {/* VERSION 2 */}
       <Card direction=''>
         <CardHeader title='hello' subTitle='hello again'>
-   {/*  <Typography variant="header">this is a header</Typography>
-        <Typography variant="sub-header">this is sub-header</Typography>
-        */}
+          <Typography variant='header'>this is a header</Typography>
+          <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
         <CardImage img={'https://picsum.photos/400/600'} />
-        <CardText
-        >
-        {/*
-         <Typography variant="header">this is a header</Typography>
-        <Typography variant="sub-header">this is sub-header</Typography>
+        <CardText bg="green">
+          
+          <Typography variant="header">this is a header</Typography>
+         {/* <Typography variant="sub-header">this is sub-header</Typography>
+         <Typography variant="body">blahblah blah body content</Typography>
         */}
+
         </CardText>
         <CardButton
           buttons={[
