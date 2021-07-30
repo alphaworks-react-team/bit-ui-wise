@@ -7,7 +7,6 @@ const CardTemplate = (props) => {
   const styles = {
     main: {
       width: `${props.width || '300px'}`,
-      // height: `${props.height}`,
       height: `${props.height}`,
       backgroundColor: 'white',
       boxShadow: '3px 3px 5px black'
@@ -20,7 +19,6 @@ const CardTemplate = (props) => {
       height: '300px'
     },
     textBody: {
-      // height: '%',
       width: 'auto',
       margin: '15px',
       display: 'flex',
@@ -32,9 +30,8 @@ const CardTemplate = (props) => {
       marginBottom: '10px'
     },
     title: {
-      fontSize: `${props.titleSize || '20px'}`, // possible prop
+      fontSize: `${props.titleSize || '20px'}`, 
       fontWeight: 'bold'
-      // margin: '10px' // possible prop
     },
     buttonGroup: {
       width: '100%',
@@ -43,7 +40,6 @@ const CardTemplate = (props) => {
       justifyContent: 'space-evenly',
       alignContent: 'space-around',
       alignItems: 'space-between'
-      // minHeight: {minHeight: "51px" ? minHeight: '125px' :  null}
     }
   }
 

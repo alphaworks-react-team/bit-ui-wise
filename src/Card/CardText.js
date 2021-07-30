@@ -4,28 +4,13 @@ const CardText = (props) => {
   const styles = {
     textBody: {
       background: 'white',
-      border: '2px solid black'
+      margin: "10px"
     }
   }
   return (
-    <div>
+   
       <div classNams='text-body' style={styles.textBody}>
-      {props.title ? ( 
-        <div className='title'>
-      {props.title}
-      </div>
-      ) : null}
-       {props.subtitle ? (
-        <div className='subtitle'>
-        {props.subtitle}
-      </div>
-       ): null}
-       {props.desc ?(
-        <div className='desc'>
-        {props.desc}
-      </div>
-       ) : null}  
-      </div>
+        {props.children}
       </div>
   )
 }
