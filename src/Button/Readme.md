@@ -9,7 +9,12 @@
 Props
 
 **'size'** has available options: 'sm' for small, 'md' for medium, 'rgl' for large.\
+![Buttons](./assets/button-sizes.png)
+
 **'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
-**'type'** options: 'outlined', 'contained'.
+![button-sizes](./assets/button-colors.png)
+
+**'type'** options: 'outlined', 'contained'.\
+![button-contained](./assets/button-contained.png)
 
 _If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._
