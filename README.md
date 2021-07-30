@@ -1,9 +1,9 @@
 # Component library for react
 
 - [Buttons](#Buttons)
+- [Card](#Card)
 
 # Buttons
-
 
 ```jsx
     <Button size="small" variant="primary">Small</Button>
@@ -28,18 +28,19 @@ _If no props are passed, the default styling will be size 'md', variant 'primary
 | type     | oputlined | contained |         |        |      |
 
 # Card
-The card component is deisigned to take in other components like **Typography** and **Button**. As you import these components in to your card, the content within the card component will flex as needed to the height and width necessary. 
-```jsx
 
+The card component is designed to take in other components like **Typography** and **Button**. As you import these components in to your card, the content within the card component will flex as needed to the height and width necessary.
+
+```jsx
 import CardText from 'bit-ui-wise'
 import Typography from 'bit-ui-wise'
 
-class CardText tends Component {
+class CardText extends Component {
   render() {
     return (
-    <CardText>
-      <Typography varient="header" varient="sub-header"></Typography>
-    </CardText>
+      <CardText>
+        <Typography varient='header' varient='sub-header'></Typography>
+      </CardText>
     )
   }
 }
@@ -49,10 +50,12 @@ class CardText tends Component {
 import CardButton from 'bit-ui-wise'
 import Button from 'bit-ui-wise'
 
-class CardButton tends Component {
-  render(){
+class CardButton extends Component {
+  render() {
     return (
-    <Button size="small" variant="primary">Small</Button>
+      <Button size='small' variant='primary'>
+        Small
+      </Button>
     )
   }
 }
