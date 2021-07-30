@@ -60,3 +60,25 @@ class CardButton extends Component {
   }
 }
 ```
+
+#Input
+
+props: type, value, placeholder, onchange, type
+
+| props       |            |          |      |
+| ----------- | ---------- | -------- | ---- |
+| type        | email      | password | text |
+| placeholder | "String"   |          |      |
+| value       | "String"   |          |      |
+| onChange    | "Function" |          |      |
+
+```jsx
+<TextField />
+<TextField placeholder={'im a placeholder'} />
+<TextField
+  inputStyle={'outline'}
+  value={'im a value'}
+  width={'25%'}
+/>
+<TextField inputStyle={'filled'} width={'25%'} />
+```
