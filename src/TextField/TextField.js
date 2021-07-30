@@ -5,57 +5,26 @@ const TextField = (props) => {
   const standardStyle = {
     width: props.width || '100%',
     height: '35px',
-    backgroundColor: 'none',
-    color: 'black',
-    borderTop: 'none',
-    borderRight: 'none',
-    borderLeft: 'none',
-    outline: 'none'
-  }
-
-  const filledStyle = {
-    width: props.width || '100%',
-    height: '35px',
-    color: 'white',
-    backgroundColor: 'lightgrey',
-    borderTopRightRadius: '3px',
-    borderTopLeftRadius: '3px',
-    borderTop: 'none',
-    borderRight: 'none',
-    borderLeft: 'none',
-    borderBottom: '2px solid white',
-    outline: 'none'
-  }
-
-  const outlineStyle = {
-    width: props.width || '100%',
-    height: '35px',
-    color: 'white',
-    backgroundColor: 'none',
-    borderRadius: '3px',
-    border: '2px solid black',
-    outline: 'none'
-  }
-
-  const showStyles = () => {
-    if (props.inputStyle === 'outline') {
-      return outlineStyle
-    } else if (props.inputStyle === 'filled') {
-      return filledStyle
-    } else {
-      return standardStyle
-    }
+    backgroundColor: props.inputStyle === 'filled' ? '#424242' : 'none',
+    color: props.inputStyle === 'filled' ? 'white' : 'black',
+    border: props.inputStyle === 'outline' ? '2px solid lightgrey' : 'none',
+    borderBottom:
+      props.inputStyle === 'filled' ? 'null' : '2px solid lightgrey',
+    outline: 'none',
+    borderRadius: props.inputStyle !== undefined ? '5px' : '0px',
+    paddingLeft: '8px',
+    boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.438)'
   }
 
   return (
-        <input
-          className={styles.teamOne}
-          style={showStyles()}
-          type={props.type}
-          value={props.value}
-          onChange={props.onChange}
-          placeholder={props.placeholder}
-        />
+    <input
+      className={styles.teamOne}
+      style={standardStyle}
+      type={props.type}
+      value={props.value}
+      onChange={props.onChange}
+      placeholder={props.placeholder}
+    />
   )
 }
 
