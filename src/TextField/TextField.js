@@ -13,7 +13,7 @@ const TextField = (props) => {
     outline: 'none',
     borderRadius: props.inputStyle !== undefined ? '5px' : '0px',
     paddingLeft: '8px',
-    boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.438)'
+    boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)'
   }
 
   return (
