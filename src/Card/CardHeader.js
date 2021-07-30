@@ -7,11 +7,11 @@ const CardHeader = (props) => {
       padding: '10px'
     },
     title: {
-      margin: '10px 10px 0px 10px',
+      padding: '10px 10px 0px 10px',
       fontWeight: 'bold'
     },
     subTitle: {
-      margin: '0px 10px 10px 10px',
+      padding: '0px 10px 10px 10px',
       fontWeight: 'lighter',
       fontSize: '12px'
     }

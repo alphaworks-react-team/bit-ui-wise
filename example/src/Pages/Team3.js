@@ -14,6 +14,7 @@ import PropTypes from 'prop-types'
 const Team3 = () => {
   const styles = {
     display: 'flex',
+    flexFlow: 'wrap',
     justifyContent: 'space-around',
     alignItems: 'center',
     height: '100vh',
@@ -21,15 +22,15 @@ const Team3 = () => {
   }
 
   const leftSide = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly'
+    // display: 'flex',
+    // flexDirection: 'column',
+    // justifyContent: 'space-evenly'
   }
 
   return (
     <div style={styles}>
       {/* VERSION 1 */}
-      <CardTemplate
+      {/* <CardTemplate
         title='hello'
         subTitle='subtitle'
         img={'https://picsum.photos/400/600'}
@@ -43,36 +44,84 @@ const Team3 = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
         ad
-      </CardTemplate>
+      </CardTemplate> */}
 
       {/* VERSION 2 */}
-      <Card direction=''>
+      <Card size='sm'>
+        <CardImage height='300px' img={'https://via.placeholder.com/150/'} />
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
-        <CardImage img={'https://picsum.photos/400/600'} />
-        <CardText bg="green">
-          
-          <Typography variant="header">this is a header</Typography>
-         {/* <Typography variant="sub-header">this is sub-header</Typography>
-         <Typography variant="body">blahblah blah body content</Typography>
-        */}
-
-        </CardText>
-        <CardButton
+        {/* <CardText bg='green'>
+          <Typography variant='header'>Hello</Typography>
+          <Typography variant='sub-header'>this</Typography>
+          <Typography variant='body'>
+            sdadsadjkhasbdhjasvdjhasvdhjasb hjsbakjsbdjkas d Lorem ipsum dolor,
+            sit amet consectetur adipisicing elit.
+          </Typography>
+        </CardText> */}
+        {/* <CardButton
           buttons={[
             <Button variant={'delete'}>Delete Me!</Button>,
             <Button variant={'primary'}>Click Me!</Button>
           ]}
+        /> */}
+      </Card>
+
+      <Card size='md'>
+        <CardImage
+          size='lrg'
+          imgSize='contain'
+          // height='800px'
+          img={'https://via.placeholder.com/150/'}
         />
+        <CardHeader title='hello' subTitle='hello again'>
+          <Typography variant='header'>this is a header</Typography>
+          <Typography variant='sub-header'>this is sub-header</Typography>
+        </CardHeader>
+        {/* <CardText bg='green'>
+          <Typography variant='header'>Hello</Typography>
+          <Typography variant='sub-header'>this</Typography>
+          <Typography variant='body'></Typography>
+        </CardText> */}
+        {/* <CardButton
+          buttons={[
+            <Button variant={'delete'}>Delete Me!</Button>,
+            <Button variant={'primary'}>Click Me!</Button>
+          ]}
+        /> */}
+      </Card>
+
+      <Card size='lrg'>
+        <CardHeader title='hello' subTitle='hello again'>
+          <Typography variant='header'>this is a header</Typography>
+          <Typography variant='sub-header'>this is sub-header</Typography>
+        </CardHeader>
+        {/* <CardImage img={'https://via.placeholder.com/150/'} /> */}
+        <CardText bg='green'>
+          <Typography variant='header'>Hello</Typography>
+          <Typography variant='sub-header'>this</Typography>
+          <Typography variant='body'></Typography>
+        </CardText>
+        {/* <CardButton
+          buttons={[
+            <Button variant={'delete'}>Delete Me!</Button>,
+            <Button variant={'primary'}>Click Me!</Button>
+          ]}
+        /> */}
       </Card>
 
       {/* VERSION 3 SIDE MODE */}
-      <Card direction='row' width={'auto'}>
+      {/* <Card direction='row'>
         <div style={leftSide}>
           <CardHeader title='hello' subTitle='hello again'></CardHeader>
-
+          <CardText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            harum molestias fugit voluptates, architecto repellat sequi placeat
+            perspiciatis impedit deleniti quidem aspernatur aliquid saepe id
+            dolorum laboriosam minima! Accusantium, dolorum!
+          </CardText>
           <CardButton
             buttons={[
               <Button size='small' variant={'delete'}>
@@ -87,7 +136,7 @@ const Team3 = () => {
         <div>
           <CardImage img={'https://picsum.photos/400/600'} />
         </div>
-      </Card>
+      </Card> */}
     </div>
   )
 }
