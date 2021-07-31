@@ -1,28 +1,24 @@
 import React from 'react'
 import {Button} from 'bit-ui-wise'
+import {StyledButton} from 'bit-ui-wise'
+
 
 const Team2 = () => {
   return (
     <div>
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center'}}>
-      <Button size="large" variant="primary">Primary</Button>
-      <Button size="large" variant="primary" type="outlined">Primary</Button>
-      <Button size="large" variant="primary">Primary</Button>
-      <Button size="medium" variant="secondary">Secondary</Button>
-      <Button size="small" variant="delete">Small</Button>
+      <StyledButton size="large" variant="primary">Primary</StyledButton>
+      <StyledButton size="medium" variant="secondary">Primary</StyledButton>
+      <StyledButton size="small" variant="send" type="contained">outlined</StyledButton>
+      <StyledButton size="medium" variant="primary" type="outlined">outlined</StyledButton>
+      <StyledButton size="large" type="outlined" variant="send">outlined</StyledButton>
+      <StyledButton variant="primary"size="medium" type="outlined">outlined</StyledButton>
+      <StyledButton size="large" type="outlined">outlined</StyledButton>
+
+
       </div>
-      <Button variant="warning">Warning</Button>
-      <Button size="medium" variant="secondary" type="outlined">Outlined</Button>
-      <Button size="small" variant="delete" type="outlined">Delete</Button>
-      <Button size="large" variant="send">Send</Button>
-      <Button variant="upload">Upload</Button>
-      <Button size="medium" variant="save">Save</Button>
-      <Button size="small" variant="submit">Submit</Button>
-      {/* <Button variant="shuffle">Delete</Button>
-      <Button variant="play">Delete</Button>
-      <Button variant="forward">Delete</Button>
-      <Button variant="rewind">Delete</Button> */}
+
     </div>
   )
 }
