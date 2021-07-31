@@ -24,8 +24,9 @@ const Card = (props) => {
     height: `${props.height}`,
     backgroundColor: 'white',
     boxShadow: '3px 3px 5px black',
+    // borderRadius: '15px',
     display: 'flex',
-    flexDirection: props.direction === 'row' ? 'row' : 'column'
+    flexDirection: props.direction === 'row' ? props.position : 'column'
   }
 
   return <div style={styles}>{props.children}</div>

@@ -3,8 +3,8 @@ import React from 'react'
 const CardText = (props) => {
   const styles = {
     textBody: {
-      background: props.bg || 'white'
-      // padding: "10px"
+      background: props.bg || 'white',
+      padding: '10px'
     }
   }
   return (

@@ -48,49 +48,83 @@ const Team3 = () => {
 
       {/* VERSION 2 */}
       <Card size='sm'>
-        <CardImage height='300px' img={'https://via.placeholder.com/150/'} />
+        <CardImage img={'https://via.placeholder.com/275/'} />
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
-        {/* <CardText bg='green'>
+        <CardText>
           <Typography variant='header'>Hello</Typography>
           <Typography variant='sub-header'>this</Typography>
           <Typography variant='body'>
-            sdadsadjkhasbdhjasvdjhasvdhjasb hjsbakjsbdjkas d Lorem ipsum dolor,
-            sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Consectetur quidem ducimus assumenda aperiam cum aliquam, distinctio
+            laudantium facilis id, dolor incidunt? Sunt autem consequatur
+            delectus perspiciatis consectetur accusantium explicabo sequi.
           </Typography>
-        </CardText> */}
-        {/* <CardButton
+        </CardText>
+        <CardButton
           buttons={[
-            <Button variant={'delete'}>Delete Me!</Button>,
-            <Button variant={'primary'}>Click Me!</Button>
+            <Button size='lrg' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='lrg' variant={'primary'}>
+              pay now
+            </Button>
           ]}
-        /> */}
+        />
       </Card>
 
       <Card size='md'>
         <CardImage
-          size='lrg'
-          imgSize='contain'
+          // imgSize='sm'
+          bgSize='cover'
           // height='800px'
-          img={'https://via.placeholder.com/150/'}
+          img={'https://via.placeholder.com/550/'}
         />
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
-        {/* <CardText bg='green'>
+        <CardText>
           <Typography variant='header'>Hello</Typography>
           <Typography variant='sub-header'>this</Typography>
-          <Typography variant='body'></Typography>
-        </CardText> */}
-        {/* <CardButton
+          <Typography variant='body'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            sit at, ipsam magnam atque corrupti! Quos ipsa similique soluta,
+            atque doloribus eos perspiciatis blanditiis earum inventore
+            voluptates. Tempore, quas ullam.
+          </Typography>
+        </CardText>
+        <CardButton
+          position='left'
           buttons={[
-            <Button variant={'delete'}>Delete Me!</Button>,
-            <Button variant={'primary'}>Click Me!</Button>
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='md' variant={'primary'}>
+              Click Me!
+            </Button>
           ]}
-        /> */}
+        />
       </Card>
 
       <Card size='lrg'>
@@ -98,18 +132,27 @@ const Team3 = () => {
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
-        {/* <CardImage img={'https://via.placeholder.com/150/'} /> */}
-        <CardText bg='green'>
+        <CardImage img={'https://via.placeholder.com/825/'} />
+        <CardText>
           <Typography variant='header'>Hello</Typography>
           <Typography variant='sub-header'>this</Typography>
-          <Typography variant='body'></Typography>
+          <Typography variant='body'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            veniam ut officiis quam tempore omnis vel eligendi soluta voluptatem
+            hic aliquam, quibusdam obcaecati aliquid perspiciatis cum! Soluta
+            dignissimos nostrum impedit.
+          </Typography>
         </CardText>
-        {/* <CardButton
+        <CardButton
           buttons={[
-            <Button variant={'delete'}>Delete Me!</Button>,
-            <Button variant={'primary'}>Click Me!</Button>
+            <Button size='lrg' variant={'delete'}>
+              Delete Me!
+            </Button>,
+            <Button size='lrg' variant={'primary'}>
+              Click Me!
+            </Button>
           ]}
-        /> */}
+        />
       </Card>
 
       {/* VERSION 3 SIDE MODE */}

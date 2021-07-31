@@ -2,7 +2,7 @@ import React from 'react'
 
 const Text = (props) => {
   const header = {
-    fontSize: '46px',
+    fontSize: '23px',
     fontFamily: 'Sans-serif',
     fontWeight: '700'
   }
