@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './button.module.css'
+import styled from 'styled-components'
+
 
 const Button = (props) => {
   const commonStyle = {
@@ -94,11 +96,11 @@ const Button = (props) => {
   return (
     <div>
       {props.type === "outlined" ? 
-        <button className={styles.outlinedBtn} style={{...outlineStyles, ...commonStyle}}>
-            {props.children}</button>
+        <Button type="primary">
+            {props.children}</Button>
       :
-        <button className={styles.bitUiWiseBtn} style={{...btnStyles, ...commonStyle}}>
-            {props.children}</button>
+        <Button type="outlined">
+            {props.children}</Button>
       }
     </div>
   ) 
