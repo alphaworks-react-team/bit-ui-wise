@@ -1,14 +1,14 @@
 ## Buttons
 
 ```jsx
-    <Button size="small" variant="primary">Small</Button>
-    <Button size="medium" variant="primary">Medium</Button>
-    <Button size="large" variant="primary">Large</Button>
+    <Button size="sm" variant="primary">Small</Button>
+    <Button size="md" variant="primary">Medium</Button>
+    <Button size="lrg" variant="primary">Large</Button>
 ```
 
 Props
 
-**'size'** has available options: 'sm' for small, 'md' for medium, 'rgl' for large.\
+**'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
 ![Buttons](./assets/button-sizes.png)
 
 **'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
