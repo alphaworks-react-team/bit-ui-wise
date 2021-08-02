@@ -4,7 +4,7 @@ import styles from './button.module.css'
 import styled from 'styled-components'
 import {css} from 'styled-components'
 import Button from './Button'
-// import {returnPadding} from './utils'
+import returnPadding from './utils'
 
 
 // const returnPadding = (size) => {
@@ -34,79 +34,71 @@ const StyledButton = styled.button`
     margin: 3px;
     text-transform: uppercase;
 
-    padding: ${props => props.size === "small"
-    ? "5px 10px"
-    : props.size ==="medium" 
-    ? "8px 15px"
-    : props.size === "large"
-    ? "10px 18px"
-    : "8px 15px"
-    };
+    padding: ${props => returnPadding(props.size)};
 
     background-color: ${props => props.variant === 'primary'
-    && props.type !== 'outlined' ? "#3f51b5"
+    && props.kind !== 'outlined' ? "#3f51b5"
     : props.variant === 'secondary'
-    && props.type !== 'outlined' ? "#FF5722"
+    && props.kind !== 'outlined' ? "#FF5722"
     : props.variant === 'delete'
-    && props.type !== 'outlined' ? '#d91111'
+    && props.kind !== 'outlined' ? '#d91111'
     : props.variant === 'warning'
-    && props.type !== 'outlined' ? 'gold'
+    && props.kind !== 'outlined' ? 'gold'
     : props.variant === 'send'
-    && props.type !== 'outlined' ? '#078c22'
-    : props.type === "outlined"
+    && props.kind !== 'outlined' ? '#078c22'
+    : props.kind === "outlined"
     ? "white"
     : '#3f51b5'
     };
 
     color: ${props => props.variant === 'primary'
-    && props.type === 'outlined' ? "#3f51b5"
+    && props.kind === 'outlined' ? "#3f51b5"
     : props.variant === 'secondary'
-    && props.type === 'outlined' ? "#FF5722"
+    && props.kind === 'outlined' ? "#FF5722"
     : props.variant === 'delete'
-    && props.type === 'outlined' ? '#d91111'
+    && props.kind === 'outlined' ? '#d91111'
     : props.variant === 'warning'
-    && props.type === 'outlined' ? 'gold'
+    && props.kind === 'outlined' ? 'gold'
     : props.variant === 'send'
-    && props.type === 'outlined' ? '#078c22'
+    && props.kind === 'outlined' ? '#078c22'
     : "white"
     };
 
-    border: ${props => props.type !== 'outlined'
-    && 'none'
+    outline: none;
+
+    border: ${props => props.kind === 'outlined' &&
+    props.variant === 'primary'
+    ? '1px solid #3f51b5'
+    : props.kind === "outlined" && props.variant === 'secondary'
+    ? '1px solid #FF5722'
+    : props.kind === "outlined" && props.variant === 'delete'
+    ? '1px solid #d91111'
+    : props.kind === "outlined" && props.variant === 'warning'
+    ? '1px solid gold'
+    : props.kind === "outlined" && props.variant === 'send'
+    ? '1px solid #078c22'
+    : 'none'
     }; 
     
-    border-color: ${props => props.type === "outlined" &&
-    props.variant === 'primary'
-    ? '#3f51b5'
-    : props.type === "outlined" && props.variant === 'secondary'
-    ? '#FF5722'
-    : props.type === "outlined" && props.variant === 'delete'
-    ? '#d91111'
-    : props.type === "outlined" && props.variant === 'warning'
-    ? 'gold'
-    : props.type === "outlined" && props.variant === 'send'
-    ? '#078c22'
-    : 'none'
-};
-
 
     &:hover {
         transition: all 0.3s ease;
         transform: translateY(-1px);
-        box-shadow: ${props => props.type === 'outlined'
+        box-shadow: ${props => props.kind === 'outlined'
         ? 'inset 0 0 7px rgba(0,0,0,0.10), 2px 3px 5px rgba(0,0,0,0.25)'
         : 'inset 0 0 20px rgba(0,0,0,0.18), 2px 3px 5px rgba(0,0,0,0.25)'
     };
 }
 `
+
 StyledButton.propTypes = {
     variant: PropTypes.string,
     size: PropTypes.string
-  }
-  StyledButton.defaultProps = {
+}
+StyledButton.defaultProps = {
     variant: 'primary',
     size: 'medium'
-  }
+}
 
 
 export default StyledButton

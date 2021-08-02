@@ -1,5 +1,5 @@
-module.exports = {
-    returnPadding: (size) => {
+
+const returnPadding = (size) => {
         switch (size) {
             case "small":
                 return "5px 10px";
@@ -11,4 +11,4 @@ module.exports = {
                 return "8px 15px"
         }
     }
-}
+export default returnPadding;
