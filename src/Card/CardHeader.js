@@ -6,9 +6,11 @@ const CardHeader = (props) => {
     main: {
       padding: '10px'
     },
+
     title: {
       padding: '10px 10px 0px 10px',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      textAlign: 'center'
     },
     subTitle: {
       padding: '0px 10px 10px 10px',

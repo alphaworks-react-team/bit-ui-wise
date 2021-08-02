@@ -10,6 +10,7 @@ const CardImage = (props) => {
     image: {
       backgroundImage: `url(${props.img})`,
       backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
       backgroundSize: props.bgSize ? props.bgSize : 'contain',
       height: props.height ? props.height : '300px',
       width:
