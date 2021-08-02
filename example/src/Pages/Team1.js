@@ -10,9 +10,9 @@ const Team1 = () => {
       <Typography>This is some text</Typography>
 
       <TextField />
-      <TextField placeholder={'im a placeholder'} />
-      <TextField inputStyle={'outline'} value={'im a value'} width={'25%'} />
-      <TextField inputStyle={'filled'} value={'im a value'} width={'25%'} />
+      <TextField placeholder='im a placeholder' />
+      <TextField inputStyle='outline' value='im a value' width='25%' />
+      <TextField inputStyle='filled' value='im a value' width='25%' />
     </div>
   )
 }
