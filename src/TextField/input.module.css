@@ -1,3 +1,11 @@
-.teamOne {
-  color: blue;
+.plainTextBox:hover {
+  color: blue !important;
+}
+
+.filledTextBox:hover {
+
+}
+
+.outlineTextBox:hover{
+  
 }

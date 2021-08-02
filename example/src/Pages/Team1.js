@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, TextField } from 'bit-ui-wise'
+import { Typography, TextField, practice } from 'bit-ui-wise'
 
 const Team1 = () => {
   const styles = {
