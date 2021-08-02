@@ -48,7 +48,7 @@ const Team3 = () => {
 
       {/* VERSION 2 */}
       <Card size='sm'>
-        <CardImage img={'https://via.placeholder.com/275/'} />
+        <CardImage img={'https://via.placeholder.com/300/'} />
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
@@ -77,10 +77,10 @@ const Team3 = () => {
 
       <Card size='md'>
         <CardImage
-          imgSize='sm'
+          // imgSize='sm'
           bgSize='cover'
           // height='800px'
-          img={'https://via.placeholder.com/550/'}
+          img={'https://via.placeholder.com/825/'}
         />
         <CardHeader title='hello' subTitle='hello again'>
           <Typography variant='header'>this is a header</Typography>
