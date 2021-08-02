@@ -58,9 +58,9 @@ const StyledButton = styled.button`
     : '#3f51b5'
     };
 
-    border: ${props => props.type === 'contained'
+    border: ${props => props.type !== 'outlined'
     && 'none'
-    };
+    }; 
     
     border-color: ${props => props.type === "outlined" &&
     props.variant === 'primary'
@@ -82,8 +82,6 @@ const StyledButton = styled.button`
         transform: translateY(-1px);
         box-shadow: ${props => props.type === 'outlined'
         ? 'inset 0 0 7px rgba(0,0,0,0.10), 2px 3px 5px rgba(0,0,0,0.25)'
-        : props.type === 'contained'
-        ? 'inset 0 0 20px rgba(0,0,0,0.18), 2px 3px 5px rgba(0,0,0,0.25)'
         : 'inset 0 0 20px rgba(0,0,0,0.18), 2px 3px 5px rgba(0,0,0,0.25)'
     };
 }

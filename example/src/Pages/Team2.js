@@ -15,6 +15,7 @@ const Team2 = () => {
       <StyledButton size="large" type="outlined" variant="send">outlined</StyledButton>
       <StyledButton variant="primary"size="medium" type="outlined">outlined</StyledButton>
       <StyledButton size="large" type="outlined">outlined</StyledButton>
+      <Button>original</Button>
 
 
       </div>
