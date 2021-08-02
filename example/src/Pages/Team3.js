@@ -132,8 +132,10 @@ const Team3 = () => {
           <Typography variant='header'>this is a header</Typography>
           <Typography variant='sub-header'>this is sub-header</Typography>
         </CardHeader>
-        <CardImage img={'https://via.placeholder.com/825/'} />
-        <CardText>
+{    /*    <CardImage img={'https://via.placeholder.com/825/'} /> */
+<CardImage img={'https://picsum.photos/400/600'} />
+
+}        <CardText>
           <Typography variant='header'>Hello</Typography>
           <Typography variant='sub-header'>this</Typography>
           <Typography variant='body'>
@@ -155,6 +157,31 @@ const Team3 = () => {
         />
       </Card>
 
+      {/*DEFAULT PROPS*/}
+      <div style={{width: '500px'}}>
+       <Card >
+        <CardHeader >
+          <Typography variant='header'>this is a header</Typography>
+          <Typography variant='sub-header'>this is sub-header</Typography>
+        </CardHeader>
+{    /*    <CardImage img={'https://via.placeholder.com/825/'} /> */
+<CardImage img={'https://picsum.photos/400/600'} />
+
+}        <CardText>
+          <Typography variant='header'>Hello</Typography>
+          <Typography variant='sub-header'>this</Typography>
+          <Typography variant='body'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            veniam ut officiis quam tempore omnis vel eligendi soluta voluptatem
+            hic aliquam, quibusdam obcaecati aliquid perspiciatis cum! Soluta
+            dignissimos nostrum impedit.
+          </Typography>
+        </CardText>
+       
+      </Card>
+      </div>
+
+      
       {/* VERSION 3 SIDE MODE */}
       {/* <Card direction='row'>
         <div style={leftSide}>
