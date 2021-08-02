@@ -4,7 +4,7 @@ import styles from './button.module.css'
 import styled from 'styled-components'
 import {css} from 'styled-components'
 import Button from './Button'
-import returnPadding from './utils'
+//import returnPadding from './utils'
 
 
 // const returnPadding = (size) => {
@@ -13,18 +13,18 @@ import returnPadding from './utils'
 //     else return "8px 15px"
 // }
 
-// const returnPadding = (size) => {
-//     switch (size) {
-//         case "small":
-//             return "5px 10px";
-//         case "medium":
-//             return "8px 15px"
-//         case "large":
-//             return "10px 18px"
-//         default:
-//             return "8px 15px"
-//     }
-// }
+const returnPadding = (size) => {
+    switch (size) {
+        case "small":
+            return "5px 10px";
+        case "medium":
+            return "8px 15px"
+        case "large":
+            return "10px 18px"
+        default:
+            return "8px 15px"
+    }
+}
 
 const StyledButton = styled.button`
     box-shadow: 0 1px 5px rgba(0,0,0,0.5);
@@ -79,6 +79,11 @@ const StyledButton = styled.button`
     ? '1px solid #078c22'
     : 'none'
     }; 
+
+    ${props => props.disabled && css`
+        background-color: grey;
+        cursor: auto;
+    `}
     
 
     &:hover {
