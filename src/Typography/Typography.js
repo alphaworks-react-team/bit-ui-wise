@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Large = styled.h1`
+  margin: 0;
+  padding: 0;
   font-size: ${(props) => props.fontSize || '3.5em'};
   color: ${(props) => props.fontColor || 'black'};
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
@@ -9,6 +11,8 @@ const Large = styled.h1`
 `
 
 const Medium = styled.h2`
+  margin: 0;
+  padding: 0;
   font-size: ${(props) => props.fontSize || '2.5em'};
   color: ${(props) => props.fontColor || 'green'};
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
@@ -20,6 +24,8 @@ const Medium = styled.h2`
 `
 
 const Small = styled.h3`
+  margin: 0;
+  padding: 0;
   font-size: ${(props) => props.fontSize || '1.2em'};
   color: ${(props) => props.fontColor || 'blue'};
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
