@@ -58,6 +58,19 @@ const StyledButton = styled.button`
     : '#3f51b5'
     };
 
+    color: ${props => props.variant === 'primary'
+    && props.type === 'outlined' ? "#3f51b5"
+    : props.variant === 'secondary'
+    && props.type === 'outlined' ? "#FF5722"
+    : props.variant === 'delete'
+    && props.type === 'outlined' ? '#d91111'
+    : props.variant === 'warning'
+    && props.type === 'outlined' ? 'gold'
+    : props.variant === 'send'
+    && props.type === 'outlined' ? '#078c22'
+    : "white"
+    };
+
     border: ${props => props.type !== 'outlined'
     && 'none'
     }; 
@@ -86,5 +99,14 @@ const StyledButton = styled.button`
     };
 }
 `
+StyledButton.propTypes = {
+    variant: PropTypes.string,
+    size: PropTypes.string
+  }
+  StyledButton.defaultProps = {
+    variant: 'primary',
+    size: 'medium'
+  }
+
 
 export default StyledButton

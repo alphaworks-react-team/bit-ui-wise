@@ -1,6 +1,6 @@
 import React from 'react'
-import {Button} from 'bit-ui-wise'
-import {StyledButton} from 'bit-ui-wise'
+import {Button, StyledButton} from 'bit-ui-wise'
+
 
 
 const Team2 = () => {
@@ -13,10 +13,9 @@ const Team2 = () => {
       <StyledButton size="small" variant="send" type="contained">outlined</StyledButton>
       <StyledButton size="medium" variant="primary" type="outlined">outlined</StyledButton>
       <StyledButton size="large" type="outlined" variant="send">outlined</StyledButton>
-      <StyledButton variant="primary"size="medium" type="outlined">outlined</StyledButton>
+      <StyledButton variant="warning"size="medium" type="outlined">outlined</StyledButton>
       <StyledButton size="large" type="outlined">outlined</StyledButton>
-      <Button>original</Button>
-
+      <StyledButton type="outlined">no props</StyledButton>
 
       </div>
 
