@@ -1,37 +1,75 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Text = (props) => {
-  const header = {
-    fontSize: '46px',
-    fontFamily: 'Sans-serif',
-    fontWeight: '700'
+const Large = styled.h1`
+  margin: 0;
+  padding: 0;
+  font-size: ${(props) => props.fontSize || '3.5em'};
+  color: ${(props) => props.fontColor || 'black'};
+  font-family: ${(props) => props.fontFamily || 'sans-serif'};
+  font-weight: ${(props) => props.fontWeight || '700'};
+`
+
+const Medium = styled.h2`
+  margin: 0;
+  padding: 0;
+  font-size: ${(props) => props.fontSize || '2.5em'};
+  color: ${(props) => props.fontColor || 'green'};
+  font-family: ${(props) => props.fontFamily || 'sans-serif'};
+  font-weight: ${(props) => props.fontWeight || '400'};
+
+  &:hover {
+    color: blue;
   }
-  const supportHeader = {
-    fontSize: '46px',
-    fontFamily: 'Sans-serif',
-    fontWeight: '700',
-    color: 'grey'
-  }
-  const subtitle = {
-    fontSize: '30px',
-    fontFamily: 'Sans-serif',
-    fontWeight: '500'
-  }
-  const body = {
-    fontSize: '18px'
-  }
+`
+
+const Small = styled.h3`
+  margin: 0;
+  padding: 0;
+  font-size: ${(props) => props.fontSize || '1.2em'};
+  color: ${(props) => props.fontColor || 'orange'};
+  font-family: ${(props) => props.fontFamily || 'sans-serif'};
+  font-weight: ${(props) => props.fontWeight || '400'};
+`
+
+const Typography = (props) => {
   switch (props.variant) {
-    case 'header':
-      return <h1 style={header}>{props.children}</h1>
-    case 'sub-header':
-      return <h1 style={supportHeader}>{props.children}</h1>
-    case 'subtitle':
-      return <h3 style={subtitle}>{props.children}</h3>
-    case 'body':
-      return <p style={body}>{props.children}</p>
+    case 'large':
+      return (
+        <Large
+          fontSize={props.fontSize}
+          fontColor={props.fontColor}
+          fontFamily={props.fontFamily}
+          fontWeight={props.fontWeight}
+        >
+          {props.children}
+        </Large>
+      )
+    case 'medium':
+      return (
+        <Medium
+          fontSize={props.fontSize}
+          fontColor={props.fontColor}
+          fontFamily={props.fontFamily}
+          fontWeight={props.fontWeight}
+        >
+          {props.children}
+        </Medium>
+      )
+    case 'small':
+      return (
+        <Small
+          fontSize={props.fontSize}
+          fontColor={props.fontColor}
+          fontFamily={props.fontFamily}
+          fontWeight={props.fontWeight}
+        >
+          {props.children}
+        </Small>
+      )
     default:
-      return <p>{props.children}</p>
+      return <Medium>{props.children}</Medium>
   }
 }
 
-export default Text
+export default Typography
