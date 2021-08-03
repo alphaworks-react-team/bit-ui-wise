@@ -3,7 +3,8 @@ import React from 'react'
 const CardHeader = (props) => {
   const style = {
     main: {
-      padding: '10px'
+      padding: '10px',
+      backgroundColor: props.bgColor || 'white',
     },
 
     title: {

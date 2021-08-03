@@ -15,7 +15,8 @@ const CardButton = (props) => {
         ? 'flex-end'
         : 'space-evenly',
     alignContent: 'space-around',
-    alignItems: 'space-between'
+    alignItems: 'space-between',
+    backgroundColor: props.bgColor || 'white',
     // minHeight: {minHeight: "51px" ? minHeight: '125px' :  null}
   }
   return (

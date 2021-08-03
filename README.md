@@ -27,6 +27,11 @@ _If no props are passed, the default styling will be size 'md', variant 'primary
 | variant: | primary   | secondary | warning | delete | send |
 | type     | oputlined | contained |         |        |      |
 
+\
+&nbsp;
+\
+&nbsp;
+
 # Card
 
 The card component is designed to take in other components like **Typography** and **Button**. As you import these components in to your card, the content within the card component will flex as needed to the height and width necessary.
@@ -60,82 +65,176 @@ class CardButton extends Component {
   }
 }
 ```
+
+\
+&nbsp;
+
 ## Default Card
-The default option for the card component is an empty container wit set styling, that allows the user to add content at their own discretion. 
+
+The default option for the card component is an empty container wit set styling, that allows the user to add content at their own discretion.
 !(image here)[]
+
 <hr />
 When users add their own content, the card will resize to the proper dimensions within itself, giving the content room to grow or shrink.
 (image here)[]
 
+---
 
-## Card Props
+\
+&nbsp;
+
+## Card
+
 <hr />
 
 Card component also returns props.children so all components within the Card component will take those style properties with it.
 
 <hr />
 
-| property              | props      |           |          |         | default |
-| --------------------- | ---------- | --------- | -------- | ------- |  -----  |
-| minWidth && maxWidth: | size:      |   'sm'    |   'md'   |  'lrg'  |  '100%' |
-| height:               | height:    |    **     |          |         |         |
-| flexDirection:        | direction: |  'column' |          |         |  'row'  |
-| backgroundColor:      | bgColor:   |   ***     |          |         | 'white' |
+### Props
 
-** Value can be any pixel, rem, percentage; ex (100px, 10rem, 100%);
+| property              | props      | default | values        |          |                  |
+| --------------------- | ---------- | ------- | ------------- | -------- | ---------------- |
+| minWidth && maxWidth: | size:      | '100%'  | 'sm'          | 'md'     | 'lrg'            |
+| height:               | height:    | null    | 'px'          | 'rem'    | '%'              |
+| flexDirection:        | direction: | 'row'   | 'row-reverse' | 'column' | 'column-reverse' |
+| backgroundColor:      | bgColor:   | 'white' | hex           | rgb      | 'color'          |
 
-*** Value can be any hex, rbg, or string color;
+<hr />
 
-
-```jsx
-<Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
+```
+  <Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
     <Child Component>
-</Card>
+  </Card>
 ```
 
 <hr />
 
-## CardHeader Props
+\
+&nbsp;
+
+## CardHeader
 
 <hr />
 
-CardHeader only takes {props.children} which will give a container for the typography component
+CardHeader takes {props.children} which will give a container for the typography component
 
-```jsx
-<CardHeader>
+<hr />
+
+### Props
+
+| property         | props    | default | values |     |         |
+| ---------------- | -------- | ------- | ------ | --- | ------- |
+| backgroundColor: | bgColor: | 'white' | hex    | rgb | 'color' |
+
+```
+  <CardHeader bgColor={ #hex, RGB, 'white' }>
     <Typography variant='header'>Header</Typography>
     <Typography variant='sub-header'>SubHeader</Typography>
-</CardHeader>
-```
-*Refer to Typography for specific Typography Props
-
-<hr />
-
-## CardImage Props
-<hr />
-
-CardImage takes in a image as a prop with a url, also props passed allowing for sizing and positioning.
-
-<hr />
-
-| property              | props      |           |          |         |  default  |
-| --------------------- | ---------- | --------- | -------- | ------- |  -------  |
-| backgroundImage:      | img:       |    url    |          |         |    null   |
-| height:               | height:    | '(num)px' | ex: '150px' |         |    300px  |
-| backgroundSize        | bgSize:    |   **      |          |         | 'contain' |
-| backgroundColor:      | bgColor:   |   HEX     |   RGB    |   StringValue      |  'white'  |
-
-
-** Value can be any backgroundSize value ;
-
-
-```
-<Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
-    <Child Component>
-</Card>
+  </CardHeader>
 ```
 
+\*Refer to Typography for specific Typography Props
+
 <hr />
+
+\
+&nbsp;
+
+## CardImage
+
+<hr />
+
+CardImage is a self closing component that takes in a image as a prop with a url, also props passed allowing for sizing and positioning.
+
+<hr />
+
+### Props
+
+| property         | props    | default   | values  |       |         |
+| ---------------- | -------- | --------- | ------- | ----- | ------- |
+| backgroundColor: | bgColor: | 'white'   | hex     | rgb   | 'color' |
+| backgroundImage: | img:     | null      | url     |       |         |
+| backgroundSize:  | bgSize:  | 'contain' | 'cover' | '%'   | 'px'    |
+| height:          | height:  | '300px'   | 'px'    | 'rem' | '%'     |
+| width:           | imgSize: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
+
+<hr />
+
+```
+<CardImage img={'url'} bgSize='cover' height='150px' />
+```
+
+<hr />
+
+\
+&nbsp;
+
+## CardText
+
+<hr />
+
+CardText takes {props.children} which will give a container for the typography component
+
+<hr />
+
+### Props
+
+| property         | props    | default | values |     |         |
+| ---------------- | -------- | ------- | ------ | --- | ------- |
+| backgroundColor: | bgColor: | 'white' | hex    | rgb | 'color' |
+
+<hr />
+
+```
+<CardText bgColor='lightgrey'>
+  <Typography> Hello World! </Typography>
+<CardText />
+```
+
+\*Refer to Typography for specific Typography Props
+
+<hr />
+
+\
+&nbsp;
+
+## CardButton
+
+<hr />
+
+CardButton takes in an array of buttons using props and the .map() method.
+
+<hr />
+
+### Props
+
+| property         | props     | default        | values                  |          |                        |
+| ---------------- | --------- | -------------- | ----------------------- | -------- | ---------------------- |
+| justifyContent:  | position: | 'space-evenly' | 'left' === 'flex-start' | 'center' | 'right' === 'flex-end' |
+| backgroundColor: | bgColor:  | 'white'        | hex                     | rgb      | 'color'                |
+
+<hr />
+
+```
+<CardButton position='right'>
+  buttons={[
+            <Button size='md' variant={'primary'}>
+              Click Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>
+          ]}
+<CardButton />
+```
+
+<hr />
+
+\
+&nbsp;
+\
+&nbsp;
 
 # Input
 
