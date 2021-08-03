@@ -40,7 +40,7 @@ const Team3 = () => {
           <Typography>Lorem ipsum dolor sit amet.</Typography>
         </CardText>
         <CardButton
-          buttons={[<Button>Click me</Button>, <Button>Click me</Button>]}
+          buttons={[<Button color="none">Click me</Button>, <Button>Click me</Button>]}
         />
       </Card>
     </div>
