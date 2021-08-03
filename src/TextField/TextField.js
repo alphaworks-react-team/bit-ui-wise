@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const StandardStyle = styled.input`
+  name: ${(props) => props.name || ''};
   type: ${(props) => props.type || ''};
   placeholder: ${(props) => props.placeholder || ''};
   value: ${(props) => props.value || ''};
@@ -12,18 +13,19 @@ const StandardStyle = styled.input`
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 3px solid rgb(48,48,48,0.3);
+  border-bottom: ${(props) => props.borderBottom || '2px solid rgb(48,48,48,0.3)'};
   outline: none;
   margin: none;
   padding: none;
 
     &:hover {
-      border-bottom: 3px solid rgb(48,48,48);
-      transition: all 0.5s ease;
+      border-bottom: ${(props) =>
+        props.borderBottomHover || '2px solid rgb(48,48,48)'};
 `
 
 const FilledStyle = styled.input`
-type: ${(props) => props.type || ''};
+  name: ${(props) => props.name || ''};
+  type: ${(props) => props.type || ''};
   placeholder: ${(props) => props.placeholder || ''};
   value: ${(props) => props.value || ''};
   width: ${(props) => props.width || '100%'};
@@ -35,41 +37,52 @@ type: ${(props) => props.type || ''};
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 3px solid rgb(48,48,48,0.3);
+  border-bottom: 2px solid rgb(48,48,48,0.3);
   outline: none;
     margin: none;
   padding: none;
 
       &:hover {
       background-color: rgb(128,128,128);
-      border-bottom: 3px solid rgb(48,48,48);
+      border-bottom: 2px solid rgb(48,48,48);
       transition: all 0.5s ease;
 `
 
 const OutlinedStyle = styled.input`
-type: ${(props) => props.type || ''};
+  name: ${(props) => props.name || ''};
+  type: ${(props) => props.type || ''};
   placeholder: ${(props) => props.placeholder || ''};
   value: ${(props) => props.value || ''};
   width: ${(props) => props.width || '100%'};
   height: ${(props) => props.height || '2em'};
   background-color: ${(props) => props.bgColor || 'none'};
   color: ${(props) => props.fontColor || 'black'};
-  border-radius: 3px;
-  border: 3px solid rgb(168, 168, 168);
+  border-radius: 2px;
+  border: 2px solid rgb(168, 168, 168);
   outline: none;
-    margin: none;
+  margin: none;
   padding: none;
 
       &:hover {
-      border: 3px solid rgb(48,48,48);
-      transition: all 0.5s ease;
+      border: 2px solid rgb(48,48,48);
 `
 
 const TextField = (props) => {
+  // const [error, setError] = useState(false)
+  // const error = () => {
+  //   setError(!error)
+  // }
+  const [form, setForm] = useState('')
+  const onChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
   switch (props.variant) {
     case 'standard':
       return (
         <StandardStyle
+          onChange={onChange}
+          name={props.name}
           type={props.type}
           placeholder={props.placeholder}
           value={props.value}
@@ -77,6 +90,8 @@ const TextField = (props) => {
           height={props.height}
           bgColor={props.bgColor}
           fontColor={props.fontColor}
+          borderBottom={props.borderBottom}
+          borderBottomHover={props.borderBottomHover}
         >
           {props.children}
         </StandardStyle>
@@ -84,6 +99,8 @@ const TextField = (props) => {
     case 'filled':
       return (
         <FilledStyle
+          onChange={onChange}
+          name={props.name}
           type={props.type}
           placeholder={props.placeholder}
           value={props.value}
@@ -98,6 +115,8 @@ const TextField = (props) => {
     case 'outlined':
       return (
         <OutlinedStyle
+          onChange={onChange}
+          name={props.name}
           type={props.type}
           placeholder={props.placeholder}
           value={props.value}

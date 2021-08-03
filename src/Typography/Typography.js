@@ -18,8 +18,8 @@ const Medium = styled.h2`
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
   font-weight: ${(props) => props.fontWeight || '400'};
 
-  // &:hover {
-  //   color: blue;
+  &:hover {
+    color: blue;
   }
 `
 
@@ -27,7 +27,7 @@ const Small = styled.h3`
   margin: 0;
   padding: 0;
   font-size: ${(props) => props.fontSize || '1.2em'};
-  color: ${(props) => props.fontColor || 'blue'};
+  color: ${(props) => props.fontColor || 'orange'};
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
   font-weight: ${(props) => props.fontWeight || '400'};
 `
