@@ -29,6 +29,7 @@ const Team2 = () => {
       <Button color="delete" outlined>delete</Button>
       <Button color="warning" variant="outlined">warning</Button>
       <Button color="send">send</Button>
+      <Button color="lightblue">own color</Button>
       </div>
     </div>
   )

@@ -1,17 +1,27 @@
 ## Buttons
-```jsx
-    <Button size="sm" color="primary">Small</Button>
-    <Button size="md" color="secondary">Medium</Button>
-    <Button size="lrg" color="delete">Large</Button>
-    <Button variant="outlined">Default</Button>
-    <Button>Default</Button>
-    <Button color="black">Default</Button>
-```
 Props
 **'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
+```jsx
+      <Button size="sm" color="primary">small</Button>
+      <Button size="md" color="secondary">medium</Button>
+      <Button size="lrg" color="delete">Large</Button>
+      <Button>default</Button>
+```
 ![Buttons](./assets/buttonsizes.png)
 **'color'** options: 'primary', 'secondary', 'warning', 'delete', 'send', 'any color you choose'.\
+```jsx
+      <Button color="delete" outlined>delete</Button>
+      <Button color="warning" variant="outlined">warning</Button>
+      <Button color="send">send</Button>
+      <Button color="lightblue">own color</Button>
+```
 ![button-sizes](./assets/extracolors.png)
+
 **'variant'** options: 'outlined', 'contained'.\
+```jsx
+      <Button variant="outlined" size="sm" color="primary">outlined</Button>
+      <Button variant="outlined" size="md" color="secondary">outlined</Button>
+      <Button variant="outlined" size="lrg" color="send">outlined</Button>
+```
 ![button-contained](./assets/outlinedbuttons.png)
 _If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._
