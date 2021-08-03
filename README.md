@@ -72,11 +72,13 @@ class CardButton extends Component {
 ## Default Card
 
 The default option for the card component is an empty container wit set styling, that allows the user to add content at their own discretion.
-!(image here)[]
+
+!(plain card)[plaincard.png]
 
 <hr />
 When users add their own content, the card will resize to the proper dimensions within itself, giving the content room to grow or shrink.
-(image here)[]
+
+!(full card)[fullcard.png]
 
 ---
 
