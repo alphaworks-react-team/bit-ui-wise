@@ -1,7 +1,7 @@
 import React from 'react'
-import {Button, StyledButton} from 'bit-ui-wise'
+import {Button} from 'bit-ui-wise'
 import {useState} from 'react'
-
+import {FaTrashAlt} from 'react-icons/fa'
 
 const Team2 = () => {
   const [count, setCount] = useState(0);
@@ -14,16 +14,21 @@ const Team2 = () => {
   return (
     <div>
       <h1>Im for team 2</h1>
-      <div style={{display: 'flex', alignItems: 'center'}}>
-      <StyledButton onClick={toggleDisabled} size="lrg" color="primary">Primary</StyledButton>
-      <StyledButton size="lrg" color="teal">Teal</StyledButton>
-      <StyledButton size="md" color="secondary" disabled={disable}>Primary</StyledButton>
-      <StyledButton size="sm" color="send">outlined</StyledButton>
-      <StyledButton size="md" color="primary" outlined>outlined</StyledButton>
-      <StyledButton size="lrg" variant="outlined" disabled={disable}>outlined</StyledButton>
-      <StyledButton color="warning"size="md" variant="outlined">outlined</StyledButton>
-      <StyledButton onClick={() => setCount(count + 1)} size="lrg" variant="outlined">outlined</StyledButton>
-      <StyledButton onClick={() => setCount(count + 1)} >no props</StyledButton>
+      <div style={{display: 'flex', alignItems: 'center', margin: '20px'}}>
+      <Button size="sm" color="primary">small</Button>
+      <Button size="md" color="secondary">medium</Button>
+      <Button size="lrg" color="delete">Large</Button>
+      <Button>default</Button>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', margin: '20px'}}>
+      <Button variant="outlined" size="sm" color="primary">outlined</Button>
+      <Button variant="outlined" size="md" color="secondary">outlined</Button>
+      <Button variant="outlined" size="lrg" color="send">outlined</Button>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', margin: '20px'}}>
+      <Button color="delete" outlined>delete</Button>
+      <Button color="warning" variant="outlined">warning</Button>
+      <Button color="send">send</Button>
       </div>
     </div>
   )
