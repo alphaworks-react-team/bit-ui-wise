@@ -8,7 +8,7 @@ const CardText = (props) => {
     }
   }
   return (
-    <div classNams='text-body' style={styles.textBody}>
+    <div className='text-body' style={styles.textBody}>
       {props.children}
     </div>
   )

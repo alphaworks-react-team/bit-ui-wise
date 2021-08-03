@@ -115,34 +115,6 @@ Card component also returns props.children so all components within the Card com
 \
 &nbsp;
 
-## CardHeader
-
-<hr />
-
-CardHeader takes {props.children} which will give a container for the typography component
-
-<hr />
-
-### Props
-
-| property         | props    | default | values |     |         |
-| ---------------- | -------- | ------- | ------ | --- | ------- |
-| backgroundColor: | bgColor: | 'white' | hex    | rgb | 'color' |
-
-```
-  <CardHeader bgColor={ #hex, RGB, 'white' }>
-    <Typography variant='header'>Header</Typography>
-    <Typography variant='sub-header'>SubHeader</Typography>
-  </CardHeader>
-```
-
-\*Refer to Typography for specific Typography Props
-
-<hr />
-
-\
-&nbsp;
-
 ## CardImage
 
 <hr />

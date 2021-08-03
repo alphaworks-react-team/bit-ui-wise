@@ -13,7 +13,7 @@ const CardImage = (props) => {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: props.bgSize ? props.bgSize : 'contain',
-      height: props.height ? props.height : '300px',
+      height: props.height ? props.height : '150px',
       width:
         props.imgSize === 'sm'
           ? '275px'
