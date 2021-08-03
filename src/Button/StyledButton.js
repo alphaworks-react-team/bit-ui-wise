@@ -81,7 +81,7 @@ const StyledButton = styled.button`
     }; 
 
     ${props => props.disabled && css`
-        background-color: grey;
+        background-color: lightgrey;
         cursor: auto;
     `}
     

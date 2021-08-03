@@ -15,11 +15,11 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center'}}>
-      <StyledButton onClick={toggleDisabled} disabled={disable} size="large" variant="primary">Primary</StyledButton>
-      <StyledButton size="medium" variant="secondary">Primary</StyledButton>
+      <StyledButton onClick={toggleDisabled} size="large" variant="primary">Primary</StyledButton>
+      <StyledButton size="medium" variant="secondary" disabled={disable}>Primary</StyledButton>
       <StyledButton size="small" variant="send">outlined</StyledButton>
       <StyledButton size="medium" variant="primary" outlined>outlined</StyledButton>
-      <StyledButton size="large" kind="outlined" variant="send">outlined</StyledButton>
+      <StyledButton size="large" kind="outlined" variant="send" disabled={disable}>outlined</StyledButton>
       <StyledButton variant="warning"size="medium" kind="outlined">outlined</StyledButton>
       <StyledButton onClick={() => setCount(count + 1)} size="large" kind="outlined">outlined</StyledButton>
       <StyledButton onClick={() => setCount(count + 1)} >no props</StyledButton>
