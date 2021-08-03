@@ -4,14 +4,14 @@ import styles from './button.module.css'
 import styled from 'styled-components'
 import {css} from 'styled-components'
 import Button from './Button'
-//import returnPadding from './utils'
+import returnPadding from './utils'
+import returnFontSize from './utils2'
 
-
-const returnPadding = (size) => {
-    if (size === "sm") return "5px 10px";
-    else if (size === "lrg") return "10px 18px"
-    else return "8px 15px"
-}
+// const returnPadding = (size) => {
+//     if (size === "sm") return "5px 10px";
+//     else if (size === "lrg") return "10px 18px"
+//     else return "8px 15px"
+// }
 
 // const returnPadding = (size) => {
 //     switch (size) {
@@ -36,14 +36,7 @@ const StyledButton = styled.button`
 
     padding: ${props => returnPadding(props.size)};
 
-    font-size: ${props => props.size === 'sm'
-    ? '0.8em'
-    : props.size === 'md'
-    ? '1em'
-    : props.size === 'lrg'
-    ? '1.15em'
-    : '1em'
-    };
+    font-size: ${props => returnFontSize(props.size)};
 
     background-color: ${props => props.color === 'primary'
     && props.variant !== 'outlined' ? "#3f51b5"

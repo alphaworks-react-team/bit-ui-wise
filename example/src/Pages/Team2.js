@@ -16,7 +16,7 @@ const Team2 = () => {
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center'}}>
       <StyledButton onClick={toggleDisabled} size="lrg" color="primary">Primary</StyledButton>
-      <StyledButton size="lrg" color="brown">Brown</StyledButton>
+      <StyledButton size="lrg" color="teal">Teal</StyledButton>
       <StyledButton size="md" color="secondary" disabled={disable}>Primary</StyledButton>
       <StyledButton size="sm" color="send">outlined</StyledButton>
       <StyledButton size="md" color="primary" outlined>outlined</StyledButton>
@@ -24,9 +24,7 @@ const Team2 = () => {
       <StyledButton color="warning"size="md" variant="outlined">outlined</StyledButton>
       <StyledButton onClick={() => setCount(count + 1)} size="lrg" variant="outlined">outlined</StyledButton>
       <StyledButton onClick={() => setCount(count + 1)} >no props</StyledButton>
-
       </div>
-
     </div>
   )
 }
