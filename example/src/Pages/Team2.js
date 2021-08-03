@@ -15,13 +15,14 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center'}}>
-      <StyledButton onClick={toggleDisabled} size="large" variant="primary">Primary</StyledButton>
-      <StyledButton size="medium" variant="secondary" disabled={disable}>Primary</StyledButton>
-      <StyledButton size="small" variant="send">outlined</StyledButton>
-      <StyledButton size="medium" variant="primary" outlined>outlined</StyledButton>
-      <StyledButton size="large" kind="outlined" variant="send" disabled={disable}>outlined</StyledButton>
-      <StyledButton variant="warning"size="medium" kind="outlined">outlined</StyledButton>
-      <StyledButton onClick={() => setCount(count + 1)} size="large" kind="outlined">outlined</StyledButton>
+      <StyledButton onClick={toggleDisabled} size="lrg" color="primary">Primary</StyledButton>
+      <StyledButton size="lrg" color="brown">Brown</StyledButton>
+      <StyledButton size="md" color="secondary" disabled={disable}>Primary</StyledButton>
+      <StyledButton size="sm" color="send">outlined</StyledButton>
+      <StyledButton size="md" color="primary" outlined>outlined</StyledButton>
+      <StyledButton size="lrg" variant="outlined" disabled={disable}>outlined</StyledButton>
+      <StyledButton color="warning"size="md" variant="outlined">outlined</StyledButton>
+      <StyledButton onClick={() => setCount(count + 1)} size="lrg" variant="outlined">outlined</StyledButton>
       <StyledButton onClick={() => setCount(count + 1)} >no props</StyledButton>
 
       </div>
