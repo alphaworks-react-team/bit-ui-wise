@@ -18,8 +18,8 @@ const Medium = styled.h2`
   font-family: ${(props) => props.fontFamily || 'sans-serif'};
   font-weight: ${(props) => props.fontWeight || '400'};
 
-  &:hover {
-    color: blue;
+  // &:hover {
+  //   color: blue;
   }
 `
 
