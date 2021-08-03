@@ -68,6 +68,75 @@ When users add their own content, the card will resize to the proper dimensions 
 (image here)[]
 
 
+## Card Props
+<hr />
+
+Card component also returns props.children so all components within the Card component will take those style properties with it.
+
+<hr />
+
+| property              | props      |           |          |         | default |
+| --------------------- | ---------- | --------- | -------- | ------- |  -----  |
+| minWidth && maxWidth: | size:      |   'sm'    |   'md'   |  'lrg'  |  '100%' |
+| height:               | height:    |    **     |          |         |         |
+| flexDirection:        | direction: |  'column' |          |         |  'row'  |
+| backgroundColor:      | bgColor:   |   ***     |          |         | 'white' |
+
+** Value can be any pixel, rem, percentage; ex (100px, 10rem, 100%);
+
+*** Value can be any hex, rbg, or string color;
+
+
+```jsx
+<Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
+    <Child Component>
+</Card>
+```
+
+<hr />
+
+## CardHeader Props
+
+<hr />
+
+CardHeader only takes {props.children} which will give a container for the typography component
+
+```jsx
+<CardHeader>
+    <Typography variant='header'>Header</Typography>
+    <Typography variant='sub-header'>SubHeader</Typography>
+</CardHeader>
+```
+*Refer to Typography for specific Typography Props
+
+<hr />
+
+## CardImage Props
+<hr />
+
+CardImage takes in a image as a prop with a url, also props passed allowing for sizing and positioning.
+
+<hr />
+
+| property              | props      |           |          |         |  default  |
+| --------------------- | ---------- | --------- | -------- | ------- |  -------  |
+| backgroundImage:      | img:       |    url    |          |         |    null   |
+| height:               | height:    | '(num)px' | ex: '150px' |         |    300px  |
+| backgroundSize        | bgSize:    |   **      |          |         | 'contain' |
+| backgroundColor:      | bgColor:   |   HEX     |   RGB    |   StringValue      |  'white'  |
+
+
+** Value can be any backgroundSize value ;
+
+
+```
+<Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
+    <Child Component>
+</Card>
+```
+
+<hr />
+
 # Input
 
 props: type, value, placeholder, onchange, type

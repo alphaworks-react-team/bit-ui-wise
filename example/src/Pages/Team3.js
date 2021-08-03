@@ -192,7 +192,8 @@ const Team3 = () => {
        
       </Card>
       </div>
-
+      
+      
 
       {/* VERSION 3 SIDE MODE */}
       {/* <Card direction='row'>

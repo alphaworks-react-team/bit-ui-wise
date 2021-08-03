@@ -8,6 +8,7 @@ const CardImage = (props) => {
       alignContent: 'center'
     },
     image: {
+      backgroundColor: props.bgColor || 'white',
       backgroundImage: `url(${props.img})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
