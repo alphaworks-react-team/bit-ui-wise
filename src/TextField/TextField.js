@@ -1,62 +1,93 @@
 import React from 'react'
-import styles from './input.module.css'
+import styled from 'styled-components'
+
+const StandardStyle = styled.input`
+  width: ${(props) => props.width || '100%'};
+  height: ${(props) => props.height || '35px'};
+  background-color: ${(props) => props.bgColor || 'none'};
+  color: ${(props) => props.fontColor || 'black'};
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.3);
+  outline: none;
+
+    &:hover {
+      border-bottom: 3px solid rgb(0, 0, 0);
+      transition: all 0.5s ease;
+`
+
+const FilledStyle = styled.input`
+  width: ${(props) => props.width || '100%'};
+  height: ${(props) => props.height || '35px'};
+  background-color: ${(props) => props.bgColor || 'rgb(128,128,128,0.8)'};
+  color: ${(props) => props.fontColor || 'white'};
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid rgb(0, 0, 0, 0.3);
+  outline: none;
+
+      &:hover {
+      background-color: rgb(128,128,128);
+      border-bottom: 3px solid rgb(0,0,0);
+      transition: all 0.5s ease;
+`
+
+const OutlinedStyle = styled.input`
+  width: ${(props) => props.width || '100%'};
+  height: ${(props) => props.height || '35px'};
+  background-color: ${(props) => props.bgColor || 'none'};
+  color: ${(props) => props.fontColor || 'black'};
+  border-radius: 3px;
+  border: 3px solid rgb(128, 128, 128);
+  outline: none;
+
+      &:hover {
+      border: 3px solid rgb(0,0,0);
+      transition: all 0.5s ease;
+`
 
 const TextField = (props) => {
-  const standardStyle = {
-    width: props.width || '100%',
-    height: '35px',
-    backgroundColor: 'none',
-    color: 'black',
-    borderTop: 'none',
-    borderRight: 'none',
-    borderLeft: 'none',
-    outline: 'none'
+  switch (props.variant) {
+    case 'standard':
+      return (
+        <StandardStyle
+          width={props.width}
+          height={props.height}
+          bgColor={props.bgColor}
+          fontColor={props.fontColor}
+        >
+          {props.children}
+        </StandardStyle>
+      )
+    case 'filled':
+      return (
+        <FilledStyle
+          width={props.width}
+          height={props.height}
+          bgColor={props.bgColor}
+          fontColor={props.fontColor}
+        >
+          {props.children}
+        </FilledStyle>
+      )
+    case 'outlined':
+      return (
+        <OutlinedStyle
+          width={props.width}
+          height={props.height}
+          bgColor={props.bgColor}
+          fontColor={props.fontColor}
+        >
+          {props.children}
+        </OutlinedStyle>
+      )
+    default:
+      return <StandardStyle>{props.children}</StandardStyle>
   }
-
-  const filledStyle = {
-    width: props.width || '100%',
-    height: '35px',
-    color: 'white',
-    backgroundColor: 'lightgrey',
-    borderTopRightRadius: '3px',
-    borderTopLeftRadius: '3px',
-    borderTop: 'none',
-    borderRight: 'none',
-    borderLeft: 'none',
-    borderBottom: '2px solid white',
-    outline: 'none'
-  }
-
-  const outlineStyle = {
-    width: props.width || '100%',
-    height: '35px',
-    color: 'white',
-    backgroundColor: 'none',
-    borderRadius: '3px',
-    border: '2px solid black',
-    outline: 'none'
-  }
-
-  const showStyles = () => {
-    if (props.inputStyle === 'outline') {
-      return outlineStyle
-    } else if (props.inputStyle === 'filled') {
-      return filledStyle
-    } else {
-      return standardStyle
-    }
-  }
-
-  return (
-    <input
-      className={styles.teamOne}
-      style={showStyles()}
-      type={props.type}
-      value={props.value}
-      onChange={props.onChange}
-      placeholder={props.placeholder}
-    />
-  )
 }
 
 export default TextField

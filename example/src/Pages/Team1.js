@@ -17,10 +17,11 @@ const Team1 = () => {
         This is some text
       </Typography>
 
-      <TextField />
-      <TextField placeholder={'im a placeholder'} />
-      <TextField inputStyle={'outline'} value={'im a value'} width={'25%'} />
-      <TextField inputStyle={'filled'} value={'im a value'} width={'25%'} />
+      <TextField variant='standard' />
+      <p></p>
+      <TextField variant='filled' />
+      <p></p>
+      <TextField variant='outlined' />
     </div>
   )
 }
