@@ -3,7 +3,6 @@ import {
   CardTemplate,
   Button,
   Card,
-  CardHeader,
   CardButton,
   CardText,
   CardImage,
@@ -29,7 +28,6 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
-      
       <Card>
         <CardText>
           <Typography>Header</Typography>
