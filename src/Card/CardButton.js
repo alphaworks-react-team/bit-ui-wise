@@ -6,9 +6,17 @@ const CardButton = (props) => {
     margin: '10px',
     display: 'flex',
     flexFlow: 'row wrap',
-    justifyContent: 'space-evenly',
+    justifyContent:
+      props.position === 'left'
+        ? 'flex-start'
+        : props.position === 'center'
+        ? 'center'
+        : props.position === 'right'
+        ? 'flex-end'
+        : 'space-evenly',
     alignContent: 'space-around',
-    alignItems: 'space-between'
+    alignItems: 'space-between',
+    backgroundColor: props.bgColor || 'white',
     // minHeight: {minHeight: "51px" ? minHeight: '125px' :  null}
   }
   return (

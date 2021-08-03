@@ -1,126 +1,59 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { css } from 'styled-components'
+import teamStyles from './utils'
 
-import styles from './button.module.css'
+const Button = styled.button`
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 3px;
+  text-transform: uppercase;
 
-import Card from '../Card/Card'
+  padding: ${(props) => teamStyles.returnPadding(props.size)};
 
-const Button = (props) => {
-  const commonStyle = {
-    cursor: 'pointer',
-    borderRadius: '4px',
-    fontWeight: '600',
-    margin: '3px',
-    textTransform: 'uppercase'
-  }
-  const btnStyles = {
-    border: 'none',
-    color: 'white',
-    backgroundColor:
-      props.variant === 'primary'
-        ? '#3f51b5'
-        : props.variant === 'secondary'
-        ? '#FF5722'
-        : props.variant === 'delete'
-        ? '#d91111'
-        : props.variant === 'warning'
-        ? 'gold'
-        : props.variant === 'send'
-        ? '#078c22'
-        : 'grey',
+  font-size: ${(props) => teamStyles.returnFontSize(props.size)};
 
-    padding:
-      props.size === 'sm'
-        ? '5px 10px'
-        : props.size === 'md'
-        ? '8px 15px'
-        : props.size === 'lrg'
-        ? '10px 18px'
-        : '7px 15px',
+  background-color: ${(props) =>
+    teamStyles.returnBgColor(props.color, props.variant)};
 
-    fontSize:
-      props.size === 'sm'
-        ? '0.8em'
-        : props.size === 'md'
-        ? '1em'
-        : props.size === 'lrg'
-        ? '1.15em'
-        : '1.20em'
+  color: ${(props) => teamStyles.returnColor(props.color, props.variant)};
+
+  border: ${(props) => teamStyles.returnBorder(props.color, props.variant)};
+
+  &:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-1px);
+    box-shadow: ${(props) =>
+      props.variant === 'outlined'
+        ? 'inset 0 0 7px rgba(0,0,0,0.10), 2px 3px 5px rgba(0,0,0,0.25)'
+        : 'inset 0 0 20px rgba(0,0,0,0.18), 2px 3px 5px rgba(0,0,0,0.25)'};
   }
 
-  const outlineStyles = {
-    backgroundColor: 'white',
-    color:
-      props.variant === 'primary'
-        ? '#3f51b5'
-        : props.variant === 'secondary'
-        ? '#FF5722'
-        : props.variant === 'delete'
-        ? '#d91111'
-        : props.variant === 'warning'
-        ? 'gold'
-        : props.variant === 'send'
-        ? '#078c22'
-        : 'grey',
-    borderColor:
-      props.variant === 'primary'
-        ? '#3f51b5'
-        : props.variant === 'secondary'
-        ? '#FF5722'
-        : props.variant === 'delete'
-        ? '#d91111'
-        : props.variant === 'warning'
-        ? 'gold'
-        : props.variant === 'send'
-        ? '#078c22'
-        : 'grey',
-    padding:
-      props.size === 'sm'
-        ? '5px 10px'
-        : props.size === 'md'
-        ? '8px 15px'
-        : props.size === 'lrg'
-        ? '10px 18px'
-        : '7px 15px',
-
-    fontSize:
-      props.size === 'sm'
-        ? '0.8em'
-        : props.size === 'md'
-        ? '1em'
-        : props.size === 'lrg'
-        ? '1.15em'
-        : '1.20em'
-  }
-
-  return (
-    <div>
-      {props.type === 'outlined' ? (
-        <button
-          className={styles.outlinedBtn}
-          style={{ ...outlineStyles, ...commonStyle }}
-        >
-          {props.children}
-        </button>
-      ) : (
-        <button
-          className={styles.bitUiWiseBtn}
-          style={{ ...btnStyles, ...commonStyle }}
-        >
-          {props.children}
-        </button>
-      )}
-    </div>
-  )
-}
+  ${(props) =>
+    props.disabled &&
+    css`
+      background-color: lightgrey;
+      cursor: auto;
+      box-shadow: none;
+      &:hover {
+        transform: none;
+        box-shadow: none;
+      }
+    `}
+`
 
 Button.propTypes = {
   variant: PropTypes.string,
+  color: PropTypes.string,
   size: PropTypes.string
 }
 Button.defaultProps = {
-  variant: 'primary',
-  size: 'medium'
+  variant: '',
+  color: 'primary',
+  size: 'md'
 }
 
 export default Button

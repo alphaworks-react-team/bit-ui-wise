@@ -3,15 +3,14 @@ import React from 'react'
 const CardText = (props) => {
   const styles = {
     textBody: {
-      background: 'white',
-      margin: "10px"
+      backgroundColor: props.bgColor || 'white',
+      padding: '10px'
     }
   }
   return (
-   
-      <div classNams='text-body' style={styles.textBody}>
-        {props.children}
-      </div>
+    <div className='text-body' style={styles.textBody}>
+      {props.children}
+    </div>
   )
 }
 

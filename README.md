@@ -27,6 +27,11 @@ _If no props are passed, the default styling will be size 'md', variant 'primary
 | variant: | primary   | secondary | warning | delete | send |
 | type     | oputlined | contained |         |        |      |
 
+\
+&nbsp;
+\
+&nbsp;
+
 # Card
 
 The card component is designed to take in other components like **Typography** and **Button**. As you import these components in to your card, the content within the card component will flex as needed to the height and width necessary.
@@ -61,7 +66,151 @@ class CardButton extends Component {
 }
 ```
 
-#Input
+\
+&nbsp;
+
+## Default Card
+
+The default option for the card component is an empty container wit set styling, that allows the user to add content at their own discretion.
+
+![plain card](./src/Card/Images/plaincard.png)
+
+<hr />
+When users add their own content, the card will resize to the proper dimensions within itself, giving the content room to grow or shrink.
+
+![full card](./src/Card/Images/fullcard.png)
+
+---
+
+\
+&nbsp;
+
+## Card
+
+<hr />
+
+Card component also returns props.children so all components within the Card component will take those style properties with it.
+
+<hr />
+
+### Props
+
+| property              | props      | default | values        |          |                  |
+| --------------------- | ---------- | ------- | ------------- | -------- | ---------------- |
+| minWidth && maxWidth: | size:      | '100%'  | 'sm'          | 'md'     | 'lrg'            |
+| height:               | height:    | null    | 'px'          | 'rem'    | '%'              |
+| flexDirection:        | direction: | 'row'   | 'row-reverse' | 'column' | 'column-reverse' |
+| backgroundColor:      | bgColor:   | 'white' | hex           | rgb      | 'color'          |
+
+<hr />
+
+```
+  <Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
+    <Child Component>
+  </Card>
+```
+
+<hr />
+
+\
+&nbsp;
+
+## CardImage
+
+<hr />
+
+CardImage is a self closing component that takes in a image as a prop with a url, also props passed allowing for sizing and positioning.
+
+<hr />
+
+### Props
+
+| property         | props    | default   | values  |       |         |
+| ---------------- | -------- | --------- | ------- | ----- | ------- |
+| backgroundColor: | bgColor: | 'white'   | hex     | rgb   | 'color' |
+| backgroundImage: | img:     | null      | url     |       |         |
+| backgroundSize:  | bgSize:  | 'contain' | 'cover' | '%'   | 'px'    |
+| height:          | height:  | '300px'   | 'px'    | 'rem' | '%'     |
+| width:           | imgSize: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
+
+<hr />
+
+```
+<CardImage img={'url'} bgSize='cover' height='150px' />
+```
+
+<hr />
+
+\
+&nbsp;
+
+## CardText
+
+<hr />
+
+CardText takes {props.children} which will give a container for the typography component
+
+<hr />
+
+### Props
+
+| property         | props    | default | values |     |         |
+| ---------------- | -------- | ------- | ------ | --- | ------- |
+| backgroundColor: | bgColor: | 'white' | hex    | rgb | 'color' |
+
+<hr />
+
+```
+<CardText bgColor='lightgrey'>
+  <Typography> Hello World! </Typography>
+<CardText />
+```
+
+\*Refer to Typography for specific Typography Props
+
+<hr />
+
+\
+&nbsp;
+
+## CardButton
+
+<hr />
+
+CardButton takes in an array of buttons using props and the .map() method.
+
+<hr />
+
+### Props
+
+| property         | props     | default        | values                  |          |                        |
+| ---------------- | --------- | -------------- | ----------------------- | -------- | ---------------------- |
+| justifyContent:  | position: | 'space-evenly' | 'left' === 'flex-start' | 'center' | 'right' === 'flex-end' |
+| backgroundColor: | bgColor:  | 'white'        | hex                     | rgb      | 'color'                |
+
+<hr />
+
+```
+<CardButton position='right'>
+  buttons={[
+            <Button size='md' variant={'primary'}>
+              Click Me!
+            </Button>,
+            <Button size='md' variant={'delete'}>
+              Delete Me!
+            </Button>
+          ]}
+<CardButton />
+```
+
+<hr />
+
+\
+&nbsp;
+\
+&nbsp;
+
+# Input
 
 props: type, value, placeholder, onchange, type
 

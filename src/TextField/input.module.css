@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 .teamOne:hover {
   color: blue;
+=======
+.plainTextBox:hover {
+  color: blue !important;
+>>>>>>> team-1-refactor
+}
+
+.filledTextBox:hover {
+
+}
+
+.outlineTextBox:hover{
+  
 }
