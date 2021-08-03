@@ -24,4 +24,11 @@ Props
       <Button variant="outlined" size="lrg" color="send">outlined</Button>
 ```
 ![button-contained](./assets/outlinedbuttons.png)
+
+**'disabled'** You can create your own disabled state, if disabled prop is passed, button will be lightgrey, no pointer or shadow.
+```jsx
+        <Button disabled size="sm">disabled</Button>
+```
+![disabled](./assets/disabled.png)
+
 _If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._

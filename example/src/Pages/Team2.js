@@ -15,11 +15,11 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{display: 'flex', alignItems: 'center', margin: '20px'}}>
-      <Button size="sm" color="primary">small</Button>
+      <Button disabled size="sm">disabled</Button>
+      </div>
       <Button size="md" color="secondary">medium</Button>
       <Button size="lrg" color="delete">Large</Button>
       <Button>default</Button>
-      </div>
       <div style={{display: 'flex', alignItems: 'center', margin: '20px'}}>
       <Button variant="outlined" size="sm" color="primary">outlined</Button>
       <Button variant="outlined" size="md" color="secondary">outlined</Button>
