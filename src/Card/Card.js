@@ -1,4 +1,5 @@
 import React from 'react'
+import Proptype from 'prop-types'
 
 const Card = (props) => {
   const styles = {
