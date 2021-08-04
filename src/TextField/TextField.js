@@ -10,7 +10,8 @@ const TextField = (props) => {
     borderTop: 'none',
     borderRight: 'none',
     borderLeft: 'none',
-    outline: 'none'
+    outline: 'none',
+    boxShadow: '1px 3px  #A9A9A9'
   }
 
   const filledStyle = {
@@ -24,7 +25,8 @@ const TextField = (props) => {
     borderRight: 'none',
     borderLeft: 'none',
     borderBottom: '2px solid white',
-    outline: 'none'
+    outline: 'none',
+    boxShadow: '1px 3px  #A9A9A9'
   }
 
   const outlineStyle = {
@@ -34,8 +36,12 @@ const TextField = (props) => {
     backgroundColor: 'none',
     borderRadius: '3px',
     border: '2px solid black',
-    outline: 'none'
+    outline: 'none',
+    boxShadow: '1px 3px  #A9A9A9'
   }
+  // const teamOne = {
+  //   boxShadow: '1px 3px  #A9A9A9'
+  // }
 
   const showStyles = () => {
     if (props.inputStyle === 'outline') {
