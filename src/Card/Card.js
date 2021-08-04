@@ -41,7 +41,7 @@ Card.propTypes = {
 Card.defaultProps = {
   height: '',
   bgColor: 'white', //do we need BGC???
-  size: 'md',
+  size: 'sm',
   direction: 'column'
 }
 

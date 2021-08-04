@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CardButton = (props) => {
   const styles = {
@@ -17,6 +18,7 @@ const CardButton = (props) => {
     alignContent: 'space-around',
     alignItems: 'space-between',
     backgroundColor: props.bgColor,
+
   }
   return (
     <div>
@@ -29,23 +31,25 @@ const CardButton = (props) => {
   )
 }
 
-Card.propTypes = {
+CardButton.propTypes = {
   position: PropTypes.string,
   bgColor: PropTypes.string,
-  buttons: PropTypes.arrayOf(PropTypes.shapes({
-    variant:PropTypes.string,
-    color:PropTypes.string,
-    size:PropTypes.string
-  }))
+  buttons: PropTypes.arrayOf({
+    variant: PropTypes.string,
+    color: PropTypes.string,
+    size: PropTypes.string
+  })
 }
-Card.defaultProps = {
+CardButton.defaultProps = {
   position: 'space-evenly',
   bgColor: 'white', //do we need BGC???
-  buttons:[{
-    variant: '',
-    color: 'primary',
-    size: 'md'
-  }]
+  buttons: [
+    {
+      variant: '',
+      color: 'primary',
+      size: 'md'
+    }
+  ] 
 }
 
 export default CardButton

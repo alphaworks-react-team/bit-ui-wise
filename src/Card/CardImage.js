@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CardImage = (props) => {
   const styles = {
@@ -8,12 +9,12 @@ const CardImage = (props) => {
       alignContent: 'center'
     },
     image: {
-      backgroundColor: props.bgColor || 'white',
+      backgroundColor: props.bgColor,
       backgroundImage: `url(${props.img})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      backgroundSize: props.bgSize ? props.bgSize : 'contain',
-      height: props.height ? props.height : '150px',
+      backgroundSize: props.bgSize,
+      height: props.imgHeight,
       width:
         props.imgSize === 'sm'
           ? '275px'
@@ -32,5 +33,20 @@ const CardImage = (props) => {
 }
 
 // ADD PROPTYPES HERE SEENA!!!! DONT MESS UP I AM WATCHING YOU !!!!
+CardImage.propTypes = {
+  bgColor: PropTypes.string,
+  img: PropTypes.string,
+  bgSize: PropTypes.string,
+  imgHeight: PropTypes.string,
+  imgWidth: PropTypes.string
+}
+
+CardImage.defaultProps = {
+  bgColor: 'white',
+  bgSize: 'cover',
+  img: 'https://picsum.photos/1000',
+  imgHeight: '150px',
+  imgSize: '100%'
+}
 
 export default CardImage
