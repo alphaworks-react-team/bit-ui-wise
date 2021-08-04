@@ -21,19 +21,47 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
-      <Card>
+      <div>
+        <Card>
+          <CardText>
+            <Typography>Header</Typography>
+          </CardText>
+          <CardImage img='https://i.pcmag.com/imagery/reviews/03aizylUVApdyLAIku1AvRV-39.1605559903.fit_scale.size_760x427.png' />
+          <CardText>
+            <Typography>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+              ex.
+            </Typography>
+            <Typography>Lorem ipsum dolor sit amet.</Typography>
+          </CardText>
+          <CardButton
+            buttons={[<Button>Click me</Button>, <Button>Click me</Button>]}
+          />
+        </Card>
+      </div>
+
+      {/*Text Card No Pic*/}
+
+      <Card size='sm'>
         <CardText>
-          <Typography>Header</Typography>
+          <Typography variant='large'>Header</Typography>
         </CardText>
-        <CardImage img='https://i.pcmag.com/imagery/reviews/03aizylUVApdyLAIku1AvRV-39.1605559903.fit_scale.size_760x427.png' />
         <CardText>
-          <Typography>
+          <Typography variant='small'>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, ex.
           </Typography>
-          <Typography>Lorem ipsum dolor sit amet.</Typography>
+          <Typography variant='small'>Lorem ipsum dolor sit amet.</Typography>
         </CardText>
         <CardButton
-          buttons={[<Button>Click me</Button>, <Button>Click me</Button>]}
+          position='left'
+          buttons={[
+            <Button variant='outlined' color='delete' size='sm'>
+              Click me
+            </Button>,
+            <Button size='sm' variant='outlined' color='warning'>
+              Click me
+            </Button>
+          ]}
         />
       </Card>
 
@@ -70,9 +98,31 @@ const Team3 = () => {
         buttons={[<Button variant="outlined" color="delete" size="sm">Click me</Button>, <Button size="sm" variant="outlined" color="warning">Click me</Button>]}
       />
     </Card>
+      {/* Card w/ Image*/}
+      <Card size='md'>
+        <CardImage img='https://picsum.photos/1200/900' bgSize height='300px' />
+        <CardText>
+          <Typography variant='large'>Header</Typography>
+        </CardText>
+        <CardText>
+          <Typography variant='small'>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, ex.
+          </Typography>
+          <Typography variant='small'>Lorem ipsum dolor sit amet.</Typography>
+        </CardText>
+        <CardButton
+          position='left'
+          buttons={[
+            <Button variant='outlined' color='delete' size='sm'>
+              Click me
+            </Button>,
+            <Button size='sm' variant='outlined' color='warning'>
+              Click me
+            </Button>
+          ]}
+        />
+      </Card>
     </div>
-
-    
 
     //     <div style={styles}>
     //       {/* VERSION 2 */}
