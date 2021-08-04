@@ -31,4 +31,7 @@ Props
 ```
 ![disabled](./assets/disabled.png)
 
-_If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._
+_If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._```jsx
+      <Button variant="outlined" size="sm" color="primary">outlined</Button>
+      <Button variant="outlined" size="md" color="secondary">outlined</Button>
+      <Button variant="outlined" size="lrg" color="send">outlined</Button>
