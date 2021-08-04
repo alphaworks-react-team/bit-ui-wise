@@ -25,7 +25,7 @@ _If no props are passed, the default styling will be size 'md', variant 'primary
 | -------- | --------- | --------- | ------- | ------ | ---- |
 | size:    | sm        | md        | rgl     |        |      |
 | variant: | primary   | secondary | warning | delete | send |
-| type     | outlined | contained |         |        |      |
+| type     | outlined | contained  |         |        |      |
 
 \
 &nbsp;
@@ -65,7 +65,6 @@ class CardButton extends Component {
 ```
 
 
-*Note that the button must always be in an array
 \
 &nbsp;
 
