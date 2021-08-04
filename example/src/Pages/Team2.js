@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'bit-ui-wise'
+import { Button, Card, CardButton, TextField, CardText, Typography } from 'bit-ui-wise'
 import { useState } from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
 
@@ -46,6 +46,29 @@ const Team2 = () => {
         </Button>
         <Button color='send'>send</Button>
         <Button color='lightblue'>own color</Button>
+      </div>
+
+      <div>
+        <Card>
+          <CardText>
+            <Typography>Card Header</Typography>
+          </CardText>
+          <button>
+            <Button size='md' color='send'>
+            medium
+          </Button>
+          </button>
+          
+        </Card>
+      </div>
+
+      <div>
+        <CardButton>
+        <Typography varient='header'>CardButton</Typography>
+          <Button size='md' color='send'>
+            medium
+          </Button>
+        </CardButton>
       </div>
     </div>
   )

@@ -1,11 +1,16 @@
 ## Buttons
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> dev
 Props
 **'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
 
+=======
+Props
+**'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
+>>>>>>> 9d5243a13036ee823b1f1cae43b60f7b46b11643
 ```jsx
       <Button size="sm" color="primary">small</Button>
       <Button size="md" color="secondary">medium</Button>
@@ -45,4 +50,11 @@ Props
 
 ![disabled](./assets/disabled.png)
 
+<<<<<<< HEAD
 _If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._
+=======
+_If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._```jsx
+      <Button variant="outlined" size="sm" color="primary">outlined</Button>
+      <Button variant="outlined" size="md" color="secondary">outlined</Button>
+      <Button variant="outlined" size="lrg" color="send">outlined</Button>
+>>>>>>> 9d5243a13036ee823b1f1cae43b60f7b46b11643
