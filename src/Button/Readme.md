@@ -1,25 +1,4 @@
 ## Buttons
-<<<<<<< HEAD
-
-```jsx
-    <Button size="sm" variant="primary">Small</Button>
-    <Button size="md" variant="primary">Medium</Button>
-    <Button size="lrg" variant="primary">Large</Button>
-```
-
-Props
-
-**'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
-![Buttons](./assets/button-sizes.png)
-
-**'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
-![button-sizes](./assets/button-colors.png)
-
-**'type'** options: 'outlined', 'contained'.\
-![button-contained](./assets/button-contained.png)
-
-_If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._
-=======
 Props
 **'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
 ```jsx
@@ -53,4 +32,3 @@ Props
 ![disabled](./assets/disabled.png)
 
 _If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._
->>>>>>> andrew-icons
