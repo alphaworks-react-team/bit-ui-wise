@@ -34,7 +34,7 @@ const Team3 = () => {
             </Typography>
             <Typography>Lorem ipsum dolor sit amet.</Typography>
           </CardText>
-          <CardButton
+          <CardButton 
             buttons={[<Button>Click me</Button>, <Button>Click me</Button>]}
           />
         </Card>

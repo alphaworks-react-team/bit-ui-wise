@@ -1,5 +1,5 @@
 import React from 'react'
-import Proptype from 'prop-types'
+import PropTypes from 'prop-types'
 
 const Card = (props) => {
   const styles = {
@@ -22,7 +22,7 @@ const Card = (props) => {
 
     minHeight: `150px`,
     height: `${props.height}`,
-    backgroundColor: props.bgColor || 'white',
+    backgroundColor: props.bgColor,
     boxShadow: '3px 3px 5px black',
 
     display: 'flex',
@@ -31,5 +31,19 @@ const Card = (props) => {
 
   return <div style={styles}>{props.children}</div>
 }
+
+Card.propTypes = {
+  height: PropTypes.string,
+  bgColor: PropTypes.string,
+  size: PropTypes.string,
+  direction: PropTypes.string
+}
+Card.defaultProps = {
+  height: '',
+  bgColor: 'white', //do we need BGC???
+  size: 'md',
+  direction: 'column'
+}
+
 
 export default Card

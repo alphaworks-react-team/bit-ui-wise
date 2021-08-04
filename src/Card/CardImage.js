@@ -31,4 +31,6 @@ const CardImage = (props) => {
   )
 }
 
+// ADD PROPTYPES HERE SEENA!!!! DONT MESS UP I AM WATCHING YOU !!!!
+
 export default CardImage

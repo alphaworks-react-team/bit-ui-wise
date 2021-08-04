@@ -29,4 +29,5 @@ const CardButton = (props) => {
   )
 }
 
+// ADD PROPTYPES HERE AKIKO
 export default CardButton

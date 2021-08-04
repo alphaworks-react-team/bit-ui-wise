@@ -14,4 +14,5 @@ const CardText = (props) => {
   )
 }
 
+// ADD PROPTYPES HERE AKIKO
 export default CardText
