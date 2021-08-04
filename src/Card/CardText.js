@@ -4,7 +4,7 @@ const CardText = (props) => {
   const styles = {
     textBody: {
       backgroundColor: props.bgColor || 'white',
-      padding: '10px'
+      textAlign: props.textAlign || 'left'
     }
   }
   return (

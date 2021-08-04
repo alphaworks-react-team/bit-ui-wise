@@ -18,12 +18,12 @@ const Card = (props) => {
         : props.size === 'lrg'
         ? '825px'
         : '100%',
-    // width: `${props.width || '300px'}`,
+
     minHeight: `150px`,
     height: `${props.height}`,
     backgroundColor: props.bgColor || 'white',
     boxShadow: '3px 3px 5px black',
-    // borderRadius: '15px',
+
     display: 'flex',
     flexDirection: props.direction === 'row' ? props.direction : 'column'
   }
