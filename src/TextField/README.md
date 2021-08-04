@@ -14,21 +14,3 @@ Props
 'inputStyle' options: 'outline', 'filled'.
 
 default ```props.children```
-
-
-
-
-## Typography 
-
-```jsx
-      <Typography variant='header'>This is some text</Typography>
-      <Typography variant='sub-header'>This is some text</Typography>
-      <Typography variant='subtitle'>This is some text</Typography>
-      <Typography variant='body'>This is some text</Typography>
-      <Typography>This is some text</Typography>
-```
-
-Props
-
-'variant' has value of 'header', 'sub-header', 'subtitle', 'body'.
-
