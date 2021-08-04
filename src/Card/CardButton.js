@@ -16,7 +16,7 @@ const CardButton = (props) => {
         : 'space-evenly',
     alignContent: 'space-around',
     alignItems: 'space-between',
-    backgroundColor: props.bgColor || 'white',
+    backgroundColor: props.bgColor,
   }
   return (
     <div>
