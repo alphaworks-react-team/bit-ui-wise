@@ -2,15 +2,33 @@
 
 ```jsx
       <TextField />
-      <TextField placeholder='im a placeholder' />
-      <TextField inputStyle='outline' value='im a value' width='25%' />
-      <TextField inputStyle='filled' value='im a value' width='25%' />
+      <TextField variant='standard' />
+      <TextField variant='outlined' value='im a value' width='25%' />
+      <TextField variant='filled' type='password' value='im a value' width='25%' />
 
 ```
 
-Props
+### Component 
+Three different component options:
+'standard', 'filled', 'outlined'.
 
- The value of 'placeholder' can be given as anything.<br>'inputStyle' values are can be given as anything.<br>
-'inputStyle' options: 'outline', 'filled'.
 
-default ```props.children```
+
+
+
+default ```standard```
+
+The user has to state 'variant' if user wants to pass 'props'
+
+### Props
+The 'props' that can be passed:
+``` 
+'onChange'
+ 'name'
+ 'type'
+ 'placeholder'
+ 'value'
+ 'width'
+ 'height'
+ 'bgColor'
+ 'fontColor' 
