@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  CardTemplate,
   Button,
   Card,
   CardButton,
@@ -18,12 +17,6 @@ const Team3 = () => {
     alignItems: 'center',
     height: '100vh',
     backgroundColor: '#9e9e9e'
-  }
-
-  const leftSide = {
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'space-evenly'
   }
 
   return (
@@ -47,7 +40,7 @@ const Team3 = () => {
       {/*Text Card No Pic*/}
   
       <Card size="md">
-      <CardText>
+      <CardText textAlign="center">
         <Typography variant='large'  >Header</Typography>
       </CardText>
       <CardText>
@@ -77,30 +70,11 @@ const Team3 = () => {
         buttons={[<Button variant="outlined" color="delete" size="sm">Click me</Button>, <Button size="sm" variant="outlined" color="warning">Click me</Button>]}
       />
     </Card>
-
     </div>
 
     
 
     //     <div style={styles}>
-
-    //       {/* VERSION 1 */}
-    //       {/* <CardTemplate
-    //         title='hello'
-    //         subTitle='subtitle'
-    //         img={'https://picsum.photos/400/600'}
-    //         // width='400px'
-    //         // height='600px'
-    //         buttons={[
-    //           <Button variant={'delete'}>Click Me!</Button>,
-    //           <Button variant={'primary'}>Delete Me!</Button>
-    //         ]}
-    //       >
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-    //         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
-    //         ad
-    //       </CardTemplate> */}
-
     //       {/* VERSION 2 */}
     //       <Card size='sm'>
     //         <CardImage img={'https://via.placeholder.com/300/'} />
