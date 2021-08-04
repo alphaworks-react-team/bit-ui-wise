@@ -50,6 +50,7 @@ Button.propTypes = {
   color: PropTypes.string,
   size: PropTypes.string
 }
+
 Button.defaultProps = {
   variant: '',
   color: 'primary',

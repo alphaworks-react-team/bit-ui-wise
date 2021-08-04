@@ -29,5 +29,23 @@ const CardButton = (props) => {
   )
 }
 
-// ADD PROPTYPES HERE AKIKO
+Card.propTypes = {
+  position: PropTypes.string,
+  bgColor: PropTypes.string,
+  buttons: PropTypes.arrayOf(PropTypes.shapes({
+    variant:PropTypes.string,
+    color:PropTypes.string,
+    size:PropTypes.string
+  }))
+}
+Card.defaultProps = {
+  position: 'space-evenly',
+  bgColor: 'white', //do we need BGC???
+  buttons:[{
+    variant: '',
+    color: 'primary',
+    size: 'md'
+  }]
+}
+
 export default CardButton
