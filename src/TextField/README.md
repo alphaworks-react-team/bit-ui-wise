@@ -12,8 +12,7 @@
 Three different component options:
 'standard', 'filled', 'outlined'.
 
-
-
+![textfield example](./Images/textfieldsceenshot.png)
 
 
 default ```standard```
@@ -33,8 +32,14 @@ The 'props' that can be passed:
  'bgColor'
  'fontColor' 
 
+ ```
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+
+### Props
+
+
+|   	|   	|   	|   	|   	|
+|---	|---	|---	|---	|---	|
+|   	|   	|   	|   	|   	|
+|   	|   	|   	|   	|   	|
+|   	|   	|   	|   	|   	|

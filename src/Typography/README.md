@@ -12,12 +12,29 @@
       <Typography>This is some text</Typography>
 ```
 
+![typography example](./Images/xdp_typographyscreenshot.png)
+
 ### Props
 
 'variant' has value of 'large', 'medium', 'small'.
 
 Props passed can be as 'font-size', 'color', 'font-family', and 'font-weight'.
 
-``` default:<br>
+``` 
+default:
       return <Medium>{props.children}</Medium> 
-      ```
+```    
+
+
+### Props
+
+
+|   	|   	|   	|   	|   	|
+|---	|---	|---	|---	|---	|
+|   	|   	|   	|   	|   	|
+|   	|   	|   	|   	|   	|
+|   	|   	|   	|   	|   	|
+
+
+
+
