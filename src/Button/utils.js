@@ -31,11 +31,11 @@ const teamStyles = {
                 return "#3f51b5"
             } else if (color === 'secondary' && variant !== 'outlined') {
                 return "#FF5722"
-            } else if (color === 'delete' && variant !== 'outlined') {
+            } else if (color === 'alert' && variant !== 'outlined') {
                 return '#d91111'
             } else if (color === 'warning' && variant !== 'outlined') {
                 return 'gold'
-            } else if (color === 'send' && variant !== 'outlined') {
+            } else if (color === 'success' && variant !== 'outlined') {
                 return '#078c22'
             } else if (variant === 'outlined') {
                 return 'white'

@@ -49,26 +49,21 @@ const Team2 = () => {
       </div>
 
       <div>
-        <Card>
+        <Card size="sm">
           <CardText>
             <Typography>Card Header</Typography>
           </CardText>
-          <button>
-            <Button size='md' color='send'>
-            medium
-          </Button>
-          </button>
+          <CardButton buttons={[<Button size="lrg" color="warning">Click me</Button>]} position="right">
+            {/* <Button size='sm' color='send'>
+              medium
+            </Button> */}
+          </CardButton>
           
         </Card>
       </div>
 
       <div>
-        <CardButton>
-        <Typography varient='header'>CardButton</Typography>
-          <Button size='md' color='send'>
-            medium
-          </Button>
-        </CardButton>
+      <Button variant="outlined" color="primary">awesome</Button>
       </div>
     </div>
   )
