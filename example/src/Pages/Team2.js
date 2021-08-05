@@ -15,25 +15,28 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-        <Button disabled size='sm'>
+        <Button variant='contained' size='sm'>
           disabled
         </Button>
       </div>
+      <Button size='sm' color='primary'>
+        small
+      </Button>
       <Button size='md' color='secondary'>
         medium
       </Button>
-      <Button size='lrg' color='delete'>
+      <Button size='lrg' color='success'>
         Large
       </Button>
       <Button>default</Button>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-        <Button variant='outlined' size='sm' color='primary'>
+        <Button variant='outlined' size='sm' color='orange'>
           outlined
         </Button>
         <Button variant='outlined' size='md' color='secondary'>
           outlined
         </Button>
-        <Button variant='outlined' size='lrg' color='send'>
+        <Button variant='outlined' size='lrg' color='delete'>
           outlined
         </Button>
       </div>
@@ -44,28 +47,30 @@ const Team2 = () => {
         <Button color='warning' variant='outlined'>
           warning
         </Button>
-        <Button color='send'>send</Button>
+        <Button color='success'>success</Button>
         <Button color='lightblue'>own color</Button>
       </div>
-
-      <div>
-        <Card size="sm">
+      {/* <div>
+        <Card>
           <CardText>
             <Typography>Card Header</Typography>
           </CardText>
-          <CardButton buttons={[<Button size="lrg" color="warning">Click me</Button>]} position="right">
-            {/* <Button size='sm' color='send'>
+          <button>
+            <Button size='md' color='success'>
               medium
-            </Button> */}
-          </CardButton>
-          
+            </Button>
+          </button>
         </Card>
-      </div>
-
-      <div>
-      <Button variant="outlined" color="primary">awesome</Button>
-      </div>
-    </div>
+      </div> */}
+      {/* {/* <div>
+        <CardButton>
+          <Typography varient='header'>CardButton</Typography>
+          <Button size='md' color='success'>
+            medium
+          </Button>
+        </CardButton>
+      </div> */}
+    </div> 
   )
 }
 

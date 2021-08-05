@@ -51,7 +51,7 @@ Button.propTypes = {
   size: PropTypes.string
 }
 Button.defaultProps = {
-  variant: '',
+  variant: 'contained',
   color: 'primary',
   size: 'md'
 }
