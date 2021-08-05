@@ -3,7 +3,6 @@ import { Button } from 'bit-ui-wise'
 
 
 const Team2 = () => {
-
   return (
     <div>
       <h1>Im for team 2</h1>
@@ -60,6 +59,9 @@ const Team2 = () => {
         medium
       </Button>
       <Button variant='text' size='lrg' color='success'>
+        Large
+      </Button>
+      <Button variant='text' size='lrg' color='#660066'>
         Large
       </Button>
       </div>
