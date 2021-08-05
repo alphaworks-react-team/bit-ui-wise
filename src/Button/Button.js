@@ -48,12 +48,12 @@ const Button = styled.button`
   ${(props) =>
     props.disabled &&
     css`
-      background-color: ${(props) => props.variant === 'text' ? 'transparent' : 'lightgrey'};
+      background-color: ${(props) => props.variant !== 'text' ? 'lightgrey' : 'transparent'};
       color: ${(props) => props.variant === 'text' ? 'lightgrey' : props.color};
       cursor: auto;
       box-shadow: none;
       &:hover {
-        background-color: transparent;
+        background-color: ${(props) => props.variant === 'text' && 'transparent'};
         transform: none;
         box-shadow: none;
       }
