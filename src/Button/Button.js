@@ -42,7 +42,7 @@ const Button = styled.button`
         /* opacity: 0.1;
         background: ${(props) =>
           teamStyles.returnColor(props.color, props.variant)};  */
-        background: rgba(255, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.1);
     `};
 
   ${(props) =>
