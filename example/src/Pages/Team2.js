@@ -19,7 +19,7 @@ const Team2 = () => {
           disabled
         </Button>
       </div>
-      <Button variant='text' size='sm' color='primary'>
+      <Button variant='text' size='sm' color='violet'>
         small
       </Button>
       <Button variant='text' size='md' color='secondary'>
