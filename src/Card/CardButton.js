@@ -3,23 +3,23 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 
+const buttonStyling = {
+  returnStyles: (position) =>{
+    switch(position){
+      case "left":
+        return 'flex-start'
+      case 'center':
+        return 'center'
+      case 'right':
+        return 'flex-end'
+      default:
+        return 'space-evenly'
+    }
+  }
+}
+
 const CardButton = (props) => {
 
-
-// const buttonStyling = {
-//   returnStyles: (position) =>{
-//     switch(position){
-//       case "left":
-//         return 'flex-start'
-//       case 'center':
-//         return 'center'
-//       case 'right':
-//         return 'flex-end'
-//       default:
-//         return 'space-evenly'
-//     }
-//   }
-// }
 
 const ButtonStyle = styled.div`
 display: flex;
@@ -30,36 +30,37 @@ flex-flow:row wrap;
 align-content: space-around;
 align-items: space-between;
 background-color: ${props.bgColor};
+justify-content:${(props) => buttonStyling.returnStyles(props.position)} ;
 `
 
 // this targets the container
  
-  const styles = {
-    height: '100%',
-    margin: '10px',
-    display: 'flex',
-    flexFlow: 'row wrap',
-    width: '100%',
-    justifyContent:
-      props.position === 'left'
-        ? 'flex-start'
-        : props.position === 'center'
-        ? 'center'
-        : props.position === 'right'
-        ? 'flex-end'
-        : 'space-evenly',
-    alignContent: 'space-around',
-    alignItems: 'space-between',
-    backgroundColor: props.bgColor
-  } 
+  // const styles = {
+  //   height: '100%',
+  //   margin: '10px',
+  //   display: 'flex',
+  //   flexFlow: 'row wrap',
+  //   width: '100%',
+  //  justifyContent:
+  //     props.position === 'left'
+  //       ? 'flex-start'
+  //       : props.position === 'center'
+  //       ? 'center'
+  //       : props.position === 'right'
+  //       ? 'flex-end'
+  //       : 'space-evenly',
+  //   alignContent: 'space-around',
+  //   alignItems: 'space-between',
+  //   backgroundColor: props.bgColor
+  // } 
 
   return (
     <div>
       {props.buttons ? (
-        <ButtonStyle>
-        <div className='buttonGroup' style={styles}>
+        <ButtonStyle position={props.position}>
+        {/*<div className='buttonGroup' style={styles}>*/}
         {props.buttons.map((item) => item)} 
-        </div> 
+       { /*</div>*/} 
         </ButtonStyle>
         ) : null}
         </div>

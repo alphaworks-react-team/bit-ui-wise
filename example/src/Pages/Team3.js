@@ -30,7 +30,7 @@ const Team3 = () => {
           </Typography>
         </CardText>
         <CardButton 
-          position=''
+          position='right'
           buttons={[
             <Button  size='sm' color="warning">
               lorem
