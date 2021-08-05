@@ -1,7 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Card = (props) => {
+
+  const Styling = styled.h1`
+    min-height: 150px;
+    height: ${props.height};
+    background-color: ${props.bgColor};
+    box-shadow:3px 3px 5px black;
+    display: flex;
+    flex-direction: ${props.direction === 'row' ?  props.direction : 'column'};
+  `
+
   const styles = {
     minWidth:
       props.size === 'sm'
@@ -26,7 +37,9 @@ const Card = (props) => {
     display: 'flex',
     flexDirection: props.direction === 'row' ? props.direction : 'column',
   }
-  return <div style={styles}>{props.children}</div>
+  return <Styling>{props.children}</Styling>
+
+  //<div style={styles}>{props.children}</div>
 }
 
 Card.propTypes = {

@@ -29,12 +29,14 @@ const Team3 = () => {
             Lorem ipsum dolor sit amet.
           </Typography>
         </CardText>
-        <CardButton
-          position='left'
+        <CardButton 
+          position=''
           buttons={[
-            <Button variant='outlined' size='sm'>
+            <Button  size='sm' color="warning">
               lorem
-            </Button>
+            </Button>, <Button variant='outlined' size='sm'>
+            lorem
+          </Button>
           ]}
         ></CardButton>
       </Card>
