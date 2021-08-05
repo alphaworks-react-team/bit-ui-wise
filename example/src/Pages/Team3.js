@@ -22,8 +22,8 @@ const Team3 = () => {
   return (
     <div style={styles}>
       <Card>
-        <CardImage imgHeight='500px' bgSize='contain' bgColor='red' />
-        <CardText padding='100px'>
+        <CardImage />
+        <CardText>
           <Typography variant='small' fontColor='black'>
             Lorem ipsum dolor sit amet.
           </Typography>
