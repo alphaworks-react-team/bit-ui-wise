@@ -7,7 +7,7 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-      <Button size='sm' color='primary'>
+      <Button disabled size='sm' color='primary'>
         small
       </Button>
       <Button size='md' color='secondary'>
@@ -51,11 +51,11 @@ const Team2 = () => {
         </Button>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-      <Button variant='text' size='sm' color='primary'>
+      <div style={{ display: 'flex', alignItems: 'center', margin: '20px', backgroundColor: 'salmon' }}>
+      <Button disabled variant='text' size='sm' color='primary'>
         small
       </Button>
-      <Button variant='text' size='md' color='secondary'>
+      <Button disabled variant='text' size='md' color='secondary'>
         medium
       </Button>
       <Button variant='text' size='lrg' color='success'>

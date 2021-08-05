@@ -63,6 +63,8 @@ const teamStyles = {
       return '#078c22'
     } else if (variant === 'outlined' || variant === 'text') {
       return 'white'
+    } else if (variant === 'text') {
+      return 'transparent'
     } else {
       return color
     }

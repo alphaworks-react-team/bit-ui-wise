@@ -42,19 +42,22 @@ const Button = styled.button`
         transform: none;
         background-color: ${(props) =>
           teamStyles.returnTextBtnHover(props.color, props.variant)}; 
-    `};
+      }
+  `};
 
   ${(props) =>
     props.disabled &&
     css`
-      background-color: lightgrey;
+      background-color: ${(props) => props.variant === 'text' ? 'transparent' : 'lightgrey'};
+      color: ${(props) => props.variant === 'text' ? 'lightgrey' : props.color};
       cursor: auto;
       box-shadow: none;
       &:hover {
+        background-color: transparent;
         transform: none;
         box-shadow: none;
       }
-    `};
+  `};
 `
 
 Button.propTypes = {
