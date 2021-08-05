@@ -104,7 +104,7 @@ Card component also returns props.children so all components within the Card com
 
 <hr />
 
-```
+```jsx
   <Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
     <Child Component>
   </Card>
@@ -128,14 +128,14 @@ CardImage is a self closing component that takes in a image as a prop with a url
 | property         | props    | default   | values  |       |         |
 | ---------------- | -------- | --------- | ------- | ----- | ------- |
 | backgroundColor: | bgColor: | 'white'   | hex     | rgb   | 'color' |
-| backgroundImage: | img:     | null      | url     |       |         |
+| backgroundImage: | img:     | picsum      | url     |       |         |
 | backgroundSize:  | bgSize:  | 'contain' | 'cover' | '%'   | 'px'    |
-| height:          | height:  | '300px'   | 'px'    | 'rem' | '%'     |
-| width:           | imgSize: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
+| height:          | imgHeight:  | '300px'   | 'px'    | 'rem' | '%'     |
+| width:           | imgWidth: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
 
 <hr />
 
-```
+```jsx
 <CardImage img={'url'} bgSize='cover' height='150px' />
 ```
 
@@ -192,7 +192,7 @@ CardButton takes in an array of buttons using props and the .map() method.
 
 <hr />
 
-```
+```jsx
 <CardButton position='right'>
   buttons={[
             <Button size='md' variant={'primary'}>

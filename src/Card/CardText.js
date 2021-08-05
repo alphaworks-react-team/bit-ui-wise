@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CardText = (props) => {
   const styles = {
     textBody: {
       backgroundColor: props.bgColor,
-      textAlign: props.textAlign
+      textAlign: props.textAlign,
+      padding: props.padding,
     }
   }
   return (
@@ -15,13 +17,15 @@ const CardText = (props) => {
 }
 
 
-Card.propTypes = {
+CardText.propTypes = {
   textAlign: PropTypes.string,
   bgColor: PropTypes.string,
+  padding: PropTypes.string,
 }
-Card.defaultProps = {
+CardText.defaultProps = {
   textAlign: 'left',
   bgColor: 'white', //do we need BGC???
+  padding: '10px'
 }
 
 export default CardText
