@@ -5,9 +5,10 @@ import {
   CardButton,
   CardText,
   CardImage,
-  Typography
+  Typography,
+  TextField,
 } from 'bit-ui-wise'
-import PropTypes from 'prop-types'
+
 
 const Team3 = () => {
   const styles = {
@@ -37,6 +38,12 @@ const Team3 = () => {
           ]}
         ></CardButton>
       </Card>
+
+    <Card>
+      
+    </Card>
+
+      
     </div>
   )
 }

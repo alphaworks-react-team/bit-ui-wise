@@ -19,16 +19,13 @@ const Card = (props) => {
         : props.size === 'lrg'
         ? '825px'
         : '100%',
-
     minHeight: `150px`,
     height: `${props.height}`,
     backgroundColor: props.bgColor,
     boxShadow: '3px 3px 5px black',
-
     display: 'flex',
-    flexDirection: props.direction === 'row' ? props.direction : 'column'
+    flexDirection: props.direction === 'row' ? props.direction : 'column',
   }
-
   return <div style={styles}>{props.children}</div>
 }
 
@@ -40,9 +37,9 @@ Card.propTypes = {
 }
 Card.defaultProps = {
   height: '',
-  bgColor: 'white', //do we need BGC???
+  bgColor: 'white', 
   size: 'sm',
-  direction: 'column'
+  direction: 'column',
 }
 
 
