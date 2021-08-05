@@ -89,6 +89,22 @@ const teamStyles = {
     }
   },
 
+  returnTextBtnHover: (color) => {
+    if (color === 'primary') {
+      return 'rgba(63, 81, 181, 0.1)'
+    } else if (color === 'secondary') {
+      return 'rgba(255, 87, 34, 0.1)'
+    } else if (color === 'delete') {
+      return 'rgba(217, 17, 17, 0.1)'
+    } else if (color === 'warning') {
+      return 'rgba(255, 215, 0, 0.1)'
+    } else if (color === 'success') {
+      return 'rgba(7, 140, 34, 0.1)'
+    } else {
+      return `opacity: 0.1;`
+    }
+  },
+
   returnBorder: (color, variant) => {
     if (color === 'primary' && variant === 'outlined') {
       return '1px solid #3f51b5'

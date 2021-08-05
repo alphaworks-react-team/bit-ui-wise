@@ -38,11 +38,10 @@ const Button = styled.button`
       color: ${(props) => teamStyles.returnColor(props.color, props.variant)};
       box-shadow: none;
       &:hover {
+        box-shadow: none;
         transform: none;
-        /* opacity: 0.1;
-        background: ${(props) =>
-          teamStyles.returnColor(props.color, props.variant)};  */
-        background: rgba(0, 0, 0, 0.1);
+        background-color: ${(props) =>
+          teamStyles.returnTextBtnHover(props.color, props.variant)}; 
     `};
 
   ${(props) =>
