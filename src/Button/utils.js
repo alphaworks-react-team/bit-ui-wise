@@ -26,17 +26,33 @@ const teamStyles = {
   },
 
   returnBgColor: (color, variant) => {
-    if (color === 'primary' && variant !== 'outlined') {
+    if (color === 'primary' && variant !== 'outlined' && variant !== 'text') {
       return '#3f51b5'
-    } else if (color === 'secondary' && variant !== 'outlined') {
+    } else if (
+      color === 'secondary' &&
+      variant !== 'outlined' &&
+      variant !== 'text'
+    ) {
       return '#FF5722'
-    } else if (color === 'delete' && variant !== 'outlined') {
+    } else if (
+      color === 'delete' &&
+      variant !== 'outlined' &&
+      variant !== 'text'
+    ) {
       return '#d91111'
-    } else if (color === 'warning' && variant !== 'outlined') {
+    } else if (
+      color === 'warning' &&
+      variant !== 'outlined' &&
+      variant !== 'text'
+    ) {
       return 'gold'
-    } else if (color === 'success' && variant !== 'outlined') {
+    } else if (
+      color === 'success' &&
+      variant !== 'outlined' &&
+      variant !== 'text'
+    ) {
       return '#078c22'
-    } else if (variant === 'outlined') {
+    } else if (variant === 'outlined' || variant === 'text') {
       return 'white'
     } else {
       return color
@@ -44,17 +60,29 @@ const teamStyles = {
   },
 
   returnColor: (color, variant) => {
-    if (color === 'primary' && variant === 'outlined') {
+    if (color === 'primary' && (variant === 'outlined' || variant === 'text')) {
       return '#3f51b5'
-    } else if (color === 'secondary' && variant === 'outlined') {
+    } else if (
+      color === 'secondary' &&
+      (variant === 'outlined' || variant === 'text')
+    ) {
       return '#FF5722'
-    } else if (color === 'delete' && variant === 'outlined') {
+    } else if (
+      color === 'delete' &&
+      (variant === 'outlined' || variant === 'text')
+    ) {
       return '#d91111'
-    } else if (color === 'warning' && variant === 'outlined') {
+    } else if (
+      color === 'warning' &&
+      (variant === 'outlined' || variant === 'text')
+    ) {
       return 'gold'
-    } else if (color === 'success' && variant === 'outlined') {
+    } else if (
+      color === 'success' &&
+      (variant === 'outlined' || variant === 'text')
+    ) {
       return '#078c22'
-    } else if (variant === 'outlined') {
+    } else if (variant === 'outlined' || variant === 'text') {
       return color
     } else {
       return 'white'

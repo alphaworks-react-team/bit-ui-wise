@@ -33,6 +33,19 @@ const Button = styled.button`
   }
 
   ${(props) =>
+    props.variant === 'text' &&
+    css`
+      color: ${(props) => teamStyles.returnColor(props.color, props.variant)};
+      box-shadow: none;
+      &:hover {
+        transform: none;
+        /* opacity: 0.1;
+        background: ${(props) =>
+          teamStyles.returnColor(props.color, props.variant)};  */
+        background: rgba(255, 0, 0, 0.1);
+    `};
+
+  ${(props) =>
     props.disabled &&
     css`
       background-color: lightgrey;
@@ -42,7 +55,7 @@ const Button = styled.button`
         transform: none;
         box-shadow: none;
       }
-    `}
+    `};
 `
 
 Button.propTypes = {

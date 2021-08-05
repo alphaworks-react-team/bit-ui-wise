@@ -15,17 +15,17 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-        <Button variant='contained' size='sm'>
+        <Button disabled variant='text' size='sm'>
           disabled
         </Button>
       </div>
-      <Button size='sm' color='primary'>
+      <Button variant='text' size='sm' color='primary'>
         small
       </Button>
-      <Button size='md' color='secondary'>
+      <Button variant='text' size='md' color='secondary'>
         medium
       </Button>
-      <Button size='lrg' color='success'>
+      <Button variant='text' size='lrg' color='success'>
         Large
       </Button>
       <Button>default</Button>
@@ -70,7 +70,7 @@ const Team2 = () => {
           </Button>
         </CardButton>
       </div> */}
-    </div> 
+    </div>
   )
 }
 
