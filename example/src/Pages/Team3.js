@@ -22,7 +22,7 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
-      <Card>
+      <Card >
         <CardImage />
         <CardText>
           <Typography variant='small' fontColor='black'>
@@ -37,13 +37,7 @@ const Team3 = () => {
             </Button>
           ]}
         ></CardButton>
-      </Card>
-
-    <Card>
-      
-    </Card>
-
-      
+      </Card>    
     </div>
   )
 }

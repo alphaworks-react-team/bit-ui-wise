@@ -1,18 +1,23 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+const Div = styled.div`
+    background-color: ${(props) => props.bgColor} ;
+    text-align: ${(props) => props.textAlign};
+    padding: ${(props) => props.padding};
+`
+
 const CardText = (props) => {
-  const styles = {
-    textBody: {
-      backgroundColor: props.bgColor,
-      textAlign: props.textAlign,
-      padding: props.padding,
-    }
-  }
+  
   return (
-    <div className='text-body' style={styles.textBody}>
+    <Div 
+    bgColor={props.bgColor}
+    padding={props.padding}
+    textAlign={props.textAlign}
+    >
       {props.children}
-    </div>
+    </Div>
   )
 }
 
@@ -24,7 +29,7 @@ CardText.propTypes = {
 }
 CardText.defaultProps = {
   textAlign: 'left',
-  bgColor: 'white', //do we need BGC???
+  bgColor: 'white', 
   padding: '10px'
 }
 
