@@ -1,3 +1,12 @@
+const hexToRGB = (hex) => {
+
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+
+    return `rgb(${r}, ${g}, ${b}, 0.1)`;
+}
+
 const teamStyles = {
   returnPadding: (size) => {
     switch (size) {
@@ -89,6 +98,7 @@ const teamStyles = {
     }
   },
 
+
   returnTextBtnHover: (color) => {
     if (color === 'primary') {
       return 'rgba(63, 81, 181, 0.1)'
@@ -101,9 +111,10 @@ const teamStyles = {
     } else if (color === 'success') {
       return 'rgba(7, 140, 34, 0.1)'
     } else {
-      return `opacity: 0.1;`
+      return `${hexToRGB(color)}`
     }
   },
+
 
   returnBorder: (color, variant) => {
     if (color === 'primary' && variant === 'outlined') {

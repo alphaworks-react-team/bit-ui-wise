@@ -15,11 +15,11 @@ const Team2 = () => {
     <div>
       <h1>Im for team 2</h1>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
-        <Button disabled variant='text' size='sm'>
-          disabled
+        <Button variant='text' color='warning' size='sm'>
+          warning
         </Button>
       </div>
-      <Button variant='text' size='sm' color='violet'>
+      <Button variant='text' size='sm' color='#660066'>
         small
       </Button>
       <Button variant='text' size='md' color='secondary'>
