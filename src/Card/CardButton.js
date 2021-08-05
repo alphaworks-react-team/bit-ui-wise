@@ -1,35 +1,53 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const buttonStyling = {
+  returnStyles: (position) =>{
+    switch(position){
+      case "left":
+        return 'flex-start'
+      case 'center':
+        return 'center'
+      case 'right':
+        return 'flex-end'
+      default:
+        return 'space-evenly'
+    }
+  }
+}
 
 const CardButton = (props) => {
-  const styles = {
-    height: '100%',
-    margin: '10px',
-    display: 'flex',
-    flexFlow: 'row wrap',
-    justifyContent:
-      props.position === 'left'
-        ? 'flex-start'
-        : props.position === 'center'
-        ? 'center'
-        : props.position === 'right'
-        ? 'flex-end'
-        : 'space-evenly',
-    alignContent: 'space-around',
-    alignItems: 'space-between',
-    backgroundColor: props.bgColor || 'white'
-  }
+
+const ButtonStyle = styled.div`
+display: flex;
+height: 100%;
+padding: 10px;
+display: flex;
+flex-flow:row wrap;
+align-content: space-around;
+align-items: space-between;
+background-color: ${props.bgColor};
+justify-content:${(props) => buttonStyling.returnStyles(props.position)} ;
+`
   return (
     <div>
       {props.buttons ? (
-        <div className='buttonGroup' style={styles}>
-          {props.buttons.map((item) => item)}
+        <ButtonStyle 
+        position={props.position}
+        bgColor={props.bgColor}
+        >
+        {/*<div className='buttonGroup' style={styles}>*/}
+        {props.buttons.map((item) => item)} 
+       { /*</div>*/} 
+        </ButtonStyle>
+        ) : null}
         </div>
-      ) : null}
-    </div>
-  )
-}
-
+        
+        )
+      }
+      
+      
 CardButton.propTypes = {
   position: PropTypes.string,
   bgColor: PropTypes.string,
@@ -38,15 +56,10 @@ CardButton.propTypes = {
     color: PropTypes.string,
     size: PropTypes.string
   })
-  // buttons: PropTypes.arrayOf(PropTypes.shapes({
-  //   variant:PropTypes.string,
-  //   color:PropTypes.string,
-  //   size:PropTypes.string
-  // })) this gave me errors
 }
 CardButton.defaultProps = {
   position: 'space-evenly',
-  bgColor: 'white', //do we need BGC???
+  bgColor: 'blue',
   buttons: [
     {
       variant: '',
