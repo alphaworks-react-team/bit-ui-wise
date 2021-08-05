@@ -1,15 +1,8 @@
 import React from 'react'
-import { Button, Card, CardButton, TextField, CardText, Typography } from 'bit-ui-wise'
-import { useState } from 'react'
-import { FaTrashAlt } from 'react-icons/fa'
+import { Button } from 'bit-ui-wise'
+
 
 const Team2 = () => {
-  const [count, setCount] = useState(0)
-  const [disable, setDisabled] = useState(false)
-
-  const toggleDisabled = () => {
-    setDisabled(!disable)
-  }
 
   return (
     <div>
