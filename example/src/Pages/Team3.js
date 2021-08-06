@@ -6,9 +6,8 @@ import {
   CardText,
   CardImage,
   Typography,
-  TextField,
+  TextField
 } from 'bit-ui-wise'
-
 
 const Team3 = () => {
   const styles = {
@@ -22,24 +21,61 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
-      <Card >
+      <Card size='sm'>
         <CardImage />
         <CardText>
           <Typography variant='small' fontColor='black'>
             Lorem ipsum dolor sit amet.
           </Typography>
         </CardText>
-        <CardButton 
-          position='right' bgColor='red' 
+        <CardButton
+          position='right'
           buttons={[
-            <Button  size='sm' color="warning">
+            <Button size='sm' color='warning'>
               lorem
-            </Button>, <Button variant='outlined' size='sm'>
-            lorem
-          </Button>
+            </Button>,
+            <Button variant='outlined' size='sm'>
+              lorem
+            </Button>
           ]}
         ></CardButton>
-      </Card>    
+      </Card>
+
+      <Card size='md'>
+        <CardText>
+          <Typography variant='small' color='black'>
+            Login
+          </Typography>
+        </CardText>
+        <CardText textAlign='center'>
+          <TextField
+            style={{ boxSizing: 'border-box' }}
+            variant='outlined'
+            width='80%'
+            placeholder='username'
+          ></TextField>
+        </CardText>
+        <CardText textAlign='center'>
+          <TextField
+            style={{ boxSizing: 'border-box' }}
+            variant='outlined'
+            width='80%'
+            placeholder='password'
+            type='password'
+          ></TextField>
+        </CardText>
+        <CardButton
+          position=''
+          buttons={[
+            <Button size='sm' color='primary'>
+              Login
+            </Button>,
+            <Button size='sm' color='primary'>
+              Sign Up
+            </Button>
+          ]}
+        ></CardButton>
+      </Card>
     </div>
   )
 }

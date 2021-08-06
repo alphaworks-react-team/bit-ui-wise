@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const buttonStyling = {
-  returnStyles: (position) =>{
-    switch(position){
-      case "left":
+  returnStyles: (position) => {
+    switch (position) {
+      case 'left':
         return 'flex-start'
       case 'center':
         return 'center'
@@ -18,36 +18,30 @@ const buttonStyling = {
 }
 
 const CardButton = (props) => {
-
-const ButtonStyle = styled.div`
-display: flex;
-height: 100%;
-padding: 10px;
-display: flex;
-flex-flow:row wrap;
-align-content: space-around;
-align-items: space-between;
-background-color: ${props.bgColor};
-justify-content:${(props) => buttonStyling.returnStyles(props.position)} ;
-`
+  const ButtonStyle = styled.div`
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    align-items: space-between;
+    background-color: ${props.bgColor};
+    justify-content: ${(props) => buttonStyling.returnStyles(props.position)};
+  `
   return (
     <div>
       {props.buttons ? (
-        <ButtonStyle 
-        position={props.position}
-        bgColor={props.bgColor}
-        >
-        {/*<div className='buttonGroup' style={styles}>*/}
-        {props.buttons.map((item) => item)} 
-       { /*</div>*/} 
+        <ButtonStyle position={props.position} bgColor={props.bgColor}>
+          {/*<div className='buttonGroup' style={styles}>*/}
+          {props.buttons.map((item) => item)}
+          {/*</div>*/}
         </ButtonStyle>
-        ) : null}
-        </div>
-        
-        )
-      }
-      
-      
+      ) : null}
+    </div>
+  )
+}
+
 CardButton.propTypes = {
   position: PropTypes.string,
   bgColor: PropTypes.string,
@@ -59,14 +53,14 @@ CardButton.propTypes = {
 }
 CardButton.defaultProps = {
   position: 'space-evenly',
-  bgColor: 'blue',
+  bgColor: 'white',
   buttons: [
     {
       variant: '',
       color: 'primary',
       size: 'md'
     }
-  ] 
+  ]
 }
 
 export default CardButton
