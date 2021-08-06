@@ -1,14 +1,13 @@
 import React from 'react'
 import {
-  CardTemplate,
   Button,
   Card,
   CardButton,
   CardText,
   CardImage,
-  Typography
+  Typography,
+  TextField
 } from 'bit-ui-wise'
-import PropTypes from 'prop-types'
 
 const Team3 = () => {
   const styles = {
@@ -20,223 +19,107 @@ const Team3 = () => {
     backgroundColor: '#9e9e9e'
   }
 
-  const leftSide = {
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'space-evenly'
-  }
-
   return (
     <div style={styles}>
-      <Card>
+      {/* Card with img/buttons/description*/}
+      <Card size='sm'>
+        <CardImage />
         <CardText>
-          <Typography>Header</Typography>
-        </CardText>
-        <CardImage img='https://i.pcmag.com/imagery/reviews/03aizylUVApdyLAIku1AvRV-39.1605559903.fit_scale.size_760x427.png' />
-        <CardText>
-          <Typography>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, ex.
+          <Typography variant='small' fontColor='black'>
+            Lorem ipsum dolor sit amet.
           </Typography>
-          <Typography>Lorem ipsum dolor sit amet.</Typography>
         </CardText>
         <CardButton
-          buttons={[<Button>Click me</Button>, <Button>Click me</Button>]}
-        />
+          position='right'
+          buttons={[
+            <Button size='sm' color='warning'>
+              lorem
+            </Button>,
+            <Button variant='outlined' size='sm'>
+              lorem
+            </Button>
+          ]}
+        ></CardButton>
+      </Card>
+
+      {/* Login Card */}
+      <Card size='md'>
+        <CardText>
+          <Typography variant='small' fontWeight='bold' fontColor='black'>
+            Login
+          </Typography>
+        </CardText>
+        <CardText textAlign='center'>
+          <TextField
+            style={{ boxSizing: 'border-box' }}
+            variant='outlined'
+            width='80%'
+            placeholder='username'
+          ></TextField>
+        </CardText>
+        <CardText textAlign='center'>
+          <TextField
+            style={{ boxSizing: 'border-box' }}
+            variant='outlined'
+            width='80%'
+            placeholder='password'
+            type='password'
+          ></TextField>
+        </CardText>
+        <CardButton
+          position=''
+          buttons={[
+            <Button size='sm' color='primary'>
+              Login
+            </Button>,
+            <Button size='sm' color='primary'>
+              Sign Up
+            </Button>
+          ]}
+        ></CardButton>
+      </Card>
+
+      <Card size='md'>
+        <Card>
+          <CardText>
+            <Typography variant='medium' fontWeight='bold' fontColor='black'>
+              Product Name
+            </Typography>
+          </CardText>
+        </Card>
+        <Card direction='row'>
+          <CardImage imgWidth='sm' imgHeight='auto' />
+          <CardText>
+            <CardText>
+              <Typography variant='small' fontWeight='bold' fontColor='black'>
+                Description:
+              </Typography>
+            </CardText>
+            <CardText>
+              <Typography variant='small' fontColor='black'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
+                illum veniam autem maiores distinctio, nihil nobis libero
+                repellendus id quaerat atque, totam consectetur soluta quisquam,
+                nostrum corporis! Rem, nam cumque.
+              </Typography>
+            </CardText>
+            <CardText textAlign='right'>
+              <Typography variant='small' fontWeight='bold' fontColor='black'>
+                $5.99
+              </Typography>
+            </CardText>
+            <CardButton
+              position='center'
+              buttons={[
+                <Button size='sm' color='primary'>
+                  Add to Cart
+                </Button>
+              ]}
+            ></CardButton>
+          </CardText>
+        </Card>
       </Card>
     </div>
-
-    //     <div style={styles}>
-
-    //       {/* VERSION 1 */}
-    //       {/* <CardTemplate
-    //         title='hello'
-    //         subTitle='subtitle'
-    //         img={'https://picsum.photos/400/600'}
-    //         // width='400px'
-    //         // height='600px'
-    //         buttons={[
-    //           <Button variant={'delete'}>Click Me!</Button>,
-    //           <Button variant={'primary'}>Delete Me!</Button>
-    //         ]}
-    //       >
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-    //         nostrum alias, cum enim excepturi odit explicabo neque fugiat inventore
-    //         ad
-    //       </CardTemplate> */}
-
-    //       {/* VERSION 2 */}
-    //       <Card size='sm'>
-    //         <CardImage img={'https://via.placeholder.com/300/'} />
-    //         <CardHeader title='hello' subTitle='hello again'>
-    //           <Typography variant='header'>this is a header</Typography>
-    //           <Typography variant='sub-header'>this is sub-header</Typography>
-    //         </CardHeader>
-    //         <CardText>
-    //           <Typography variant='header'>Hello</Typography>
-    //           <Typography variant='sub-header'>this</Typography>
-    //           <Typography variant='body'>
-    //             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-    //             Consectetur quidem ducimus assumenda aperiam cum aliquam, distinctio
-    //             laudantium facilis id, dolor incidunt? Sunt autem consequatur
-    //             delectus perspiciatis consectetur accusantium explicabo sequi.
-    //           </Typography>
-    //         </CardText>
-    //         <CardButton
-    //           buttons={[
-    //             <Button size='sm' variant={'delete'}>
-    //               Delete Me!
-    //             </Button>,
-    //             <Button size='sm' variant={'primary'}>
-    //               pay now
-    //             </Button>
-    //           ]}
-    //         />
-    //       </Card>
-
-    //       <Card size='md'>
-    //         <CardImage
-    //           // imgSize='sm'
-    //           bgSize='cover'
-    //           // height='800px'
-    //           img={'https://via.placeholder.com/825/'}
-    //         />
-    //         <CardHeader title='hello' subTitle='hello again'>
-    //           <Typography variant='header'>this is a header</Typography>
-    //           <Typography variant='sub-header'>this is sub-header</Typography>
-    //         </CardHeader>
-    //         <CardText>
-    //           <Typography variant='header'>Hello</Typography>
-    //           <Typography variant='sub-header'>this</Typography>
-    //           <Typography variant='body'>
-    //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-    //             sit at, ipsam magnam atque corrupti! Quos ipsa similique soluta,
-    //             atque doloribus eos perspiciatis blanditiis earum inventore
-    //             voluptates. Tempore, quas ullam.
-    //           </Typography>
-    //         </CardText>
-    //         <CardButton
-    //           // position='center'
-    //           buttons={[
-    //             <Button size='md' variant={'delete'}>
-    //               Delete Me!
-    //             </Button>,
-    //             <Button size='md' variant={'primary'}>
-    //               Click Me!
-    //             </Button>
-    //           ]}
-    //         />
-    //       </Card>
-
-    //       <Card size='lrg'>
-    //         <CardHeader title='hello' subTitle='hello again'>
-    //           <Typography variant='header'>this is a header</Typography>
-    //           <Typography variant='sub-header'>this is sub-header</Typography>
-    //         </CardHeader>
-    // {    /*    <CardImage img={'https://via.placeholder.com/825/'} /> */
-    // <CardImage img={'https://picsum.photos/400/600'} />
-
-    // }        <CardText>
-    //           <Typography variant='header'>Hello</Typography>
-    //           <Typography variant='sub-header'>this</Typography>
-    //           <Typography variant='body'>
-    //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-    //             veniam ut officiis quam tempore omnis vel eligendi soluta voluptatem
-    //             hic aliquam, quibusdam obcaecati aliquid perspiciatis cum! Soluta
-    //             dignissimos nostrum impedit.
-    //           </Typography>
-    //         </CardText>
-    //         <CardButton
-    //           buttons={[
-    //             <Button size='lrg' variant={'delete'}>
-    //               Delete Me!
-    //             </Button>,
-    //             <Button size='lrg' variant={'primary'}>
-    //               Click Me!
-    //             </Button>
-    //           ]}
-    //         />
-    //       </Card>
-
-    //       <div style={{ width: '400px' }}>
-    //         <Card>
-    //           <CardHeader title='hello' subTitle='hello again'>
-    //             <Typography variant='header'>this is a header</Typography>
-    //             <Typography variant='sub-header'>this is sub-header</Typography>
-    //           </CardHeader>
-    //           <CardImage img={'https://via.placeholder.com/825/'} />
-    //           <CardText>
-    //             <Typography variant='header'>Hello</Typography>
-    //             <Typography variant='sub-header'>this</Typography>
-    //             <Typography variant='body'>
-    //               Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-    //               veniam ut officiis quam tempore omnis vel eligendi soluta
-    //               voluptatem hic aliquam, quibusdam obcaecati aliquid perspiciatis
-    //               cum! Soluta dignissimos nostrum impedit.
-    //             </Typography>
-    //           </CardText>
-    //           <CardButton
-    //             buttons={[
-    //               <Button size='lrg' variant={'delete'}>
-    //                 Delete Me!
-    //               </Button>,
-    //               <Button size='lrg' variant={'primary'}>
-    //                 Click Me!
-    //               </Button>
-    //             ]}
-    //           />
-    //         </Card>
-    //       </div>
-
-    //       {/*DEFAULT PROPS*/}
-    //       <div style={{width: '500px'}}>
-    //        <Card >
-    //         <CardHeader >
-    //           <Typography variant='header'>this is a header</Typography>
-    //           <Typography variant='sub-header'>this is sub-header</Typography>
-    //         </CardHeader>
-    // {    /*    <CardImage img={'https://via.placeholder.com/825/'} /> */
-    // <CardImage img={'https://picsum.photos/400/600'} />
-
-    // }        <CardText>
-    //           <Typography variant='header'>Hello</Typography>
-    //           <Typography variant='sub-header'>this</Typography>
-    //           <Typography variant='body'>
-    //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-    //             veniam ut officiis quam tempore omnis vel eligendi soluta voluptatem
-    //             hic aliquam, quibusdam obcaecati aliquid perspiciatis cum! Soluta
-    //             dignissimos nostrum impedit.
-    //           </Typography>
-    //         </CardText>
-
-    //       </Card>
-    //       </div>
-
-    //       {/* VERSION 3 SIDE MODE */}
-    //       {/* <Card direction='row'>
-    //         <div style={leftSide}>
-    //           <CardHeader title='hello' subTitle='hello again'></CardHeader>
-    //           <CardText>
-    //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-    //             harum molestias fugit voluptates, architecto repellat sequi placeat
-    //             perspiciatis impedit deleniti quidem aspernatur aliquid saepe id
-    //             dolorum laboriosam minima! Accusantium, dolorum!
-    //           </CardText>
-    //           <CardButton
-    //             buttons={[
-    //               <Button size='small' variant={'delete'}>
-    //                 Delete Me!
-    //               </Button>,
-    //               <Button size='small' variant={'primary'}>
-    //                 Click Me!
-    //               </Button>
-    //             ]}
-    //           />
-    //         </div>
-    //         <div>
-    //           <CardImage img={'https://picsum.photos/400/600'} />
-    //         </div>
-    //       </Card> */}
-    //     </div>
   )
 }
 

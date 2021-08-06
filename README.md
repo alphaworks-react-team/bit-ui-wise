@@ -26,7 +26,7 @@ _If no props are passed, the default styling will be size 'md', variant 'primary
 | -------- | --------- | --------- | ------- | ------ | ---- |
 | size:    | sm        | md        | rgl     |        |      |
 | variant: | primary   | secondary | warning | delete | send |
-| type     | oputlined | contained |         |        |      |
+| type     | outlined | contained |         |        |      |
 
 \
 &nbsp;
@@ -59,14 +59,14 @@ import Button from 'bit-ui-wise'
 class CardButton extends Component {
   render() {
     return (
-      <Button size='small' variant='primary'>
-        Small
-      </Button>
+      [<Button variant="outlined" color="delete" size="sm">Click me</Button>, <Button size="sm" variant="outlined" color="warning">Click me</Button>]
     )
   }
 }
 ```
 
+
+*Note that the button must always be in an array
 \
 &nbsp;
 
@@ -105,7 +105,7 @@ Card component also returns props.children so all components within the Card com
 
 <hr />
 
-```
+```jsx
   <Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
     <Child Component>
   </Card>
@@ -129,14 +129,14 @@ CardImage is a self closing component that takes in a image as a prop with a url
 | property         | props    | default   | values  |       |         |
 | ---------------- | -------- | --------- | ------- | ----- | ------- |
 | backgroundColor: | bgColor: | 'white'   | hex     | rgb   | 'color' |
-| backgroundImage: | img:     | null      | url     |       |         |
+| backgroundImage: | img:     | picsum      | url     |       |         |
 | backgroundSize:  | bgSize:  | 'contain' | 'cover' | '%'   | 'px'    |
-| height:          | height:  | '300px'   | 'px'    | 'rem' | '%'     |
-| width:           | imgSize: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
+| height:          | imgHeight:  | '300px'   | 'px'    | 'rem' | '%'     |
+| width:           | imgWidth: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
 
 <hr />
 
-```
+```jsx
 <CardImage img={'url'} bgSize='cover' height='150px' />
 ```
 
@@ -155,14 +155,16 @@ CardText takes {props.children} which will give a container for the typography c
 
 ### Props
 
-| property         | props    | default | values |     |         |
-| ---------------- | -------- | ------- | ------ | --- | ------- |
-| backgroundColor: | bgColor: | 'white' | hex    | rgb | 'color' |
+| property         | props      | default | values |     |         |
+| ---------------- | --------   | ------- | ------ | --- | ------- |
+| backgroundColor: | bgColor:   | 'white' | hex    | rgb | 'color' |
+| textAlign:       | textAlign: | 'left'  | null   | rgb | null    |
+
 
 <hr />
 
-```
-<CardText bgColor='lightgrey'>
+```jsx
+<CardText alignText="center" bgColor='lightgrey'>
   <Typography> Hello World! </Typography>
 <CardText />
 ```
@@ -191,7 +193,7 @@ CardButton takes in an array of buttons using props and the .map() method.
 
 <hr />
 
-```
+```jsx
 <CardButton position='right'>
   buttons={[
             <Button size='md' variant={'primary'}>
