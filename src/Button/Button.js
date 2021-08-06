@@ -9,7 +9,7 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
-  margin: 3px;
+  
   text-transform: uppercase;
 
   padding: ${(props) => teamStyles.returnPadding(props.size)};
@@ -50,6 +50,7 @@ Button.propTypes = {
   color: PropTypes.string,
   size: PropTypes.string
 }
+
 Button.defaultProps = {
   variant: '',
   color: 'primary',
