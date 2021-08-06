@@ -80,18 +80,76 @@ const Team3 = () => {
       </Card>
 
       <Card size='md'>
-        <Card>
+        <CardText>
+          <Typography variant='small' fontWeight='bold' fontColor='black'>
+            Register
+          </Typography>
+        </CardText>
+        <form action=''>
+          <CardText textAlign='center'>
+            <TextField
+              style={{ boxSizing: 'border-box' }}
+              variant='outlined'
+              width='80%'
+              placeholder='username'
+            ></TextField>
+          </CardText>
+          <CardText textAlign='center'>
+            <TextField
+              style={{ boxSizing: 'border-box' }}
+              variant='outlined'
+              width='80%'
+              placeholder='e-mail'
+            ></TextField>
+          </CardText>
+          <CardText textAlign='center'>
+            <TextField
+              style={{ boxSizing: 'border-box' }}
+              variant='outlined'
+              width='80%'
+              placeholder='password'
+              type='password'
+            ></TextField>
+          </CardText>
+        </form>
+        <CardText textAlign='center'>
+          <TextField
+            style={{ boxSizing: 'border-box' }}
+            variant='outlined'
+            width='80%'
+            placeholder='confirm password'
+            type='password'
+          ></TextField>
+        </CardText>
+        <CardButton
+          position=''
+          buttons={[
+            <Button size='md' color='primary'>
+              Register
+            </Button>
+          ]}
+        ></CardButton>
+      </Card>
+
+      {/* Product Card */}
+      <Card size='md'>
+        {/* <Card>
           <CardText>
-            <Typography variant='medium' fontWeight='bold' fontColor='black'>
+            <Typography variant='medium' fontWeight='bold' fontColor='primary'>
               Product Name
             </Typography>
           </CardText>
-        </Card>
+        </Card> */}
         <Card direction='row'>
           <CardImage imgWidth='sm' imgHeight='auto' />
           <CardText>
             <CardText>
               <Typography variant='small' fontWeight='bold' fontColor='black'>
+                Product Name
+              </Typography>
+            </CardText>
+            <CardText>
+              <Typography variant='small' fontColor='black'>
                 Description:
               </Typography>
             </CardText>
@@ -113,6 +171,38 @@ const Team3 = () => {
               buttons={[
                 <Button size='sm' color='primary'>
                   Add to Cart
+                </Button>
+              ]}
+            ></CardButton>
+          </CardText>
+        </Card>
+      </Card>
+
+      {/* Social Media Post Card */}
+      <Card size='lrg'>
+        <CardText>
+          <Typography variant='medium' fontWeight='bold' fontColor='primary'>
+            Friend
+          </Typography>
+        </CardText>
+        <Card direction='row'>
+          <CardText>
+            <CardText>
+              <Typography variant='small' fontColor='black'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
+                illum veniam autem maiores distinctio, nihil nobis libero
+                repellendus id quaerat atque, totam consectetur soluta quisquam,
+                nostrum corporis! Rem, nam cumque.
+              </Typography>
+            </CardText>
+            <CardButton
+              position='right'
+              buttons={[
+                <Button size='sm' color='primary'>
+                  Like
+                </Button>,
+                <Button size='sm' color='primary'>
+                  Comment
                 </Button>
               ]}
             ></CardButton>
