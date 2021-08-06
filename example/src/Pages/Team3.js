@@ -21,6 +21,7 @@ const Team3 = () => {
 
   return (
     <div style={styles}>
+      {/* Card with img/buttons/description*/}
       <Card size='sm'>
         <CardImage />
         <CardText>
@@ -41,9 +42,10 @@ const Team3 = () => {
         ></CardButton>
       </Card>
 
+      {/* Login Card */}
       <Card size='md'>
         <CardText>
-          <Typography variant='small' color='black'>
+          <Typography variant='small' fontWeight='bold' fontColor='black'>
             Login
           </Typography>
         </CardText>
@@ -75,6 +77,47 @@ const Team3 = () => {
             </Button>
           ]}
         ></CardButton>
+      </Card>
+
+      <Card size='md'>
+        <Card>
+          <CardText>
+            <Typography variant='medium' fontWeight='bold' fontColor='black'>
+              Product Name
+            </Typography>
+          </CardText>
+        </Card>
+        <Card direction='row'>
+          <CardImage imgWidth='sm' imgHeight='auto' />
+          <CardText>
+            <CardText>
+              <Typography variant='small' fontWeight='bold' fontColor='black'>
+                Description:
+              </Typography>
+            </CardText>
+            <CardText>
+              <Typography variant='small' fontColor='black'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
+                illum veniam autem maiores distinctio, nihil nobis libero
+                repellendus id quaerat atque, totam consectetur soluta quisquam,
+                nostrum corporis! Rem, nam cumque.
+              </Typography>
+            </CardText>
+            <CardText textAlign='right'>
+              <Typography variant='small' fontWeight='bold' fontColor='black'>
+                $5.99
+              </Typography>
+            </CardText>
+            <CardButton
+              position='center'
+              buttons={[
+                <Button size='sm' color='primary'>
+                  Add to Cart
+                </Button>
+              ]}
+            ></CardButton>
+          </CardText>
+        </Card>
       </Card>
     </div>
   )
