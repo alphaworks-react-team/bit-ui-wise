@@ -1,118 +1,104 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const returnProps = (propsObject) => {
+  return {
+    onChange: propsObject.onChange,
+    name: propsObject.name,
+    type: propsObject.type,
+    placeholder: propsObject.placeholder,
+    value: propsObject.value,
+    width: propsObject.width,
+    height: propsObject.height,
+    bgColor: propsObject.bgColor,
+    fontColor: propsObject.fontColor
+  }
+}
+const colors = {
+  darkGrey: 'rgb(48, 48, 48)',
+  darkGreyThirty: 'rgb(48, 48, 48, 0.3)',
+  darkGreyEighty: 'rgb(48, 48, 48, 0.8)',
+  lightGrey: 'rgb(128, 128, 128)',
+  almostBlack: 'rgb(9, 11, 12)',
+  almostWhite: 'rgb(247, 247, 243)'
+}
+const styles = {
+  width: `100%`,
+  height: `2rem`,
+  border: `2px solid ${colors.darkGrey}`,
+  borderBottom: `2px solid ${colors.darkGreyThirty}`,
+  hoverBorder: `2px solid ${colors.darkGrey}`,
+  borderBottomHover: `2px solid ${colors.almostBlack}`,
+  borderTopRadius: `0.25rem`,
+  backgroundColor: `${colors.lightGrey}`
+}
+const returnThings = (width, height, bgColor, fontColor, borderBottom) => {
+  return `
+  width: ${width || styles.width};
+  height: ${height || styles.height};
+  background-color: ${bgColor || 'none'};
+  color: ${fontColor || colors.almostBlack} ;
+  border-bottom: ${borderBottom || styles.borderBottom};
+ `
+}
 const StandardStyle = styled.input`
-  width: ${(props) => props.width || '100%'};
-  height: ${(props) => props.height || '2em'};
-  background-color: ${(props) => props.bgColor || 'none'};
-  color: ${(props) => props.fontColor || 'black'};
+  ${(props) =>
+    returnThings(
+      props.width,
+      props.height,
+      props.bgColor,
+      props.fontColor,
+      props.borderBottom
+    )};
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: ${(props) =>
-    props.borderBottom || '2px solid rgb(48,48,48,0.3)'};
+  margin: 0;
+  padding: 0;
   outline: none;
-  margin: none;
-  padding: none;
-
   &:hover {
     border-bottom: ${(props) =>
-      props.borderBottomHover || '2px solid rgb(48,48,48)'};
+      props.borderBottomHover || styles.borderBottomHover};
   }
 `
-
-const FilledStyle = styled.input`
-  width: ${(props) => props.width || '100%'};
-  height: ${(props) => props.height || '2em'};
-  background-color: ${(props) => props.bgColor || 'rgb(168,168,168,0.8)'};
-  color: ${(props) => props.fontColor || 'white'};
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 2px solid rgb(48, 48, 48, 0.3);
-  outline: none;
-  margin: none;
-  padding: none;
+const FilledStyle = styled(StandardStyle)`
+  background-color: ${(props) => props.bgColor || colors.darkGreyThirty};
+  color: ${(props) => props.fontColor || colors.almostWhite};
+  border-top-right-radius: ${styles.borderTopRadius};
+  border-top-left-radius: ${styles.borderTopRadius};
   &:hover {
-    background-color: rgb(128, 128, 128);
-    border-bottom: 2px solid rgb(48, 48, 48);
+    background-color: ${colors.lightGrey};
+    border-bottom: ${styles.borderBottom};
     transition: all 0.5s ease;
   }
 `
-
-const OutlinedStyle = styled.input`
-  width: ${(props) => props.width || '100%'};
-  height: ${(props) => props.height || '2em'};
+const OutlinedStyle = styled(StandardStyle)`
   background-color: ${(props) => props.bgColor || 'none'};
-  color: ${(props) => props.fontColor || 'black'};
-  border-radius: 2px;
-  border: 2px solid rgb(168, 168, 168);
-  outline: none;
-  margin: none;
-  padding: none;
-
+  color: ${(props) => props.fontColor || colors.almostWhite};
+  border-top-right-radius: ${styles.borderTopRadius};
+  border-top-left-radius: ${styles.borderTopRadius};
+  border: ${styles.borderBottom};
   &:hover {
-    border: 2px solid rgb(48, 48, 48);
+    border: ${styles.borderBottomHover};
   }
 `
-
 const TextField = (props) => {
+  console.log({ props })
   switch (props.variant) {
     case 'standard':
       return (
-        <StandardStyle
-          onChange={props.onChange}
-          name={props.name}
-          type={props.type}
-          placeholder={props.placeholder}
-          value={props.value}
-          width={props.width}
-          height={props.height}
-          bgColor={props.bgColor}
-          fontColor={props.fontColor}
-          borderBottom={props.borderBottom}
-          borderBottomHover={props.borderBottomHover}
-        >
-          {props.children}
-        </StandardStyle>
+        <StandardStyle {...returnProps(props)}>{props.children}</StandardStyle>
       )
     case 'filled':
-      return (
-        <FilledStyle
-          onChange={props.onChange}
-          name={props.name}
-          type={props.type}
-          placeholder={props.placeholder}
-          value={props.value}
-          width={props.width}
-          height={props.height}
-          bgColor={props.bgColor}
-          fontColor={props.fontColor}
-        >
-          {props.children}
-        </FilledStyle>
-      )
+      return <FilledStyle {...returnProps(props)}>{props.children}</FilledStyle>
     case 'outlined':
       return (
-        <OutlinedStyle
-          onChange={props.onChange}
-          name={props.name}
-          type={props.type}
-          placeholder={props.placeholder}
-          value={props.value}
-          width={props.width}
-          height={props.height}
-          bgColor={props.bgColor}
-          fontColor={props.fontColor}
-        >
-          {props.children}
-        </OutlinedStyle>
+        <OutlinedStyle {...returnProps(props)}>{props.children}</OutlinedStyle>
       )
     default:
-      return <StandardStyle>{props.children}</StandardStyle>
+      return (
+        <StandardStyle {...returnProps(props)}>{props.children}</StandardStyle>
+      )
   }
 }
-
 export default TextField

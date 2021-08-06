@@ -19,14 +19,16 @@ const Team1 = () => {
 
   return (
     <div>
-      <Typography variant='large'>This is some text</Typography>
+      <Typography variant='large' fontColor='secondary'>
+        This is some text
+      </Typography>
       <Typography variant='medium'>This is some text</Typography>
       <Typography variant='small'>This is some text</Typography>
       <Typography
         variant='small'
         fontSize='5em'
         fontFamily='Papyrus'
-        fontColor='rgb(75,153,180)'
+        fontColor='success'
         fontWeight='700'
       >
         AVATAR

@@ -2,6 +2,7 @@
 
 - [Buttons](#Buttons)
 - [Card](#Card)
+- [Typography](#Card)
 
 # Buttons
 
@@ -104,7 +105,7 @@ Card component also returns props.children so all components within the Card com
 
 <hr />
 
-```
+```jsx
   <Card size='sm' flexDirection='row' bgColor='#F9EAE1'>
     <Child Component>
   </Card>
@@ -128,14 +129,14 @@ CardImage is a self closing component that takes in a image as a prop with a url
 | property         | props    | default   | values  |       |         |
 | ---------------- | -------- | --------- | ------- | ----- | ------- |
 | backgroundColor: | bgColor: | 'white'   | hex     | rgb   | 'color' |
-| backgroundImage: | img:     | null      | url     |       |         |
+| backgroundImage: | img:     | picsum      | url     |       |         |
 | backgroundSize:  | bgSize:  | 'contain' | 'cover' | '%'   | 'px'    |
-| height:          | height:  | '300px'   | 'px'    | 'rem' | '%'     |
-| width:           | imgSize: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
+| height:          | imgHeight:  | '300px'   | 'px'    | 'rem' | '%'     |
+| width:           | imgWidth: | '100%'    | 'sm'    | 'md'  | 'lrg'   |
 
 <hr />
 
-```
+```jsx
 <CardImage img={'url'} bgSize='cover' height='150px' />
 ```
 
@@ -192,7 +193,7 @@ CardButton takes in an array of buttons using props and the .map() method.
 
 <hr />
 
-```
+```jsx
 <CardButton position='right'>
   buttons={[
             <Button size='md' variant={'primary'}>
@@ -212,24 +213,56 @@ CardButton takes in an array of buttons using props and the .map() method.
 \
 &nbsp;
 
-# Input
-
-props: type, value, placeholder, onchange, type
-
-| props       |            |          |      |
-| ----------- | ---------- | -------- | ---- |
-| type        | email      | password | text |
-| placeholder | "String"   |          |      |
-| value       | "String"   |          |      |
-| onChange    | "Function" |          |      |
+# TextField
 
 ```jsx
-<TextField />
-<TextField placeholder={'im a placeholder'} />
-<TextField
-  inputStyle={'outline'}
-  value={'im a value'}
-  width={'25%'}
-/>
-<TextField inputStyle={'filled'} width={'25%'} />
+      <TextField />
+      <TextField variant='standard' />
+      <TextField variant='outlined' value='im a value' width='25%' />
+      <TextField variant='filled' type='password' value='im a value' width='25%' />
+
 ```
+
+### Component
+
+Three different component options:
+'standard', 'filled', 'outlined'.
+
+![textfield example](./Images/textfieldsceenshot.png)
+
+default `standard`
+
+The user has to state 'variant' if user wants to pass 'props'
+
+### Props
+
+The 'props' that can be passed:
+
+```
+'onChange'
+ 'name'
+ 'type'
+ 'placeholder'
+ 'value'
+ 'width'
+ 'height'
+ 'bgColor'
+ 'fontColor'
+```
+
+## Typography
+
+```jsx
+      <Typography variant='large'>This is some text</Typography>
+      <Typography variant='medium'>This is some text</Typography>
+      <Typography variant='small'>This is some text</Typography>
+      <Typography>This is some text</Typography>
+```
+
+![typography example](./Images/xdp_typographyscreenshot.png)
+
+### Props
+
+'variant' has value of 'large', 'medium', 'small'.
+
+Props passed can be as 'font-size', 'color', 'font-family', and 'font-weight'.
