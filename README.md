@@ -2,7 +2,7 @@
 
 - [Buttons](#Buttons)
 - [Card](#Card)
-- [Card](#Card)
+- [Typography](#Card)
 
 # Buttons
 
