@@ -25,15 +25,18 @@ Props
 
 ![button-sizes](./assets/extracolors.png)
 
-**'variant'** options: 'outlined', 'contained'.\
+**'variant'** options: 'contained', 'outlined', 'text'. Text buttons have a light highlight of the text color on hover. You can use any of the primary, secondary, success, delete, or warning on text btns however,if using your own color on a text button specifically, you must pass a hex color.\
 
 ```jsx
       <Button variant="outlined" size="sm" color="primary">outlined</Button>
       <Button variant="outlined" size="md" color="secondary">outlined</Button>
       <Button variant="outlined" size="lrg" color="success">outlined</Button>
+      <Button variant="text" color="success">text</Button>
+      <Button variant="text" color="#660066">own color</Button>
+      <Button variant="text" color='primary' size='sm'>small</Button>
 ```
 
-![button-contained](./assets/outlinedbuttons.png)
+![button-contained](./assets/outlinedandtext.png)
 
 **'disabled'** You can create your own disabled state, if disabled prop is passed, button will be lightgrey, no pointer or shadow.
 

@@ -8,7 +8,7 @@ const Team2 = () => {
       <h1>Im for team 2</h1>
       <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
       <Button disabled size='sm' color='primary'>
-        small
+        disabled
       </Button>
       <Button size='md' color='secondary'>
         medium
@@ -49,13 +49,21 @@ const Team2 = () => {
         <Button variant='outlined' size='lrg' color='success'>
           large
         </Button>
+        <Button variant="text" color="success">text</Button>
+        <Button variant='text' color='#660066'>
+        own color
+      </Button>
+        <Button variant="text" color="primary" size='sm'>small</Button>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', margin: '20px', backgroundColor: 'salmon' }}>
-      <Button disabled variant='text' size='sm' color='primary'>
+      <div style={{ display: 'flex', alignItems: 'center', margin: '20px' }}>
+      <Button disabled variant='text' color='primary'>
+        disabled
+      </Button>
+      <Button size='sm' variant='text' color='primary'>
         small
       </Button>
-      <Button disabled variant='text' size='md' color='secondary'>
+      <Button variant='text' size='md' color='secondary'>
         medium
       </Button>
       <Button variant='text' size='lrg' color='success'>
@@ -63,6 +71,9 @@ const Team2 = () => {
       </Button>
       <Button variant='text' size='lrg' color='#660066'>
         Large
+      </Button>
+      <Button variant='text' size='lrg' color='primary'>
+        primary
       </Button>
       </div>
 
