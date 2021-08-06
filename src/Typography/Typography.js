@@ -25,7 +25,7 @@ const Medium = styled.h1`
 
   // &:hover {
   //   color: blue;
-  }
+  //}
 `
 
 const Small = styled.h1`
