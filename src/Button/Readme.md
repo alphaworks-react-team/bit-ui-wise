@@ -1,20 +1,45 @@
 ## Buttons
 
+Props
+**'size'** has available options: 'sm' for small, 'md' for medium, 'lrg' for large.\
+
 ```jsx
-    <Button size="small" variant="primary">Small</Button>
-    <Button size="medium" variant="primary">Medium</Button>
-    <Button size="large" variant="primary">Large</Button>
+      <Button size="sm" color="primary">small</Button>
+      <Button size="md" color="secondary">medium</Button>
+      <Button size="lrg" color="delete">Large</Button>
+      <Button>default</Button>
 ```
 
-Props
+![Buttons](./assets/buttonsizes.png)
+**'color'** options: 'primary', 'secondary', 'warning', 'delete', 'send', 'any color you choose'.\
 
-**'size'** has available options: 'sm' for small, 'md' for medium, 'rgl' for large.\
-![Buttons](./assets/button-sizes.png)
+```jsx
+      <Button color="delete" outlined>delete</Button>
+      <Button color="warning" variant="outlined">warning</Button>
+      <Button color="send">send</Button>
+      <Button color="lightblue">own color</Button>
+```
 
-**'variant'** options: 'primary', 'secondary', 'warning', 'delete', 'send'.\
-![button-sizes](./assets/button-colors.png)
+![button-sizes](./assets/extracolors.png)
 
-**'type'** options: 'outlined', 'contained'.\
-![button-contained](./assets/button-contained.png)
+**'variant'** options: 'outlined', 'contained'.\
 
-_If no props are passed, the default styling will be size 'md', variant 'primary', and type 'contained'._
+```jsx
+      <Button variant="outlined" size="sm" color="primary">outlined</Button>
+      <Button variant="outlined" size="md" color="secondary">outlined</Button>
+      <Button variant="outlined" size="lrg" color="send">outlined</Button>
+```
+
+![button-contained](./assets/outlinedbuttons.png)
+
+**'disabled'** You can create your own disabled state, if disabled prop is passed, button will be lightgrey, no pointer or shadow.
+
+```jsx
+<Button disabled size='sm'>
+  disabled
+</Button>
+```
+
+![disabled](./assets/disabled.png)
+
+_If no props are passed, the default styling will be size 'md', color 'primary', and variant 'contained'._

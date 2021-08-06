@@ -19,24 +19,28 @@ const Team1 = () => {
 
   return (
     <div>
-      <Typography variant='header'>This is some text</Typography>
-      <Typography variant='sub-header'>This is some text</Typography>
-      <Typography variant='subtitle'>This is some text</Typography>
-      <Typography variant='body'>This is some text</Typography>
-      <Typography>This is some text</Typography>
+      <Typography variant='large' fontColor='secondary'>
+        This is some text
+      </Typography>
+      <Typography variant='medium'>This is some text</Typography>
+      <Typography variant='small'>This is some text</Typography>
+      <Typography
+        variant='small'
+        fontSize='5em'
+        fontFamily='Papyrus'
+        fontColor='success'
+        fontWeight='700'
+      >
+        AVATAR
+      </Typography>
 
-      <div style={styles2}>
-        <div style={styles}>
-          <TextField />
-          <TextField placeholder={'im a placeholder'} />
-          <TextField
-            inputStyle={'outline'}
-            value={'im a value'}
-            width={'25%'}
-          />
-          <TextField inputStyle={'filled'} width={'25%'} />
-        </div>
-      </div>
+      <TextField variant='standard' width='75%' type='password' />
+      <p></p>
+      <TextField variant='filled' width='50%' placeholder='world' />
+      <p></p>
+      <TextField variant='outlined' width='25%' type='password' type='number' />
+      <p></p>
+      <TextField />
     </div>
   )
 }
