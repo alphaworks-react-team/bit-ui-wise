@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-
 const Wrapper = styled.div`
   min-width: ${(props) =>
     props.size === 'sm'
@@ -29,16 +28,17 @@ const Wrapper = styled.div`
     props.direction === 'row' ? props.direction : 'column'};
 `
 
-
 const Card = (props) => {
-  
-  return (<Wrapper
-  
-    direction={props.direction}
-    size={props.size}
-    height={props.height}
-    bgColor={props.bgColor}
-  >{props.children}</Wrapper> )
+  return (
+    <Wrapper
+      direction={props.direction}
+      size={props.size}
+      height={props.height}
+      bgColor={props.bgColor}
+    >
+      {props.children}
+    </Wrapper>
+  )
 }
 
 Card.propTypes = {
@@ -49,10 +49,9 @@ Card.propTypes = {
 }
 Card.defaultProps = {
   height: '',
-  bgColor: 'white', 
+  bgColor: 'white',
   size: '100%',
   direction: 'column'
 }
-
 
 export default Card
