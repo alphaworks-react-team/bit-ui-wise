@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Button,
   Card,
@@ -6,7 +6,8 @@ import {
   CardText,
   CardImage,
   Typography,
-  TextField
+  TextField,
+  Modal
 } from 'bit-ui-wise'
 
 const Team3 = () => {
@@ -19,28 +20,32 @@ const Team3 = () => {
     backgroundColor: '#9e9e9e'
   }
 
+  const [state, setState] = useState(true)
+
   return (
     <div style={styles}>
       {/* Card with img/buttons/description*/}
-      <Card size='sm'>
-        <CardImage />
-        <CardText>
-          <Typography variant='small' fontColor='black'>
-            Lorem ipsum dolor sit amet.
-          </Typography>
-        </CardText>
-        <CardButton
-          position='right'
-          buttons={[
-            <Button size='sm' color='warning'>
-              lorem
-            </Button>,
-            <Button variant='outlined' size='sm'>
-              lorem
-            </Button>
-          ]}
-        ></CardButton>
-      </Card>
+      <Modal toggleState={state}>
+        <Card size='sm'>
+          <CardImage />
+          <CardText>
+            <Typography variant='small' fontColor='black'>
+              Lorem ipsum dolor sit amet.
+            </Typography>
+          </CardText>
+          <CardButton
+            position='right'
+            buttons={[
+              <Button size='sm' color='warning'>
+                lorem
+              </Button>,
+              <Button variant='outlined' size='sm'>
+                lorem
+              </Button>
+            ]}
+          ></CardButton>
+        </Card>
+      </Modal>
 
       {/* Login Card */}
       <Card size='md'>
@@ -72,11 +77,32 @@ const Team3 = () => {
             <Button size='sm' color='primary'>
               Login
             </Button>,
-            <Button size='sm' color='primary'>
+            <Button onClick={() => setState(!state)} size='sm' color='primary'>
               Sign Up
             </Button>
           ]}
         ></CardButton>
+        <Modal toggleState={state}>
+          <Card size='sm'>
+            <CardImage />
+            <CardText>
+              <Typography variant='small' fontColor='black'>
+                Lorem ipsum dolor sit amet.
+              </Typography>
+            </CardText>
+            <CardButton
+              position='right'
+              buttons={[
+                <Button size='sm' color='warning'>
+                  lorem
+                </Button>,
+                <Button variant='outlined' size='sm'>
+                  lorem
+                </Button>
+              ]}
+            ></CardButton>
+          </Card>
+        </Modal>
       </Card>
 
       <Card size='md'>
@@ -185,7 +211,7 @@ const Team3 = () => {
             Friend
           </Typography>
         </CardText>
-        <Card direction='row'>
+        <Card>
           <CardText>
             <CardText>
               <Typography variant='small' fontColor='black'>

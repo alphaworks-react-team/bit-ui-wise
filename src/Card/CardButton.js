@@ -20,7 +20,7 @@ const buttonStyling = {
 const CardButton = (props) => {
   const ButtonStyle = styled.div`
     display: flex;
-    height: 100%;
+    // height: 100%;
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
@@ -30,15 +30,9 @@ const CardButton = (props) => {
     justify-content: ${(props) => buttonStyling.returnStyles(props.position)};
   `
   return (
-    <div>
-      {props.buttons ? (
-        <ButtonStyle position={props.position} bgColor={props.bgColor}>
-          {/*<div className='buttonGroup' style={styles}>*/}
-          {props.buttons.map((item) => item)}
-          {/*</div>*/}
-        </ButtonStyle>
-      ) : null}
-    </div>
+    <ButtonStyle position={props.position} bgColor={props.bgColor}>
+      {props.buttons ? <div>{props.buttons.map((item) => item)}</div> : null}
+    </ButtonStyle>
   )
 }
 

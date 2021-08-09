@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import Button from './../Button/Button'
+import React from 'react'
 
-const Modal = () => {
-  const [toggleModal, setToggleModal] = useState(false)
+const Modal = (props) => {
+  const modalStyles = {
+    display: !props.toggleState ? 'flex' : 'none'
+    // height: !props.toggleState ? '' : ''
+  }
 
-  return (
-    <div>
-      <Button>Show Modal</Button>
-    </div>
-  )
+  return <div style={modalStyles}>{props.children}</div>
 }
 
 export default Modal

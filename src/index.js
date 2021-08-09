@@ -8,6 +8,7 @@ import Card from './Card/Card'
 import CardText from './Card/CardText'
 import CardButton from './Card/CardButton'
 import CardImage from './Card/CardImage'
+import Modal from './Modal/Modal'
 
 import Typography from './Typography/Typography'
 import TextField from './TextField/TextField'
@@ -20,5 +21,6 @@ export {
   CardText,
   CardImage,
   Typography,
-  TextField
+  TextField,
+  Modal
 }
