@@ -57,9 +57,13 @@ const Modal = (props) => {
       <div style={modalContent} onClick={(e) => e.stopPropagation()}>
         {props.title ? (
           <div style={modalHeader}>
-            <Typography>{props.title}</Typography>
+            <Typography variant={props.titleSize} fontColor={props.titleColor}>
+              {props.title}
+            </Typography>
             <Button
-              size='sm'
+              size={props.btnSize}
+              color={props.btnColor}
+              variant={props.btnVariant}
               style={{ height: '28px' }}
               onClick={props.closeModal}
             >
@@ -68,7 +72,10 @@ const Modal = (props) => {
           </div>
         ) : null}
         <div style={modalBody}>
-          <Typography>
+          <Typography
+            variant={props.bodyTextSize}
+            fontColor={props.bodyTextColor}
+          >
             This Modal is Awesome lorem lorem Lorem ipsum dolor sit amet, Lorem
             ipsum, dolor sit amet consectetur adipisicing elit. Quia, facilis
             laborum. Delectus accusamus vitae rerum eos voluptas consectetur id,
@@ -77,7 +84,7 @@ const Modal = (props) => {
           </Typography>
           {!props.title ? (
             <Button
-              size='sm'
+              size={props.btnSize}
               style={{ height: '28px' }}
               onClick={props.closeModal}
             >

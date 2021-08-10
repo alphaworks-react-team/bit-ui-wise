@@ -26,7 +26,14 @@ const Team3 = () => {
     <div style={styles}>
       <Button onClick={() => setState(true)}>Open Modal</Button>
       <Modal
-        title='Modal Title'
+        btnSize='sm'
+        btnColor='primary'
+        btnVariant='outlined'
+        // title='Modal Title'
+        titleSize='large'
+        titleColor='success'
+        bodyTextSize='small'
+        bodyTextColor='success'
         state={state}
         closeModal={() => setState(false)}
       />
